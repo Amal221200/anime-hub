@@ -1,7 +1,7 @@
 import NextAuth, { NextAuthConfig } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-import User from "./models/userModel";
 import { compare, genSalt, hash } from "bcrypt-ts";
+import db from "./utils/db";
 
 const authConfig = {
   providers: [Credentials({
@@ -14,12 +14,12 @@ const authConfig = {
         throw new Error("Invalid credentials")
       }
 
-      const userExists = await User.findOne({ email: credentials.email })
+      const userExists = await db.user.findFirst({ where: { email: credentials.email } })
+
       if (!userExists) {
         throw new Error("User does not exists")
       }
 
-      const salt = await genSalt(10)
       const isValid = await compare(credentials.password.toString(), userExists.password)
 
 
@@ -27,9 +27,7 @@ const authConfig = {
         throw new Error("Incorrect Password")
       }
 
-      const jsonUser = userExists.toJSON()
-
-      return { ...jsonUser, _id: jsonUser._id.toString() }
+      return userExists;
     },
   })],
   secret: [process.env.AUTH_SECRET!, process.env.AUTH_SECRET_1!],
