@@ -1,0 +1,3259 @@
+[
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218328"
+    },
+    "title": "One Piece",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Eiichi Ro Oda",
+    "imageLink": "/assets/anime/one_piece.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.531Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.531Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218329"
+    },
+    "title": "Bleach",
+    "description": "High school student Kurosaki Ichigo is unlike any ordinary kid. Why? Because he can see ghosts. Ever since a young age, he's been able to see spirits from the afterlife. Ichigo's life completely changes one day when he and his two sisters are attacked by an evil, hungry and tormented spirit known as a Hollow. Right in the nick of time, Ichigo and his siblings are aided by a Shinigami (Death God) named Kuchiki Rukia, whose responsibility it is to send good spirits (Pluses) to the afterlife known as Soul Society, and to purify Hollows and send them up to Soul Society. But during the fight against the Hollow, Rukia is injured and must transfer her powers to Ichigo. With this newly acquired power, so begins Kurosaki Ichigo's training and duty as a Shinigami to maintain the balance between the world of the living and the world of the dead.",
+    "watchLink": "https://animesuge.to/anime/bleach-6j9/ep-1",
+    "status": "completed",
+    "studio": "TV Tokyo, Dentsu, Studio Pierrot",
+    "episodes": 366,
+    "episodeDuration": 23,
+    "release": 2005,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy"
+    ],
+    "artist": "Tite Kubo",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077367/zbpc/opaoco8h1lcqzh3a0ccj.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.532Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:29:34.291Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821832a"
+    },
+    "title": "Naruto",
+    "description": "Naruto Uzumaki, a mischievous adolescent ninja, struggles as he searches for recognition and dreams of becoming the Hokage, the village's leader and strongest ninja.",
+    "watchLink": "https://animesuge.to/anime/naruto-xx8z/ep-1",
+    "status": "completed",
+    "studio": "Studio Pierrot",
+    "episodes": 220,
+    "episodeDuration": 23,
+    "release": 2003,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Masashi Kishimoto",
+    "imageLink": "/assets/anime/naruto.jpg",
+    "reviews": [
+      {
+        "$oid": "663394942a15d737ecac0bb4"
+      },
+      {
+        "$oid": "6633949b2a15d737ecac0bba"
+      }
+    ],
+    "__v": 2,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.532Z"
+    },
+    "updatedAt": {
+      "$date": "2024-05-02T13:26:51.621Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821832b"
+    },
+    "title": "Attack On Titan",
+    "description": "Set in a post-apocalyptic world where the remains of humanity live behind walls protecting them from giant humanoid Titans, Attack on Titan follows protagonist Eren Yeager, along with friends Mikasa Ackerman and Armin Arlert. When a Colossal Titan breaches the wall of their hometown, Titans destroy the city and eat Eren's mother. Vowing vengeance, Eren joins the elite Survey Corps, a group of soldiers who fight against Titans. It chronicles Eren's journey with the Survey Corps as they fight against the Titans while investigating their origin and history.",
+    "watchLink": "https://animesuge.to/anime/attack-on-titan-kww/ep-1",
+    "status": "completed",
+    "studio": "Wit Studio, Mappa Studio",
+    "episodes": 89,
+    "episodeDuration": 23,
+    "release": 2012,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Hajime Isayama",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077238/zbpc/c5teee2w9tu5ypclisea.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.532Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:27:22.186Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821832c"
+    },
+    "title": "Hunter x Hunter",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/hunter-x-hunter-2011-295/ep-1",
+    "status": "completed",
+    "studio": "Madhouse",
+    "episodes": 148,
+    "episodeDuration": 23,
+    "release": 2011,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Yoshiro Togashi",
+    "imageLink": "/assets/anime/hunter_x_hunter.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.533Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.533Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821832d"
+    },
+    "title": "Black Clover",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Yuki Tabata",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077341/zbpc/kfpqxfogzhz8yxkjyzjg.jpg",
+    "reviews": [
+      {
+        "$oid": "65e9e4b891264d618e4c3492"
+      }
+    ],
+    "__v": 1,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.533Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:29:06.631Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821832e"
+    },
+    "title": "Mob Psycho 100",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "comedy",
+      "fantasy",
+      "excorcism"
+    ],
+    "artist": "One",
+    "imageLink": "/assets/anime/mob_psycho_100.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.533Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.533Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821832f"
+    },
+    "title": "Death Note",
+    "description": "An intelligent high school student goes on a secret crusade to eliminate criminals from the world after discovering a notebook capable of killing anyone whose name is written into it.",
+    "watchLink": "https://animesuge.to/anime/death-note-z02/ep-1",
+    "status": "completed",
+    "studio": "Madhouse",
+    "episodes": 37,
+    "episodeDuration": 23,
+    "release": 2007,
+    "genre": [
+      "shonen",
+      "thriller",
+      "crime",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Tsugomi Ohba",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077718/zbpc/t9kilwbbhar4tkpmrhzx.jpg",
+    "reviews": [],
+    "__v": 1,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.533Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:35:21.192Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218330"
+    },
+    "title": "HoriMiya",
+    "description": "At first glance, the ultra-popular Kyoko Hori seems like a frivolous high school girl, but in reality, she's simple, pragmatic, and family-oriented. On the other hand, the bespectacled Miyamura Izumi comes across as an average, gloomy high school fanboy, but he's actually an attractive young man who has a bad-boy streak and is covered in piercings and tattoos. When these two unexpectedly similar classmates have a random run-in outside of the classroom, a bubbly, sweet tale of school life begins.",
+    "watchLink": "https://animesuge.to/anime/horimiya-m0o8/ep-1",
+    "status": "completed",
+    "studio": "CloverWorks",
+    "episodes": 13,
+    "episodeDuration": 23,
+    "release": 2021,
+    "genre": [
+      "shonen",
+      "romance",
+      "comedy"
+    ],
+    "artist": "Daisuke Hagiware",
+    "imageLink": "/assets/anime/horimiya.jpg",
+    "reviews": [],
+    "__v": 1,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.533Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-08T15:01:47.936Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218331"
+    },
+    "title": "Your Lie In April",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Naoshi Arakawa",
+    "imageLink": "/assets/anime/your_lie_in_april.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.533Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.533Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218332"
+    },
+    "title": "Clannad",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Jun Maeda",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709734923/zbpc/pru3fj689tmtrdbyjyg8.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.533Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.533Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218333"
+    },
+    "title": "Erased",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "thriller",
+      "fantasy"
+    ],
+    "artist": "Kei Sanbe",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710161508/zbpc/wbopyokvbegqzvboae1l.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-11T12:51:54.267Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218334"
+    },
+    "title": "Hajime No Ippo",
+    "description": "Makunouchi Ippo is an ordinary high school student in Japan. Since he spends most of his time away from school helping his mother run the family business, he doesn't get to enjoy his younger years like most teenagers. Always a target for bullying at school (the family fishing business grants him a distinct odor), Ippo's life is one of hardship. One of these after-school bullying sessions turns Ippo's life around for the better, as he is saved by a boxer named Takamura. He decides to follow in Takamura's footsteps and train to become a boxer, giving his life direction and purpose. Ippo's path to perfecting his pugilistic prowess is just beginning.",
+    "watchLink": "https://animesuge.to/anime/fighting-spirit-lr3/ep-1",
+    "status": "completed",
+    "studio": "Madhouse, MAPPA",
+    "episodes": 75,
+    "episodeDuration": 23,
+    "release": 2003,
+    "genre": [
+      "shonen",
+      "sports"
+    ],
+    "artist": "Jeorge Murikiwa",
+    "imageLink": "/assets/anime/hajime_no_ippo.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-08T15:38:56.519Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218335"
+    },
+    "title": "Haikyuu",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "sports"
+    ],
+    "artist": "Haruichi Furudate",
+    "imageLink": "/assets/anime/haikyuu.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218336"
+    },
+    "title": "My Hero Academia",
+    "description": "In a world populated with superhumans, the superhero-loving Izuku Midoriya is without power. However, after the Quirkless dreamer Izuku inherits the powers of the world's best superhero, All Might, his hopes of becoming the top hero are now possible. Once enrolled in the high school for heroes, U.A., Izuku soon discovers being a hero is much more complicated than it appears.",
+    "watchLink": "https://animesuge.to/anime/my-hero-academia-jvl2/ep-1",
+    "status": "ongoing",
+    "studio": "Bones",
+    "episodes": 146,
+    "episodeDuration": 23,
+    "release": 2016,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure",
+      "sci-fi"
+    ],
+    "artist": "Kohei Horikoshi",
+    "imageLink": "/assets/anime/my_hero_academia.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-08T15:11:02.294Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218337"
+    },
+    "title": "One Punch Man",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "comedy"
+    ],
+    "artist": "One",
+    "imageLink": "/assets/anime/one_punch_man.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218338"
+    },
+    "title": "Dragon Ball",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Akira Toriyama",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710161381/zbpc/jrcptqonup40a9ndrlwc.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-11T12:49:47.876Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218339"
+    },
+    "title": "Stiens Gate",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "sci fi",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Yomi Sarachi",
+    "imageLink": "/assets/anime/steins_gate.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821833a"
+    },
+    "title": "Code Geas",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "sci fi"
+    ],
+    "artist": "Goro Taniguchi, Ichijiro Okoushi",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077500/zbpc/vqurgruu1ps8qpbue6bf.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:31:43.798Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821833b"
+    },
+    "title": "Angel Beats",
+    "description": "Angel Beats! is a 13-episode Japanese anime television series produced by P.A. Works and Aniplex and directed by Seiji Kishi. The story was originally conceived by Jun Maeda, who also wrote the screenplay and composed the music with the group Anant-Garde Eyes, with original character design by Na-Ga; both Maeda and Na-Ga are from the visual novel brand Key, who produced such titles as Kanon, Air, and Clannad. The anime aired in Japan between April 3 and June 26, 2010, on CBC. An original video animation (OVA) episode was released in December 2010, and a second OVA was released in June 2015. The story takes place in the afterlife and focuses on Otonashi, a boy who lost his memories of his life after dying. He is enrolled into the afterlife school and meets a girl named Yuri who invites him to join the Afterlife Battlefront, an organization she leads which fights against the student council president Kanade Tachibana, a girl also known as Angel with supernatural powers",
+    "watchLink": "https://animesuge.to/anime/angel-beats-lzz",
+    "status": "completed",
+    "studio": "P.A. Works",
+    "episodes": 13,
+    "episodeDuration": 23,
+    "release": 2010,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Jun Maeda",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709992216/zbpc/q9xr4zmcedhgja9uddgo.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-09T13:50:21.039Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821833c"
+    },
+    "title": "Kingdom",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Yasuhisa Hara",
+    "imageLink": "/assets/anime/kingdom.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821833d"
+    },
+    "title": "Rising of the Shield Hero",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Aneko Yusagi",
+    "imageLink": "/assets/anime/rising_of_the_shield_hero.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821833e"
+    },
+    "title": "Fullmetal Alchemist Brotherhood",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Hiromu Arakawa",
+    "imageLink": "/assets/anime/fullmetal_alchemist_brotherhood.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.534Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821833f"
+    },
+    "title": "Fruit Basket",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Natsuki Takaya",
+    "imageLink": "/assets/anime/fruit_basket.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218340"
+    },
+    "title": "Mashle: Magic and Muscles",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Hajime Komoto",
+    "imageLink": "/assets/anime/mashle.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218341"
+    },
+    "title": "Jojo's Bizarre Adventure",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Hirohiko Araki",
+    "imageLink": "/assets/anime/jojos_bizzare_adventure.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218342"
+    },
+    "title": "Demon Slayer",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Koyoharu Gotouge",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077743/zbpc/sak5nhjgug7s7mrakpic.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:35:46.803Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218343"
+    },
+    "title": "Cowboy Bebop",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "space",
+      "neo-western",
+      "adventure"
+    ],
+    "artist": "Shinchiro Watanabe",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077535/zbpc/kcr7mawyvrdksgrdmq6g.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:32:18.548Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218344"
+    },
+    "title": "Neon Genesis Evangelion",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure",
+      "sci fi"
+    ],
+    "artist": "Hideki Anno",
+    "imageLink": "/assets/anime/neon_genesis_evangelion.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218345"
+    },
+    "title": "Darling in The Franxx",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Code000",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077646/zbpc/biij3flbuucopia23yty.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:34:19.746Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218346"
+    },
+    "title": "Vinland Saga",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Makoto Yukimura",
+    "imageLink": "/assets/anime/vinland_saga.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218347"
+    },
+    "title": "We Never Learn",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Taishi Tsutsui",
+    "imageLink": "/assets/anime/we_never_learn.png",
+    "reviews": [
+      {
+        "$oid": "66339f7b9c2312eaa36b256e"
+      }
+    ],
+    "__v": 1,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-05-02T14:13:16.033Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218348"
+    },
+    "title": "Samurai Champloo",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "neo noir",
+      "adventure"
+    ],
+    "artist": "Shinchiro Watanabe",
+    "imageLink": "/assets/anime/samurai_champloo.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218349"
+    },
+    "title": "Kaguya Sama: Love is War",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Aka Akasaka",
+    "imageLink": "/assets/anime/kaguya_sama.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821834a"
+    },
+    "title": "Rascal Does Not Dream of Bunny Girl Senpai",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Hajime Kamoshida",
+    "imageLink": "/assets/anime/rascal_does_not_dream_of_bunny_girl_senpai.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821834b"
+    },
+    "title": "That Time I Got Re-incarnated as a Slime",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "issekai",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Fuse, Mitz Vah",
+    "imageLink": "/assets/anime/that_time_i_got_re_incarnated_as_a_slime.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821834c"
+    },
+    "title": "Jobless Re-incarnation",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "issekai",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Rifujin Na Magonote",
+    "imageLink": "/assets/anime/jobless_re_incarnation.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821834d"
+    },
+    "title": "In Another World With My Smartphone",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Patora Fuyuhara",
+    "imageLink": "/assets/anime/in_another_world_with_my_smartphone.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.535Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821834f"
+    },
+    "title": "Aho Girl",
+    "description": "Yoshiko Hanabatake is an idiot. She is so ditzy she gets zero on all her tests, she just wants to play and run around all day and not ponder her future, and she loves bananas. Her closest friends are Akuru Akutsu, a smart and serious student, and Sayaka Sumino, a kind and level-headed schoolgirl; both of whom must put up with Yoshiko's escapades.",
+    "watchLink": "https://animesuge.to/anime/aho-girl-78jy/ep-1",
+    "status": "completed",
+    "studio": "Diomedéa",
+    "episodes": 12,
+    "episodeDuration": 23,
+    "release": 2017,
+    "genre": [
+      "shonen",
+      "comedy"
+    ],
+    "artist": "Hiroyuki",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709992163/zbpc/fts2veiygfuw9pfakijr.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-09T13:49:41.548Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218350"
+    },
+    "title": "Monster",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "thriller",
+      "mistery",
+      "crime"
+    ],
+    "artist": "Naoki urasawa",
+    "imageLink": "/assets/anime/monster.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218351"
+    },
+    "title": "High School DxD",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "herum",
+      "drama",
+      "fantasy"
+    ],
+    "artist": "Ichiei Ishibumi",
+    "imageLink": "/assets/anime/high_school_dxd.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218352"
+    },
+    "title": "Doctor Stone",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "sci fi",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Riichiro Inagaki",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710161328/zbpc/egpd8fvhse8gj6pjbf6y.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-11T12:48:52.549Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218353"
+    },
+    "title": "Rent a Girlfriend",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Rejimiyajima",
+    "imageLink": "/assets/anime/rent_a_girlfriend.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218354"
+    },
+    "title": "Spy x Family",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Tatsuya Endo",
+    "imageLink": "/assets/anime/spy_x_family.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218355"
+    },
+    "title": "The Quintessential Quintuplets",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Negi Haruba",
+    "imageLink": "/assets/anime/the_quintessential_quintuplets.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218356"
+    },
+    "title": "Couple of Cuckoos",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Miki Yoshkaw",
+    "imageLink": "/assets/anime/couple_of_cuckoos.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218357"
+    },
+    "title": "Psycho Pass",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Gen Urobuchi",
+    "imageLink": "/assets/anime/psycho_pass.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218358"
+    },
+    "title": "Gintama",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Hedaki Sorachi",
+    "imageLink": "/assets/anime/gintama.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218359"
+    },
+    "title": "Devilman Cry Baby",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Go Nagai's",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710161289/zbpc/blqcotttzryexolpibfk.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-11T12:48:16.277Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821835a"
+    },
+    "title": "Hellsing",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Kouta Hirano",
+    "imageLink": "/assets/anime/hellsing.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821835b"
+    },
+    "title": "The Seven Deadly Sins",
+    "description": "The Seven Deadly Sins were once an active group of knights in the region of Britannia, who disbanded after they supposedly plotted to overthrow the Liones Kingdom. Their supposed defeat came at the hands of the Holy Knights, but rumors continued to persist that they were still alive. Ten years later, the Holy Knights staged a coup d'état and captured the king, becoming the new, tyrannical rulers of the kingdom. The third princess, Elizabeth, then starts out on a journey to find the Seven Deadly Sins and enlist their help in taking back the kingdom.",
+    "watchLink": "https://animesuge.to/anime/the-seven-deadly-sins-ll4n/ep-1",
+    "status": "completed",
+    "studio": "A-1 Pictures, Studio DEEN",
+    "episodes": 101,
+    "episodeDuration": 23,
+    "release": 2014,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Nakaba Suzuki",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709992103/zbpc/aklfrmeaqo1ykxkxyt6t.jpg",
+    "reviews": [
+      {
+        "$oid": "65e7ec80c714c2a0c8ee712b"
+      }
+    ],
+    "__v": 1,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-09T13:48:26.839Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821835c"
+    },
+    "title": "Devil May Cry",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Shin_ya Goikeda",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077837/zbpc/zzd7qcp3p5knxs3ydsds.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:37:21.318Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821835d"
+    },
+    "title": "Tokyo Ghoul",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Sui Ishida",
+    "imageLink": "/assets/anime/tokyo_ghoul.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821835e"
+    },
+    "title": "The Testaments of Sister New Devil",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Tetsuto Uesu",
+    "imageLink": "/assets/anime/the_testaments_of_sister_new_devil.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.536Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821835f"
+    },
+    "title": "Devil Is a Part-Timer",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Satoshi wagahara",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077794/zbpc/rs01kqer9oxnvbdbi52i.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:36:38.097Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218360"
+    },
+    "title": "Future Diaries",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Sake Esuno",
+    "imageLink": "/assets/anime/future_diaries.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218361"
+    },
+    "title": "Solo Leveling",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Chugong",
+    "imageLink": "/assets/anime/solo_leveling.png",
+    "reviews": [
+      {
+        "$oid": "65e94b5f997a3816c7442d69"
+      }
+    ],
+    "__v": 1,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-07T05:06:39.236Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218362"
+    },
+    "title": "God of High School",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Yongje Park",
+    "imageLink": "/assets/anime/god_of_high_school.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218363"
+    },
+    "title": "Tower of God",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Slave In Utro",
+    "imageLink": "/assets/anime/tower_of_god.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218364"
+    },
+    "title": "Foolish Angel Dances With The Devil",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Sawayoshi Azuma",
+    "imageLink": "/assets/anime/foolish_angel.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218365"
+    },
+    "title": "Fairy Tail",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Hiro Mashima",
+    "imageLink": "/assets/anime/fairy_tail.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218366"
+    },
+    "title": "Shaman King",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Hiroyuki Takei",
+    "imageLink": "/assets/anime/shaman_king.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218367"
+    },
+    "title": "K: Missing Kings",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Rei Rairaku",
+    "imageLink": "/assets/anime/k_missing_kings.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218368"
+    },
+    "title": "Ranking of Kings",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Sosuke Toka",
+    "imageLink": "/assets/anime/ranking_of_kings.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218369"
+    },
+    "title": "Magi: The Labrynth of Magic",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Shinobu Ohtaka",
+    "imageLink": "/assets/anime/magi.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821836a"
+    },
+    "title": "Issekai Uncle",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Hotondo Shindeiru",
+    "imageLink": "/assets/anime/issekai_uncle.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821836b"
+    },
+    "title": "Overlord",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Kugane Maruyama",
+    "imageLink": "/assets/anime/overlord.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821836c"
+    },
+    "title": "Sword Art Online",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Reki Kawahara",
+    "imageLink": "/assets/anime/sword_art_online.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821836d"
+    },
+    "title": "Tenchi Muyo, War on Geminar",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Masaki Kajishima",
+    "imageLink": "/assets/anime/tenchi_muyo.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821836e"
+    },
+    "title": "Record of Ragnarok",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Shinya Umemura, Takumi Fukui",
+    "imageLink": "/assets/anime/record_of_ragnarok.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821836f"
+    },
+    "title": "Moonlight Fantasy",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Kei Azumi",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709964354/zbpc/b3fr1xchlxdvaofrz0fp.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218370"
+    },
+    "title": "The Eminence in Shadow",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Daisuke Aizawa",
+    "imageLink": "/assets/anime/the_eminence_in_shadow.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218371"
+    },
+    "title": "Harem in the Labrynth of Another World Species",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Shachi Sogano",
+    "imageLink": "/assets/anime/harem_labyrinth.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218372"
+    },
+    "title": "Campfire Cooking in Another World With My Absurd Skill",
+    "description": "Along with three other heroes, Tsuyoshi Mukouda is transported into a fantasy world to rescue a kingdom from a mysterious threat. However, it soon becomes clear that Tsuyoshi Mukouda has been dragged into the summoning ritual by accident. His only skill turns out to be \"Net Super,\" which allows him to open an interface where he can purchase and obtain food-related supermarket items from modern Japan. Unceremoniously booted out of the palace, Tsuyoshi Mukouda sets out on his own into his new world.",
+    "watchLink": "https://animesuge.to/anime/tondemo-skill-de-isekai-hourou-meshi-vvqq2/ep-1",
+    "status": "ongoing",
+    "studio": "Mappa",
+    "episodes": 12,
+    "episodeDuration": 23,
+    "release": 2023,
+    "genre": [
+      "shonen",
+      "fantasy",
+      "adventure",
+      "comedy"
+    ],
+    "artist": "Ren Eguchi",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077432/zbpc/sro866zirx7cibaexz4b.jpg",
+    "reviews": [
+      {
+        "$oid": "65edbb705882b05de92b0887"
+      },
+      {
+        "$oid": "65edbb705882b05de92b0889"
+      }
+    ],
+    "__v": 3,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:53:52.366Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218373"
+    },
+    "title": "Re:Zero - Starting Life in Another World",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Tappei Nagatsuki",
+    "imageLink": "/assets/anime/re_zero.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218374"
+    },
+    "title": "Death March to the Parallel World Rhapsody",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Hiro Ainana",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077687/zbpc/ww4q99m02ssysrtetjm4.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:34:52.874Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218375"
+    },
+    "title": "Tokyo Revengers",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Ken Wakui",
+    "imageLink": "/assets/anime/tokyo_revengers.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218376"
+    },
+    "title": "How Not to Summon A Demon Lord",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Yuki Murasaki",
+    "imageLink": "/assets/anime/how_not_to_summon_a_demon_lord.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218377"
+    },
+    "title": "Skeleton Knight In Another World",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Enki Hakari",
+    "imageLink": "/assets/anime/skeleton_knight.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218378"
+    },
+    "title": "No Game No Life",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Yuu Kamiya",
+    "imageLink": "/assets/anime/no_game_no_life.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218379"
+    },
+    "title": "I Got A Cheat Skill In Another World And Become Unrivaled In The Real World Too.",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "iku",
+    "imageLink": "/assets/anime/i_got_a_cheat_skill_in_another_world_and_become_unrivaled_in_the_real_world_too.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821837a"
+    },
+    "title": "Berserk",
+    "description": "Guts, also known as the Black Swordsman, earns a living as a skilled mercenary wielding a massive greatsword. He drifts from one job to the next, looking solely for high pay, until he meets the Band of the Falcon. During a mission, Guts is attacked and successfully defends himself, catching the attention of the group's leader, Griffith. The two clash in battle, and though Guts dispatches his comrades with ease, Griffith emerges victorious with a single blow. Guts is taken to the Band of the Falcon's encampment to recover from his injuries, and upon regaining consciousness, he challenges Griffith to a rematch. The stipulation is that if Guts loses, he must join the group. Guts loses as a result of his fresh wounds, and Griffith brings him into the fold. Three years later, Guts has become a top commander of the Band of the Falcon and is almost as formidable as Griffith himself. Together, they are unbeatable on the battlefield. However, a malevolent force lurks, threatening to irrevocably change Guts' destiny.",
+    "watchLink": "https://animesuge.to/anime/berserk-xrp8",
+    "status": "completed",
+    "studio": "OML",
+    "episodes": 97,
+    "episodeDuration": 23,
+    "release": 1997,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Kentaro Miura, Kouji Mori",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709808953/zbpc/h5gohq3yfdh1uobj3te3.jpg",
+    "reviews": [
+      {
+        "$oid": "65d83a818722fae0be6db684"
+      },
+      {
+        "$oid": "65edbc4b5882b05de92b08a3"
+      }
+    ],
+    "__v": 2,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:57:31.966Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821837b"
+    },
+    "title": "Berserk of Gluttoning",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Ichika Isshiki",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077323/zbpc/dk8x74q2rqgmvmuvkz4j.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:28:46.028Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821837c"
+    },
+    "title": "HeroMan",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Stan Lee, Bone",
+    "imageLink": "/assets/anime/heroman.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821837d"
+    },
+    "title": "Fireforce",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Atsushi Ohkubo",
+    "imageLink": "/assets/anime/fireforce.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821837e"
+    },
+    "title": "I am Standing On a Million Life",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Akinari Nao",
+    "imageLink": "/assets/anime/i_am_standing_on_a_million_life.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821837f"
+    },
+    "title": "91 Days",
+    "description": "The story takes place in Lawless, a town thriving on black market sales of illicitly brewed liquor. Avilio returns to Lawless after some time away, following the murder of his family in a mafia dispute there.",
+    "watchLink": "https://animesuge.to/anime/91-days-7j7y/ep-1",
+    "status": "completed",
+    "studio": "Shuka",
+    "episodes": 14,
+    "episodeDuration": 23,
+    "release": 2016,
+    "genre": [
+      "action",
+      "crime",
+      "thriller",
+      "adventure"
+    ],
+    "artist": "Taku Kishimoto",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709992077/zbpc/vtcmhrh7fzrsz171rijr.png",
+    "reviews": [
+      {
+        "$oid": "6633e4ee9d1e043dc63c361d"
+      }
+    ],
+    "__v": 1,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-05-02T19:09:34.290Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218380"
+    },
+    "title": "Heavens Lost Property",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Suu Minazuki",
+    "imageLink": "/assets/anime/heavens_lost_property.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218381"
+    },
+    "title": "Ah! My Goddesses",
+    "description": "Nice Guy Keiichi is doing his best as a poor student at a tech college, but his good nature is taken advantage of relentlessly. One day he is attempting to order a pizza over the phone (being stuck at the dorm to take messages for upperclassmen) and by fate reaches the Goddess Help Line. Before he knows it he is presented with a real live goddess named Belldandy who will grant him one and only one wish. Still suspecting he is the butt of an elaborate joke, he wishes for her to be by his side forever. His wish is granted! It would seem his luck has changed, but he finds out that having a goddess is no way to avoid trouble.",
+    "watchLink": "https://animesuge.to/anime/oh-my-goddess-ly7n/ep-1",
+    "status": "completed",
+    "studio": "Anime International Company",
+    "episodes": 25,
+    "episodeDuration": 23,
+    "release": 2005,
+    "genre": [
+      "sienen",
+      "comedy",
+      "fantasy",
+      "romance"
+    ],
+    "artist": "Kosuke Fujishima",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709992125/zbpc/rixfvxw687kpborv6svf.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-09T13:48:53.203Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218382"
+    },
+    "title": "Classroom of Elite",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Shogo Kinugasa",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077472/zbpc/ctlg23e9nfvujjbenbzf.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:31:16.192Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218383"
+    },
+    "title": "School Babysitters",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Hari Tokeino",
+    "imageLink": "/assets/anime/school_babysitters.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.538Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218384"
+    },
+    "title": "Temple: Tempuru",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Kimitake Yoshioka",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710164827/zbpc/zywqqg6zdzhmbsng0ccf.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.539Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-11T13:47:15.097Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218385"
+    },
+    "title": "Bungou Stray Dogs",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Kafka Asagiri, Sango Harukawa",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077404/zbpc/lkodfr80v6uixqlzhjum.png",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.539Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:30:09.229Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218386"
+    },
+    "title": "Jujutsu Kaisen",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Gege Akutami",
+    "imageLink": "/assets/anime/jujutsu_kaisen.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.539Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.539Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218387"
+    },
+    "title": "Link Click",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Li Haoling",
+    "imageLink": "/assets/anime/link_click.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.539Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.539Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218388"
+    },
+    "title": "Baki",
+    "description": "To gain the skills he needs to surpass his powerful father, Baki enters Arizona State Prison to take on the notorious inmate known as Mr. Unchained.",
+    "watchLink": "https://animesuge.to/anime/baki-nozm",
+    "status": "completed",
+    "studio": "TMS ENTERTAINMENT",
+    "episodes": 39,
+    "episodeDuration": 25,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Kesuke Itagaki",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077300/zbpc/emrvy216nqo7dsuqgyvq.png",
+    "reviews": [
+      {
+        "$oid": "6634c68de0b9082124a84c1c"
+      }
+    ],
+    "__v": 1,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.539Z"
+    },
+    "updatedAt": {
+      "$date": "2024-05-03T11:12:13.426Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff853108218389"
+    },
+    "title": "Shangri La Frontier",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Kata Rina, Ryosuke Fuji",
+    "imageLink": "/assets/anime/shangri_la_frontier.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.539Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.539Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821838a"
+    },
+    "title": "K-On",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Kaki Fly",
+    "imageLink": "/assets/anime/k_on.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.539Z"
+    },
+    "updatedAt": {
+      "$date": "2024-02-23T06:14:16.539Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65d837b852ff85310821838b"
+    },
+    "title": "Daily Life of the Immortal King",
+    "description": "Hello",
+    "watchLink": "https://animesuge.to/anime/one-piece-ov8/ep-1",
+    "status": "ongoing",
+    "studio": "Toei Animation",
+    "episodes": 1094,
+    "episodeDuration": 23,
+    "release": 1999,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "artist": "Kuxuan",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710077575/zbpc/yhkpb6vwwvu9bbt6zit1.jpg",
+    "reviews": [],
+    "__v": 0,
+    "createdAt": {
+      "$date": "2024-02-23T06:14:16.539Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-10T13:32:59.688Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65db63b17aa19e0918ab32c6"
+    },
+    "title": "Parasyte: The Maxim",
+    "description": "The 16-year-old Izumi Shinichi lives with his mother and father in a quiet neighborhood in Tokyo. One night, worm-like aliens called Parasytes invade Earth, taking over the brains of human hosts by entering through their ears or noses. One Parasyte attempts to crawl into Shinichi's ear while he sleeps, but fails since he is wearing headphones, and enters his body by burrowing into his arm instead, taking over his right hand and is named Migi. Because Shinichi was able to prevent Migi from traveling further up into his brain, both beings retain their separate intellect and personality. As the duo encounter other Parasytes, they capitalize on their strange situation and gradually form a strong bond, working together to survive. This gives them an edge in battling other Parasytes, who frequently attack the pair upon realization that Shinichi's human brain is still intact. Shinichi feels compelled to fight other Parasytes, who devour humans as food, while enlisting Migi's help.",
+    "release": 2014,
+    "status": "completed",
+    "studio": "Madhouse",
+    "episodes": 24,
+    "episodeDuration": 23,
+    "genre": [
+      "action",
+      "adventure",
+      "horror"
+    ],
+    "artist": "Hitoshi Iwaaki",
+    "imageLink": "/assets/anime/parasyte.jpg",
+    "watchLink": "https://animesuge.to/anime/parasyte-the-maxim-kw49/ep-1",
+    "reviews": []
+  },
+  {
+    "_id": {
+      "$oid": "65e56303eb1747d8a9cabce3"
+    },
+    "title": "Wiseman's Grandchild",
+    "description": "A young man who had surely died in an accident, was reborn in another world as a baby. After that, he was picked up by the patriot hero \"Sage\" Merlin Wolford and was given the name Shin. He was raised as a grandson by Merlin and soaked up Merlin's teachings, earning him some shocking powers; however, when he became 15, his grandfather Merlin said, \"I forgot to teach him common sense!\" An \"abnormal\" boy's unconventional other world fantasy life starts here.",
+    "watchLink": "https://animesuge.to/anime/wise-mans-grandchild-40wx/ep-1",
+    "status": "completed",
+    "studio": "Silver Link",
+    "episodes": 12,
+    "episodeDuration": 23,
+    "release": 2019,
+    "genre": [
+      "shonen",
+      "fantasy",
+      "adventure",
+      "comedy"
+    ],
+    "artist": "Tsuyoshi Yoshioka",
+    "imageLink": "/assets/anime/wisemans_grandchild.jpg",
+    "reviews": [
+      {
+        "$oid": "65e9e51e91264d618e4c349c"
+      }
+    ],
+    "createdAt": {
+      "$date": "2024-03-04T05:58:27.846Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-07T16:02:38.617Z"
+    },
+    "__v": 1
+  },
+  {
+    "_id": {
+      "$oid": "65e5d2d3e22035853f30765e"
+    },
+    "title": "The Promise Neverland",
+    "description": "At Grace Field House, life couldn't be better for the orphans. Though they have no parents, together with the other kids and a kind \"Mama\" who cares for them, they form one big, happy family. No child is ever overlooked, especially since they are all adopted by the age of 12. Their daily lives involve rigorous tests, but afterwards, they are allowed to play outside. There is only one rule they must obey: do not leave the orphanage. But one day, two top-scoring orphans, Emma and Norman, venture past the gate and unearth the harrowing secret behind their entire existence. Utilizing their quick-wittedness, the children must work together to somehow change their predetermined fate.",
+    "watchLink": "https://animesuge.to/anime/the-promised-neverland-r12q/ep-1",
+    "status": "completed",
+    "studio": "Aniplex, Clover Works",
+    "episodes": 24,
+    "episodeDuration": 23,
+    "release": 2019,
+    "genre": [
+      "shonen",
+      "fantasy",
+      "adventure",
+      "survival"
+    ],
+    "artist": "Kaiu Shirai",
+    "imageLink": "/assets/anime/the_promise_neverland.jpg",
+    "reviews": [],
+    "createdAt": {
+      "$date": "2024-03-04T13:55:31.988Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-04T13:55:31.988Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "65e961b50821f3f31d72ac5c"
+    },
+    "title": "Yu Yu Hakusho: Ghost Files",
+    "description": "One day, 14-year-old Yusuke Urameshi suddenly finds himself dead, having died pushing a child out of the way of oncoming traffic. Since he has such a bad personality, even the Spirit World was caught by surprise that he would sacrifice himself. Yusuke soon finds out he wasn't supposed to die and has a chance for resurrection and bringing his body back to life. After being resurrected, Yusuke becomes a Spirit Detective, along with his comrades, and one adventure after another happens, whether it be an investigation or a fighting tournament.",
+    "watchLink": "https://animesuge.to/anime/yu-yu-hakusho-ghostfiles-2r4/ep-1",
+    "status": "completed",
+    "studio": "Studio Pierrot",
+    "episodes": 112,
+    "episodeDuration": 23,
+    "release": 1992,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure",
+      "comedy"
+    ],
+    "artist": "Yoshihiro Togashi",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709793484/zbpc/bcaysx2djwq4ekzjgrdf.jpg",
+    "reviews": [],
+    "createdAt": {
+      "$date": "2024-03-07T06:41:57.425Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-07T06:41:57.425Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "65e9640d0821f3f31d72ac6f"
+    },
+    "title": "Violet Evergardeen",
+    "description": "After four long years of conflict, The Great War has finally come to an end. Caught up in the bloodshed was Violet Evergarden, a young girl raised to be a deadly weapon on the battlefield. Hospitalized and maimed in a bloody skirmish during the War's final leg, she was left with only words from the person she held dearest, but no understanding of their meaning. Recovering from her wounds, Violet starts a new life working at CH Postal Services. There, she witnesses by pure chance the work of an \"Auto Memory Doll\", amanuenses that transcribe people's thoughts and feelings into words on paper. Moved by the notion, Violet begins work as an Auto Memory Doll, a trade that will take her on an adventure, one that will reshape the lives of her clients and hopefully lead to self-discovery.",
+    "watchLink": "https://animesuge.to/anime/violet-evergarden-mymp/ep-1",
+    "status": "completed",
+    "studio": "Kyoto Animation",
+    "episodes": 14,
+    "episodeDuration": 23,
+    "release": 2018,
+    "genre": [
+      "sci-fi",
+      "romance",
+      "period",
+      "drama"
+    ],
+    "artist": "Kana Akatsuki",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709793970/zbpc/rdepuptffwfnat7qex2o.jpg",
+    "reviews": [],
+    "createdAt": {
+      "$date": "2024-03-07T06:51:57.878Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-07T06:51:57.878Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "65e94e6dead54b29e943d68e"
+    },
+    "title": "Darker than Black",
+    "description": "In Tokyo, an impenetrable field known as \"Hell's Gate\" appeared ten years ago. At the same time, psychics who wield paranormal powers at the cost of their conscience also emerged. Hei is one of the most powerful of these psychic agents, and along with his blind associate, Yin, works for one of the many rival agencies vying to unlock the mysteries of Hell's Gate.",
+    "watchLink": "https://animesuge.to/anime/darker-than-black-v0l/ep-1",
+    "status": "completed",
+    "studio": "Bones",
+    "episodes": 42,
+    "episodeDuration": 23,
+    "release": 2007,
+    "genre": [
+      "action",
+      "fantasy",
+      "thriller",
+      "sci-fi."
+    ],
+    "artist": "Tensai Okamura",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709788762/zbpc/tcge7jnzoswljgog6shi.png",
+    "reviews": [],
+    "createdAt": {
+      "$date": "2024-03-07T05:19:41.612Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-07T05:19:41.612Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "65e9b2e10cdc59ea2c3497e5"
+    },
+    "title": "Dragon Ball Z",
+    "description": "The adventures of Earth's martial arts defender, Son Goku, continue with a new family and the revelation of his alien origins. Now Goku and his allies must defend the planet from an onslaught of new extraterrestrial enemies.",
+    "watchLink": "https://animesuge.to/anime/dragon-ball-z-51ov/ep-1",
+    "status": "completed",
+    "studio": "Toei Animation",
+    "episodes": 291,
+    "episodeDuration": 23,
+    "release": 1989,
+    "genre": [
+      "shonen",
+      "action",
+      "adventure",
+      "fantasy "
+    ],
+    "artist": "Akira Toriyama",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709814312/zbpc/karlqi6nchwbomphfyo5.jpg",
+    "reviews": [],
+    "createdAt": {
+      "$date": "2024-03-07T12:28:17.015Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-07T12:28:17.015Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "65eb0fffd10c41dab1554238"
+    },
+    "title": "The 8th son? Are you kidding me?",
+    "description": "Shingo Ichinomiya, a 25 year old man working at a firm company reincarnated as the youngest child of a poor noble family living in a back country. He is blessed with a very rare talent, but in his situation it only brought disaster.",
+    "watchLink": "https://animesuge.to/anime/the-8th-son-are-you-kidding-me-4p47/ep-1",
+    "status": "completed",
+    "studio": "Shin-Ei Animation",
+    "episodes": 12,
+    "episodeDuration": 23,
+    "release": 2020,
+    "genre": [
+      "isekai",
+      "romance",
+      "drama"
+    ],
+    "artist": "Y.A.",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709903401/zbpc/chebuuxrgu7aju19xjyk.jpg",
+    "reviews": [],
+    "createdAt": {
+      "$date": "2024-03-08T13:17:51.225Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-08T13:17:51.225Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "65eb26ea91e3fbe0950ab51c"
+    },
+    "title": "Naruto Shippuden",
+    "description": "Naruto Uzumaki wants to be the best ninja in the land. He's done well so far, but with the looming danger posed by the mysterious Akatsuki organization, Naruto knows he must train harder than ever and leaves his village for intense exercises that will push him to his limits.",
+    "watchLink": "https://animesuge.to/anime/naruto-shippuden-qv3/ep-1",
+    "status": "completed",
+    "studio": "Studio Pierrot.",
+    "episodes": 501,
+    "episodeDuration": 23,
+    "release": 2007,
+    "genre": [
+      "shonen",
+      "action",
+      "adventure",
+      "fantasy "
+    ],
+    "artist": "Masashi Kishimoto",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709909549/zbpc/yhgomurm9lnwsdnbsqym.jpg",
+    "reviews": [],
+    "createdAt": {
+      "$date": "2024-03-08T14:55:38.478Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-08T14:55:38.478Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "65ebf677efb9ff5a8f2cf387"
+    },
+    "title": "Dragon Ball Super",
+    "description": "With Majin Buu defeated half-a-year prior, peace returns to Earth, where Son Goku (now a radish farmer) and his friends now live peaceful lives. However, a new threat appears in the form of Beerus, the God of Destruction. Considered the most terrifying being in the entire universe, Beerus is eager to fight the legendary warrior seen in a prophecy foretold decades ago known as the Super Saiyan God. The series retells the events from the two Dragon Ball Z films, Battle of Gods and Resurrection 'F' before proceeding to an original story about the exploration of alternate universes.",
+    "watchLink": "https://animesuge.to/anime/dragon-ball-super-7jly/ep-1",
+    "status": "completed",
+    "studio": "Toei Animation",
+    "episodes": 131,
+    "episodeDuration": 23,
+    "release": 2015,
+    "genre": [
+      "shonen",
+      "action",
+      "fantasy",
+      "adventure",
+      "comedy"
+    ],
+    "artist": "Akira Toriyama",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709962715/zbpc/tcezg660fyzrmd589hng.png",
+    "reviews": [],
+    "createdAt": {
+      "$date": "2024-03-09T05:41:11.952Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-09T05:41:11.952Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "65e879beb67a00d33389b47a"
+    },
+    "title": "My Teen Romance Comedy Snafu",
+    "description": "About an antisocial high school student named Hikigaya Hachiman with a distorted view on life and no friends or girlfriend. His life change when he was forced to enter the \"Volunteer Service Club\" by his teacher.",
+    "watchLink": "https://animesuge.to/anime/my-teen-romantic-comedy-snafu-j83/ep-1",
+    "status": "completed",
+    "studio": "Feel",
+    "episodes": 41,
+    "episodeDuration": 23,
+    "release": 2013,
+    "genre": [
+      "shonen",
+      "comedy",
+      "romance"
+    ],
+    "artist": "Wataru Watari",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1709734275/zbpc/vcy7f4s8oc031rny1ipe.jpg",
+    "reviews": [],
+    "createdAt": {
+      "$date": "2024-03-06T14:12:14.817Z"
+    },
+    "updatedAt": {
+      "$date": "2024-03-06T14:12:14.817Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "65eeff40d53a8044ed751039"
+    },
+    "title": "3d Kanjo Real Girl",
+    "description": "Hikaru Tsutsui is a quiet, unassuming high school student who forsakes the company of his classmates to spend his time reading manga, playing video games, and watching anime.",
+    "watchLink": "https://animesuge.to/anime/real-girl-7lp7/ep-1",
+    "status": "ongoing",
+    "studio": "Hoods Entertainment",
+    "episodes": 24,
+    "episodeDuration": 23,
+    "release": 2018,
+    "genre": [
+      "shonen",
+      "romance",
+      "comedy"
+    ],
+    "artist": "Mao Nanami",
+    "imageLink": "https://res.cloudinary.com/dwimzsevp/image/upload/v1710161709/zbpc/iidhbknktgzsvikxruw1.jpg",
+    "reviews": [
+      {
+        "$oid": "663385d5aee3bb0374ed959f"
+      },
+      {
+        "$oid": "663725c8473b4bd5e2ac0a39"
+      }
+    ],
+    "createdAt": {
+      "$date": "2024-03-11T12:55:28.064Z"
+    },
+    "updatedAt": {
+      "$date": "2024-05-05T06:23:04.676Z"
+    },
+    "__v": 2
+  }
+]

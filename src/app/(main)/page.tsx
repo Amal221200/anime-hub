@@ -1,12 +1,26 @@
-import Image from "next/image";
+import { addAnime } from "@/seed";
+import Intro from "./_components/Intro";
+import AnimeSection from "./_components/AnimeSection";
+import { getAnimes } from "@/lib/actions/anime";
+import AnimeCard from "./_components/AnimeCard";
 
 
-export default function Home() {
-  // const user = await createUser({'email':'amal@gmail.com', password:'amal1234', username:"amalOtaku"})
+export default async function Home() {
+  
+  const animes = await getAnimes()
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Anime Hub</h1>
-      <Image src="/logo.png" alt="logo" className="" width={100} height={100} />
-    </main>
+    <>
+      <Intro />
+      <AnimeSection>
+        {
+          !animes?.length ? "" : (
+            animes.map(anime => (
+              <AnimeCard key={anime.id} anime={anime} />
+            ))
+          )
+        }
+      </AnimeSection>
+    </>
   );
 }

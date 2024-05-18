@@ -2,11 +2,14 @@
 
 yarn.lock
 package.lock.json
+
+
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+/backup
 
 # testing
 /coverage

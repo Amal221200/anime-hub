@@ -40,9 +40,10 @@ model Anime {
   id              String       @id @default(uuid())
   title           String
   description     String
-  watchLink       USER_ROLE    @default(USER)
+  watchLink       String
   status          ANIME_STATUS
   studio          String
+  artist          String
   episodes        Int
   episodeDuration Int
   release         Int
