@@ -12,11 +12,11 @@ export default async function Home() {
       <Intro />
       <AnimeSection>
         {
-          !animes?.length ? "" : (
+          animes?.length ? (
             animes.map(anime => (
               <AnimeCard key={anime.id} anime={anime} />
             ))
-          )
+          ) : ""
         }
       </AnimeSection>
     </>

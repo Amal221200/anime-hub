@@ -1,6 +1,7 @@
 "use client"
+import { UserButton, useSession } from '@clerk/nextjs';
 import { LogIn, LogOut, Search, User } from 'lucide-react';
-import { signOut, useSession } from 'next-auth/react';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -11,7 +12,7 @@ const Header = () => {
   const headerRef = useRef<ElementRef<'header'>>(null);
   const router = useRouter()
   const scrollY = useRef(0)
-  const { data: userData, status: userStatus } = useSession()
+  const { isSignedIn }  = useSession()
 
   const handleSearch = useCallback((e: FormEvent) => {
     e.preventDefault()
@@ -20,9 +21,7 @@ const Header = () => {
     router.push(`/search?query=${search}`)
   }, [router])
 
-  const handleLogOut = useCallback(async () => {
-    await signOut()
-  }, [])
+  
 
   useEffect(() => {
     setMounted(true)
@@ -60,13 +59,10 @@ const Header = () => {
           </button>
         </form>
         <div className="flex items-center gap-5">
-          {userStatus === 'authenticated' && <User />}
+          {/* {userStatus === 'authenticated' && <User />} */}
           <div className="flex">
-            {(userStatus === 'authenticated') ? (
-              <span className="flex items-center justify-center gap-3">
-                <span className="h-7 w-7 rounded-full bg-black text-center leading-7 text-white">{'A'}</span>
-                <LogOut className="cursor-pointer" onClick={handleLogOut} />
-              </span>
+            {(isSignedIn) ? (
+              <UserButton />
             ) :
               <Link href="/auth/sign-in" className="flex gap-3">Login <LogIn /></Link>
             }

@@ -6,7 +6,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
             <Header />
-            <main className='mt-[100px]'>
+            <main className='mt-[150px] sm:mt-[100px]'>
                 {children}
             </main>
             <Footer />
