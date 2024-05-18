@@ -2,19 +2,18 @@
 
 import SectionContainer from "@/components/containers/SectionContainer";
 import { useToast } from "@/components/ui/use-toast";
-import { useSession } from "next-auth/react";
+import { useSession } from "@clerk/nextjs";
 import { FormEvent, useCallback, useState } from "react";
 import ReviewForm from "./ReviewForm";
 
 const ReviewsSection = ({ animeId }: { animeId: string }) => {
-    const { data: user, status } = useSession()
+    const { session, isSignedIn } = useSession()
     const { toast } = useToast()
     const [reviews, setReviews] = useState(null);
 
     const handleSubmit = useCallback((e: FormEvent) => {
         e.preventDefault();
-        if (status === 'unauthenticated') {
-
+        if (!isSignedIn) {
             return toast({ title: "Unauthorized", description: "Please login to add a review.", variant: "destructive" })
         }
 
@@ -23,7 +22,7 @@ const ReviewsSection = ({ animeId }: { animeId: string }) => {
         //     setReviews((current) => [res, ...current]);
         //     e.target.reset();
         // });
-    }, [status, toast])
+    }, [isSignedIn, toast])
 
 
 
