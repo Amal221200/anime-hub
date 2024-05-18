@@ -1,4 +1,3 @@
-import { addAnime } from "../../../seed";
 import Intro from "./_components/Intro";
 import AnimeSection from "./_components/AnimeSection";
 import { getAnimes } from "@/lib/actions/anime";
@@ -6,7 +5,6 @@ import AnimeCard from "./_components/AnimeCard";
 
 
 export default async function Home() {
-  // await addAnime()
   const animes = await getAnimes()
 
   return (
