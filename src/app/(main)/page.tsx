@@ -6,7 +6,7 @@ import AnimeCard from "./_components/AnimeCard";
 
 
 export default async function Home() {
-  
+  // await addAnime()
   const animes = await getAnimes()
 
   return (
