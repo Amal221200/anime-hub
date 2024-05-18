@@ -10,7 +10,7 @@ package.lock.json
 .pnp.js
 .yarn/install-state.gz
 /backup
-
+/seed.ts
 # testing
 /coverage
 
