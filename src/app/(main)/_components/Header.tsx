@@ -45,14 +45,14 @@ const Header = () => {
   // }
 
   return (
-    <header ref={headerRef} className="header-transition fixed left-0 right-0 top-0 z-[100] bg-white/90 text-black">
+    <header ref={headerRef} className="header-transition fixed left-0 right-0 top-0 z-[100] bg-[#111]/90 backdrop-blur-3xl">
       <div className="mx-auto flex max-w-[90vw] items-center justify-between px-3">
         <div className="">
           <Link href={"/"} className='relative block h-[100px] w-[130px] sm:w-[150px]'>
-            <Image src="/logo-header.png" alt="logo" fill className="w-full object-contain" />
+            <Image src="/logo-header-dark.png" alt="logo" fill className="w-full object-contain" />
           </Link>
         </div>
-        <form onSubmit={handleSearch} className="hidden w-[50vw] items-center overflow-hidden rounded-full bg-zinc-100 sm:flex">
+        <form onSubmit={handleSearch} className="hidden w-[50vw] items-center overflow-hidden rounded-full bg-zinc-800 sm:flex">
           <input type="text" name="search" id="search" className="w-[95%] rounded-full bg-transparent px-3 py-2 outline-none" placeholder="Search anime" />
           <button type="submit">
             <Search size={20} className="mr-3" />
@@ -70,7 +70,7 @@ const Header = () => {
         </div>
       </div>
       {/* Mobille Search */}
-      <form onSubmit={handleSearch} className="mx-auto mb-2 flex w-[80vw] items-center overflow-hidden rounded-full bg-zinc-100 sm:hidden">
+      <form onSubmit={handleSearch} className="mx-auto mb-2 flex w-[80vw] items-center overflow-hidden rounded-full bg-zinc-800 sm:hidden">
         <input type="text" name="search" id="search" className="w-[95%] rounded-full bg-transparent px-3 py-2 outline-none" placeholder="Search anime" />
         <button type="submit">
           <Search size={20} className="mr-3" />
