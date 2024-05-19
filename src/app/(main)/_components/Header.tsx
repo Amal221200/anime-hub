@@ -48,7 +48,7 @@ const Header = () => {
     <header ref={headerRef} className="header-transition fixed left-0 right-0 top-0 z-[100] bg-background/90 backdrop-blur-sm">
       <div className="mx-auto flex max-w-[90vw] items-center justify-between px-3">
         <div className="overflow-hidden rounded-md">
-          <Link href={"/"} className='relative block h-[100px] w-[130px] overflow-hidden rounded-md sm:w-[150px]'>
+          <Link href="/" className='relative block h-[100px] w-[130px] overflow-hidden rounded-md sm:w-[150px]'>
             <Image src="/logo-header-dark.png" alt="logo" fill className="w-full object-contain" />
           </Link>
         </div>
@@ -64,7 +64,7 @@ const Header = () => {
             {(isSignedIn) ? (
               <UserButton />
             ) :
-              <Link href="/auth/sign-in" className="flex gap-3">Login <LogIn /></Link>
+              <Link href="/sign-in" className="flex gap-3">Login <LogIn /></Link>
             }
           </div>
         </div>
