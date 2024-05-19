@@ -45,10 +45,10 @@ const Header = () => {
   // }
 
   return (
-    <header ref={headerRef} className="header-transition fixed left-0 right-0 top-0 z-[100] bg-[#111]/90 backdrop-blur-3xl">
+    <header ref={headerRef} className="header-transition fixed left-0 right-0 top-0 z-[100] bg-background/90 backdrop-blur-sm">
       <div className="mx-auto flex max-w-[90vw] items-center justify-between px-3">
-        <div className="">
-          <Link href={"/"} className='relative block h-[100px] w-[130px] sm:w-[150px]'>
+        <div className="overflow-hidden rounded-md">
+          <Link href={"/"} className='relative block h-[100px] w-[130px] overflow-hidden rounded-md sm:w-[150px]'>
             <Image src="/logo-header-dark.png" alt="logo" fill className="w-full object-contain" />
           </Link>
         </div>
