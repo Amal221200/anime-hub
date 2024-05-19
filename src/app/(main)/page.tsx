@@ -16,7 +16,7 @@ export default async function Home() {
             animes.map(anime => (
               <AnimeCard key={anime.id} anime={anime} />
             ))
-          ) : ""
+          ) : <h1 className="text-center">{"Couldn't"} fetch anime</h1>
         }
       </AnimeSection>
     </>

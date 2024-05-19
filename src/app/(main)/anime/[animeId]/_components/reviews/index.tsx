@@ -28,8 +28,8 @@ const ReviewsSection = ({ animeId }: { animeId: string }) => {
 
     return (
         <section className="my-5">
-            <SectionContainer>
-                <h2 className="text-3xl font-bold">Reviews</h2>
+            <SectionContainer className="space-y-3">
+                <h2 className="text-3xl font-semibold">Reviews</h2>
                 <ReviewForm handleSubmit={handleSubmit} />
                 {/* <Reviews reviews={reviews} /> */}
             </SectionContainer>

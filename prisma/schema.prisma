@@ -20,13 +20,15 @@ enum USER_ROLE {
 }
 
 model User {
-  id        String    @id @default(uuid())
-  username  String
-  email     String
-  role      USER_ROLE @default(USER)
-  password  String
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
+  id             String    @id @default(uuid())
+  imageUrl       String    @db.Text
+  externalUserId String    @unique
+  username       String
+  email          String    @unique
+  role           USER_ROLE @default(USER)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   Review Review[]
 }

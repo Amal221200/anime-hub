@@ -6,10 +6,10 @@ const AnimePage = async ({ params:{animeId} }: { params: { animeId: string } }) 
 
 
     return (
-        <div className='min-h-[calc(100dvh-160px)]'>
+        <>
             <AnimeIntro animeId={animeId} />
             <ReviewsSection animeId={animeId} />
-        </div>
+        </>
     )
 }
 
