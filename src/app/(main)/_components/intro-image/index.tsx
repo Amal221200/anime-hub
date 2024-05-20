@@ -6,7 +6,9 @@ import Image from 'next/image'
 const IntroImage = () => {
     return (
         <button type="button" className={cn(style.box)}>
-            <Image src={logo} alt="logo" className="bg-emerald- absolute h-[98%] w-[98%]" />
+            <div className="absolute h-[98%] w-[98%] rounded-[50px] bg-black">
+                <Image src={logo} alt="logo" fill className="absolute h-full w-full" />
+            </div>
         </button>
     )
 }
