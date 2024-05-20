@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   title: "Anime Hub",
   description: "Everything for Anime in one place",
   icons: [{
-    url: "/favicon-dark.ico",
-    href: "/favicon-dark.ico",
-    type: "icon/ico"
+    url: "/logo-dark.png",
+    href: "/logo-dark.png",
+    type: "image/png"
   }]
 };
 
