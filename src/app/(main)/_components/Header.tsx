@@ -1,6 +1,7 @@
 "use client"
 import { UserButton, useSession } from '@clerk/nextjs';
-import { LogIn, LogOut, Search, User } from 'lucide-react';
+import { useQueryClient } from '@tanstack/react-query';
+import { LogIn, Search } from 'lucide-react';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,23 +9,24 @@ import { useRouter } from 'next/navigation';
 import React, { useEffect, useRef, ElementRef, useCallback, useState, FormEvent } from 'react'
 
 const Header = () => {
-  const [mounted, setMounted] = useState(false)
+  const queryClient = useQueryClient()
   const headerRef = useRef<ElementRef<'header'>>(null);
   const router = useRouter()
   const scrollY = useRef(0)
-  const { isSignedIn }  = useSession()
+  const { isSignedIn } = useSession()
 
   const handleSearch = useCallback((e: FormEvent) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget as HTMLFormElement)
     const search = formData.get('search')?.toString()!
-    router.push(`/search?query=${search}`)
-  }, [router])
+    router.push(`/anime?query=${search}`)
+    queryClient.invalidateQueries({ queryKey: ['animes'] })
+  }, [router, queryClient])
 
-  
+
 
   useEffect(() => {
-    setMounted(true)
+    // setMounted(true)
 
     if (headerRef.current === null) {
       return

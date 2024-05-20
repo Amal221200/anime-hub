@@ -2,15 +2,17 @@ import Link from "next/link";
 import { ArrowUpRightSquare } from "lucide-react";
 import Image from "next/image"
 import { Anime } from "@prisma/client";
+import { cn } from "@/lib/utils";
+import { forwardRef, LegacyRef } from "react";
 
 interface AnimeCardProps {
-    anime: Anime
+    anime: Anime, home?: boolean
 }
 
-const AnimeCard = ({ anime }: AnimeCardProps) => {
+const AnimeCard = forwardRef(function AnimeCard({ anime, home }: AnimeCardProps, ref) {
 
     return (
-        <article className="group/anime relative h-[200px] overflow-hidden rounded-md bg-gray-300 sm:h-[250px]">
+        <article ref={ref as LegacyRef<HTMLElement>} className={cn("group/anime relative h-[200px] overflow-hidden rounded-md border-destructive bg-gray-300 sm:h-[250px]", home && "sm:w-[350px] w-[280px]")}>
             <Image src={anime.imageLink} alt={anime.title} fill className="duration-[0.5] z-0 h-full w-full transform object-cover object-top transition group-hover/anime:scale-[1.2]" />
             <div className="absolute inset-0 z-10 grid h-full w-full place-content-center space-y-1 bg-black/50 px-3 py-1 opacity-0 transition-all group-hover/anime:opacity-100 group-hover/anime:backdrop-blur-md">
                 <div className="delay-[200ms] flex translate-y-[20%] transform flex-col items-center gap-2 text-center text-white opacity-0 transition-[all] duration-500 group-hover/anime:translate-y-0 group-hover/anime:opacity-100">
@@ -21,6 +23,6 @@ const AnimeCard = ({ anime }: AnimeCardProps) => {
             </div>
         </article>
     );
-}
+})
 
 export default AnimeCard;
