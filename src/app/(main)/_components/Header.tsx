@@ -1,11 +1,12 @@
 "use client"
+import useSearchQuery from '@/hooks/useSearchQuery';
 import { UserButton, useSession } from '@clerk/nextjs';
-import { useQueryClient } from '@tanstack/react-query';
+import { useQueryClient, } from '@tanstack/react-query';
 import { LogIn, Search } from 'lucide-react';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import React, { useEffect, useRef, ElementRef, useCallback, useState, FormEvent } from 'react'
 
 const Header = () => {
@@ -14,14 +15,17 @@ const Header = () => {
   const router = useRouter()
   const scrollY = useRef(0)
   const { isSignedIn } = useSession()
+  const { setQuery } = useSearchQuery()
 
-  const handleSearch = useCallback((e: FormEvent) => {
+
+  const handleSearch = useCallback(async (e: FormEvent) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget as HTMLFormElement)
     const search = formData.get('search')?.toString()!
     router.push(`/anime?query=${search}`)
-    queryClient.invalidateQueries({ queryKey: ['animes'] })
-  }, [router, queryClient])
+    setQuery(search)
+    setTimeout(() => queryClient.invalidateQueries({ queryKey: ['animes'] }))
+  }, [queryClient, router, setQuery])
 
 
 
@@ -61,7 +65,6 @@ const Header = () => {
           </button>
         </form>
         <div className="flex items-center gap-5">
-          {/* {userStatus === 'authenticated' && <User />} */}
           <div className="flex">
             {(isSignedIn) ? (
               <UserButton />
