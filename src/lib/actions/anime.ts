@@ -1,8 +1,8 @@
 "use server"
 import db from "@/lib/db"
 
-export async function getAnimes(query?: string, page: number = 1, totalAnimes: number = 12) {
-
+export async function getAnimes({ query, page = 1, totalAnimes = false }: { query?: string, page?: number, totalAnimes?: number | boolean }) {
+    const isLimit = typeof totalAnimes === 'number' ? totalAnimes : 0
     try {
         const animes = await db.anime.findMany(
             {
@@ -11,13 +11,17 @@ export async function getAnimes(query?: string, page: number = 1, totalAnimes: n
                     title: { contains: query ? query : '', mode: "insensitive" }
                 },
                 orderBy: { title: 'asc' },
+                take: isLimit || undefined,
+                skip: ((page - 1) * isLimit) || undefined
             }
-        );
+        );        
 
-        const totalPages = Math.ceil(animes.length / totalAnimes)
+        const animesLength = await db.anime.count({ where: { title: { contains: query ? query : '', mode: "insensitive" } } });
 
-        const currentPageAnimes = animes.slice((page - 1) * totalAnimes, page * totalAnimes)
-        return { animes: currentPageAnimes, totalPages }
+        const totalPages = Math.ceil(animesLength / isLimit)
+
+        // const currentPageAnimes = animes.slice((page - 1) * isLimit, page * isLimit)
+        return { animes, totalPages }
     } catch (error) {
         console.log("getAnimes error");
         return { animes: null, totalPages: 0 }

@@ -5,7 +5,7 @@ import HomeAnimeSection from "./_components/HomeAnimeSection";
 
 
 export default async function Home() {
-  const { animes } = await getAnimes('')
+  const { animes } = await getAnimes({ query: '', page: 1, totalAnimes: 12 })
 
   return (
     <>

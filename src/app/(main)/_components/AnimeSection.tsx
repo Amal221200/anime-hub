@@ -17,7 +17,7 @@ interface AnimeSectionProps extends ComponentProps<'div'> {
 const AnimeSection = ({ heading, className, query }: AnimeSectionProps) => {
     const queryClient = useQueryClient()
     const { query: currentQuery } = useSearchQuery()
-    const { isIntersecting, ref } = useIntersectionObserver({ threshold: 1 });
+    const { isIntersecting, ref } = useIntersectionObserver({ threshold: 0.5 });
 
     const fetchAnimes = useCallback(async ({ pageParam }: { pageParam: number }): Promise<{ data: Anime[], currentPage: number, nextPage: number | null }> => {
         const response = await axios.get(`/api/anime?query=${currentQuery ? currentQuery : (query || '')}&page=${pageParam}`);
@@ -40,30 +40,18 @@ const AnimeSection = ({ heading, className, query }: AnimeSectionProps) => {
     }, queryClient)
 
     useEffect(() => {
-        (async () => {
-            if (isIntersecting) {
-                await fetchNextPage()
-            }
-            // refetch()
-        })
+        if (isIntersecting) {
+            fetchNextPage()
+        }
     }, [isIntersecting, fetchNextPage, query, refetch])
 
-    // if (isLoading) {
-    //     return <h1>Loading</h1>
-    // }
-
-    // if (isError) {
-    //     return <h1>Failed to fetch</h1>
-    // }
-
-    // if(isFetched && animes)
     return (
         <section className={cn("my-5", className)}>
             <SectionContainer>
                 {
                     status === 'pending' ?
-                        <h1></h1> : status === 'error' ?
-                            '' :
+                        <h1>Loading....</h1> : status === 'error' ?
+                            <h1>Erorr...</h1> :
                             (
                                 <>
                                     <h2 className="mb-3 text-3xl font-semibold">{heading || 'Popular Anime'}</h2>
@@ -79,8 +67,8 @@ const AnimeSection = ({ heading, className, query }: AnimeSectionProps) => {
                                                 </Fragment>
                                             )) : <h1>No results found</h1>
                                         }
-                                        <i ref={ref} />
                                     </div>
+                                    <div ref={ref} className="h-5" />
                                 </>
                             )
                 }
