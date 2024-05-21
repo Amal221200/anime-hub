@@ -6,7 +6,7 @@ import { LogIn, Search } from 'lucide-react';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next13-progressbar';
 import React, { useEffect, useRef, ElementRef, useCallback, useState, FormEvent } from 'react'
 
 const Header = () => {
