@@ -8,7 +8,7 @@ export default async function Home() {
   const { animes } = await getAnimes({ query: '', page: 1, totalAnimes: 12 })
 
   return (
-    <>
+    <div className="min-h-[calc(100vh-160px)] sm:min-h-[calc(100vh-120px)]">
       <Intro />
       <HomeAnimeSection className="">
         {
@@ -19,6 +19,6 @@ export default async function Home() {
           ) : <h1 className="text-center">{"Couldn't"} fetch anime</h1>
         }
       </HomeAnimeSection>
-    </>
+    </div>
   );
 }

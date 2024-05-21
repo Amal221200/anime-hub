@@ -1,5 +1,4 @@
 "use client"
-
 import SectionContainer from "@/components/containers/SectionContainer";
 import { useToast } from "@/components/ui/use-toast";
 import { useSession } from "@clerk/nextjs";
@@ -12,10 +11,10 @@ import Review from "./Review";
 
 const ReviewsSection = ({ animeId }: { animeId: string }) => {
     const queryClient = useQueryClient()
-    const { session, isSignedIn } = useSession()
+    const { isSignedIn } = useSession()
     const { toast } = useToast()
 
-    const { data: reviews, refetch } = useInfiniteQuery({
+    const { data: reviews } = useInfiniteQuery({
         queryKey: [`reviews ${animeId}`],
         queryFn: getReviews(animeId),
         getNextPageParam: (lastPage) => lastPage.nextPage,
@@ -32,15 +31,16 @@ const ReviewsSection = ({ animeId }: { animeId: string }) => {
 
     const handleSubmit = useCallback(async (e: FormEvent) => {
         e.preventDefault();
+        const form = e.target as HTMLFormElement;
 
         if (!isSignedIn) {
             return toast({ title: "Unauthorized", description: "Please login to add a review.", variant: "destructive" })
         }
 
-        const formData = new FormData(e.currentTarget as HTMLFormElement)
+        const formData = new FormData(form)
         const review = formData.get('review')?.toString()!
         await mutateAsync({ review })
-
+        form.reset()
     }, [isSignedIn, toast, mutateAsync])
 
     return (

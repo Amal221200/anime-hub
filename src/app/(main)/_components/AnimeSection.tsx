@@ -8,6 +8,7 @@ import axios from "axios";
 import { Anime } from "@prisma/client";
 import AnimeCard from "./AnimeCard";
 import useSearchQuery from "@/hooks/useSearchQuery";
+import Spinner from "@/components/spinner";
 
 interface AnimeSectionProps extends ComponentProps<'div'> {
     query: string;
@@ -29,14 +30,11 @@ const AnimeSection = ({ heading, className, query }: AnimeSectionProps) => {
     }, [query, currentQuery])
 
 
-    const { data: animes, status, fetchNextPage, refetch } = useInfiniteQuery({
+    const { data: animes, status, fetchNextPage, refetch, isFetchingNextPage, isFetching, isLoading } = useInfiniteQuery({
         queryKey: ['animes'],
         queryFn: fetchAnimes,
         getNextPageParam: (lastPage) => lastPage.nextPage,
         initialPageParam: 1,
-        // refetchOnReconnect(query) {
-        //     return true
-        // },
     }, queryClient)
 
     useEffect(() => {
@@ -68,6 +66,11 @@ const AnimeSection = ({ heading, className, query }: AnimeSectionProps) => {
                                             )) : <h1>No results found</h1>
                                         }
                                     </div>
+                                    {(isFetching || isFetchingNextPage || isLoading) && (
+                                        <div className="my-5 flex justify-center">
+                                            <Spinner />
+                                        </div>
+                                    )}
                                     <div ref={ref} className="h-5" />
                                 </>
                             )
