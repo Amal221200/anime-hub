@@ -1,5 +1,4 @@
 import { getAnimes } from "@/lib/actions/anime";
-import db from "@/lib/db";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {

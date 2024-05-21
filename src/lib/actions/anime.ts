@@ -20,7 +20,6 @@ export async function getAnimes({ query, page = 1, totalAnimes = false }: { quer
 
         const totalPages = Math.ceil(animesLength / isLimit)
 
-        // const currentPageAnimes = animes.slice((page - 1) * isLimit, page * isLimit)
         return { animes, totalPages }
     } catch (error) {
         console.log("getAnimes error");
