@@ -1,38 +1,30 @@
 "use client";
-import SectionContainer from "@/components/containers/SectionContainer"
+import { ComponentProps, Fragment, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { QueryFunctionContext, useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
+import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
 import { useIntersectionObserver } from "usehooks-ts"
-import { ComponentProps, Fragment, useCallback, useEffect, useRef } from "react";
-import axios from "axios";
-import { Anime } from "@prisma/client";
-import AnimeCard from "./AnimeCard";
+
 import useSearchQuery from "@/hooks/useSearchQuery";
+
+import { fetchAnimes } from "./functions";
+
 import Spinner from "@/components/spinner";
+import AnimeCard from "../../_components/AnimeCard";
+import SectionContainer from "@/components/containers/SectionContainer"
 
 interface AnimeSectionProps extends ComponentProps<'div'> {
-    query: string;
+    searchQuery: string;
     heading?: string;
 }
 
-const AnimeSection = ({ heading, className, query }: AnimeSectionProps) => {
+const AnimeSection = ({ heading, className, searchQuery }: AnimeSectionProps) => {
     const queryClient = useQueryClient()
-    const { query: currentQuery } = useSearchQuery()
+    const { searchQuery: currentSearchQuery } = useSearchQuery()
     const { isIntersecting, ref } = useIntersectionObserver({ threshold: 0.5 });
 
-    const fetchAnimes = useCallback(async ({ pageParam }: { pageParam: number }): Promise<{ data: Anime[], currentPage: number, nextPage: number | null }> => {
-        const response = await axios.get(`/api/anime?query=${currentQuery ? currentQuery : (query || '')}&page=${pageParam}`);
-        const { animes, totalPages, page } = response.data
-
-        return {
-            data: animes, currentPage: page, nextPage: pageParam < totalPages ? pageParam + 1 : null
-        }
-    }, [query, currentQuery])
-
-
-    const { data: animes, status, fetchNextPage, refetch, isFetchingNextPage, isFetching, isLoading } = useInfiniteQuery({
+    const { data: animes, status, fetchNextPage, isFetchingNextPage, isLoading } = useInfiniteQuery({
         queryKey: ['animes'],
-        queryFn: fetchAnimes,
+        queryFn: fetchAnimes(currentSearchQuery, searchQuery),
         getNextPageParam: (lastPage) => lastPage.nextPage,
         initialPageParam: 1,
     }, queryClient)
@@ -41,7 +33,7 @@ const AnimeSection = ({ heading, className, query }: AnimeSectionProps) => {
         if (isIntersecting) {
             fetchNextPage()
         }
-    }, [isIntersecting, fetchNextPage, query, refetch])
+    }, [isIntersecting, fetchNextPage])
 
     return (
         <section className={cn("my-5", className)}>
@@ -66,7 +58,7 @@ const AnimeSection = ({ heading, className, query }: AnimeSectionProps) => {
                                             )) : <h1>No results found</h1>
                                         }
                                     </div>
-                                    {(isFetching || isFetchingNextPage || isLoading) && (
+                                    {(isFetchingNextPage || isLoading) && (
                                         <div className="my-5 flex justify-center">
                                             <Spinner />
                                         </div>

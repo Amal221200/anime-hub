@@ -11,7 +11,10 @@ import QueryProvider from "@/components/providers/QueryProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Anime Hub",
+  title: {
+    default: "Anime Hub",
+    template: "Anime Hub | %s"
+  },
   description: "Everything for Anime in one place",
   icons: [{
     url: "/logo-dark.png",

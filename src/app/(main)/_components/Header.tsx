@@ -1,13 +1,13 @@
 "use client"
-import useSearchQuery from '@/hooks/useSearchQuery';
 import { UserButton, useSession } from '@clerk/nextjs';
 import { useQueryClient, } from '@tanstack/react-query';
-import { LogIn, Search } from 'lucide-react';
+import { LogIn } from 'lucide-react';
 
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next13-progressbar';
 import React, { useEffect, useRef, ElementRef, useCallback, useState, FormEvent } from 'react'
+import SearchBox from './SearchBox';
 
 const Header = () => {
   const queryClient = useQueryClient()
@@ -15,23 +15,18 @@ const Header = () => {
   const router = useRouter()
   const scrollY = useRef(0)
   const { isSignedIn } = useSession()
-  const { setQuery } = useSearchQuery()
-
 
   const handleSearch = useCallback(async (e: FormEvent) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget as HTMLFormElement)
     const search = formData.get('search')?.toString()!
     router.push(`/anime?query=${search}`)
-    setQuery(search)
-    setTimeout(() => queryClient.invalidateQueries({ queryKey: ['animes'] }))
-  }, [queryClient, router, setQuery])
+    await queryClient.invalidateQueries({ queryKey: ['animes'] })
+  }, [queryClient, router])
 
 
 
   useEffect(() => {
-    // setMounted(true)
-
     if (headerRef.current === null) {
       return
     }
@@ -46,10 +41,6 @@ const Header = () => {
     })
   }, [])
 
-  // if (!mounted) {
-  //   return null
-  // }
-
   return (
     <header ref={headerRef} className="header-transition fixed left-0 right-0 top-0 z-[100] bg-background/90 backdrop-blur-sm">
       <div className="mx-auto flex max-w-[90vw] items-center justify-between px-3">
@@ -58,12 +49,7 @@ const Header = () => {
             <Image src="/logo-header-dark.png" alt="logo" fill className="w-full object-contain" />
           </Link>
         </div>
-        <form onSubmit={handleSearch} className="hidden w-[50vw] items-center overflow-hidden rounded-full bg-zinc-800 sm:flex">
-          <input type="text" name="search" id="search" className="w-[95%] rounded-full bg-transparent px-3 py-2 outline-none" placeholder="Search anime" />
-          <button type="submit">
-            <Search size={20} className="mr-3" />
-          </button>
-        </form>
+        <SearchBox handleSearch={handleSearch} />
         <div className="flex items-center gap-5">
           <div className="flex">
             {(isSignedIn) ? (
@@ -75,12 +61,7 @@ const Header = () => {
         </div>
       </div>
       {/* Mobille Search */}
-      <form onSubmit={handleSearch} className="mx-auto mb-2 flex w-[80vw] items-center overflow-hidden rounded-full bg-zinc-800 sm:hidden">
-        <input type="text" name="search" id="search" className="w-[95%] rounded-full bg-transparent px-3 py-2 outline-none" placeholder="Search anime" />
-        <button type="submit">
-          <Search size={20} className="mr-3" />
-        </button>
-      </form>
+      <SearchBox handleSearch={handleSearch} mobile />
     </header>
   );
 }

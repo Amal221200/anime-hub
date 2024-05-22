@@ -2,13 +2,13 @@ import { create } from "zustand";
 
 
 interface SearchQueryStore {
-    query: string,
-    setQuery: (val: string) => void
+    searchQuery: string,
+    setSearchQuery: (val: string) => void
 }
 
 const useSearchQuery = create<SearchQueryStore>((set) => ({
-    query: "",
-    setQuery: (val) => set({ query: val })
+    searchQuery: "",
+    setSearchQuery: (val) => set({ searchQuery: val })
 }))
 
 export default useSearchQuery;
