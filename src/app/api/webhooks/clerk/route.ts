@@ -69,7 +69,8 @@ export async function POST(req: NextRequest) {
             },
             data: {
                 username: payload.data.username,
-                imageUrl: payload.data.image_url
+                imageUrl: payload.data.image_url,
+                email: payload.data.email_addresses[0].email_address
             }
         })
     }
