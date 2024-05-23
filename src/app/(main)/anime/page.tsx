@@ -9,7 +9,7 @@ export async function generateMetadata({ searchParams: { query } }: { searchPara
     }
 }
 
-const AnimesPage = async ({ searchParams: { query } }: { searchParams: { query: string } }) => {
+const AnimesPage = ({ searchParams: { query } }: { searchParams: { query: string } }) => {
     return (
         <Suspense fallback={<SkeletonSpinner className='h-[85vh]' />}>
             <AnimeSection

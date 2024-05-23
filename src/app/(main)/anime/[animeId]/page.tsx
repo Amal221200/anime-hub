@@ -24,12 +24,12 @@ export async function generateMetadata({ params: { animeId } }: { params: { anim
 const AnimePage = async ({ params: { animeId } }: { params: { animeId: string } }) => {
 
     return (
-        <>
+        <div className='min-h-screen'>
             <AnimeIntro animeId={animeId} />
             <Suspense fallback={<SkeletonSpinner className='h-[50vh]' />}>
                 <ReviewsSection animeId={animeId} />
             </Suspense>
-        </>
+        </div>
     )
 }
 
