@@ -8,13 +8,14 @@ import { useInfiniteQuery, useMutation, useQueryClient } from "@tanstack/react-q
 import { addReview, getReviews } from "./functions";
 import Reviews from "./Reviews";
 import Review from "./Review";
+import SkeletonSpinner from "@/components/SkeletonSpinner";
 
 const ReviewsSection = ({ animeId }: { animeId: string }) => {
     const queryClient = useQueryClient()
     const { isSignedIn } = useSession()
     const { toast } = useToast()
 
-    const { data: reviews } = useInfiniteQuery({
+    const { data: reviews, isLoading } = useInfiniteQuery({
         queryKey: [`reviews ${animeId}`],
         queryFn: getReviews(animeId),
         getNextPageParam: (lastPage) => lastPage.nextPage,
@@ -48,19 +49,22 @@ const ReviewsSection = ({ animeId }: { animeId: string }) => {
             <SectionContainer className="space-y-3">
                 <h2 className="text-3xl font-semibold">Reviews</h2>
                 <ReviewForm handleSubmit={handleSubmit} isLoading={isPending} />
-                <Reviews className="">
-                    {
-                        reviews?.pages && reviews.pages.map(reviews => (
-                            <Fragment key={crypto.randomUUID()}>
-                                {
-                                    reviews.data.map(review => (
-                                        <Review key={review.id} review={review} />
-                                    ))
-                                }
-                            </Fragment>
-                        ))
-                    }
-                </Reviews>
+                {
+                    isLoading ? <SkeletonSpinner className="h-[40vh]" /> :
+                        <Reviews className="">
+                            {
+                                reviews?.pages && reviews.pages.map(reviews => (
+                                    <Fragment key={crypto.randomUUID()}>
+                                        {
+                                            reviews.data.map(review => (
+                                                <Review key={review.id} review={review} />
+                                            ))
+                                        }
+                                    </Fragment>
+                                ))
+                            }
+                        </Reviews>
+                }
             </SectionContainer>
         </section>
     );

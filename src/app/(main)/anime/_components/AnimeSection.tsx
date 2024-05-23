@@ -8,7 +8,6 @@ import useSearchQuery from "@/hooks/useSearchQuery";
 
 import { fetchAnimes } from "./functions";
 
-import Spinner from "@/components/spinner";
 import AnimeCard from "../../_components/AnimeCard";
 import SectionContainer from "@/components/containers/SectionContainer"
 import SkeletonSpinner from "@/components/SkeletonSpinner";
