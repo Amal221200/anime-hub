@@ -50,7 +50,7 @@ const ReviewsSection = ({ animeId }: { animeId: string }) => {
                 <h2 className="text-3xl font-semibold">Reviews</h2>
                 <ReviewForm handleSubmit={handleSubmit} isLoading={isPending} />
                 {
-                    isLoading ? <SkeletonSpinner className="h-[40vh]" /> :
+                    isLoading ? <SkeletonSpinner className="h-[15vh]" /> :
                         <Reviews className="">
                             {
                                 reviews?.pages && reviews.pages.map(reviews => (
