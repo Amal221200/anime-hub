@@ -11,6 +11,7 @@ import { fetchAnimes } from "./functions";
 import Spinner from "@/components/spinner";
 import AnimeCard from "../../_components/AnimeCard";
 import SectionContainer from "@/components/containers/SectionContainer"
+import SkeletonSpinner from "@/components/SkeletonSpinner";
 
 interface AnimeSectionProps extends ComponentProps<'div'> {
     searchQuery: string;
@@ -40,7 +41,7 @@ const AnimeSection = ({ heading, className, searchQuery }: AnimeSectionProps) =>
             <SectionContainer>
                 {
                     status === 'pending' ?
-                        <h1>Loading....</h1> : status === 'error' ?
+                        <SkeletonSpinner className="h-[30vh]" /> : status === 'error' ?
                             <h1>Erorr...</h1> :
                             (
                                 <>
@@ -59,9 +60,7 @@ const AnimeSection = ({ heading, className, searchQuery }: AnimeSectionProps) =>
                                         }
                                     </div>
                                     {(isFetchingNextPage || isLoading) && (
-                                        <div className="my-5 flex justify-center">
-                                            <Spinner />
-                                        </div>
+                                        <SkeletonSpinner className="h-[10vh]" />
                                     )}
                                     <div ref={ref} className="h-5" />
                                 </>

@@ -1,9 +1,11 @@
-
 import { Metadata } from 'next'
 import AnimeIntro from './_components/AnimeIntro'
-import ReviewsSection from './_components/reviews'
 import { getAnime } from '@/lib/actions/anime'
 import { redirect } from 'next/navigation';
+import { lazy, Suspense } from 'react';
+import SkeletonSpinner from '@/components/SkeletonSpinner';
+
+const ReviewsSection = lazy(() => import('./_components/reviews'))
 
 export async function generateMetadata({ params: { animeId } }: { params: { animeId: string } }): Promise<Metadata> {
     const anime = await getAnime(animeId);
@@ -24,7 +26,9 @@ const AnimePage = async ({ params: { animeId } }: { params: { animeId: string } 
     return (
         <>
             <AnimeIntro animeId={animeId} />
-            <ReviewsSection animeId={animeId} />
+            <Suspense fallback={<SkeletonSpinner className='h-[50vh]' />}>
+                <ReviewsSection animeId={animeId} />
+            </Suspense>
         </>
     )
 }
