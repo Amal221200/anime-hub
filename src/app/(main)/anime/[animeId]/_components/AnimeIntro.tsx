@@ -24,7 +24,7 @@ const AnimeIntro = async ({ animeId }: { animeId: string }) => {
                         <ul className="space-y-1 py-3 text-sm sm:space-y-2 sm:text-base">
                             <li><strong>Studio:</strong> {anime.studio}</li>
                             <li><strong>Artist:</strong> {anime.artist}</li>
-                            <li><strong>Year:</strong> {anime.release} <small>{anime.status}</small></li>
+                            <li><strong>Year:</strong> {anime.release.getFullYear()} <small>{anime.status}</small></li>
                             <li><strong>Episodes:</strong> {anime.episodes} | Duration {anime.episodeDuration} mins</li>
                             <li><strong>Genre:</strong> {anime.genre?.map((ele) => `${ele[0].toUpperCase()}${ele.slice(1)}`).join(", ")}</li>
                             <li className="flex items-center gap-2">

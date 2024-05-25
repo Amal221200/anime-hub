@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,6 +8,11 @@ datasource db {
   relationMode = "prisma"
 }
 
+enum ANIME_STATUS {
+  ONGOING
+  COMPLETED
+}
+
 enum USER_ROLE {
   SUPER_ADMIN
   ADMIN
@@ -21,41 +20,44 @@ enum USER_ROLE {
 }
 
 model User {
+  id             String   @id @default(uuid())
+  imageUrl       String   @db.Text
+  externalUserId String   @unique
+  username       String
+  email          String   @unique
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  Review Review[]
+}
+
+model AdminUser {
   id             String    @id @default(uuid())
   imageUrl       String    @db.Text
   externalUserId String    @unique
   username       String
   email          String    @unique
   role           USER_ROLE @default(USER)
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  Review Review[]
-}
-
-enum ANIME_STATUS {
-  ONGOING
-  COMPLETED
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
 }
 
 model Anime {
   id              String       @id @default(uuid())
   title           String
-  description     String
-  watchLink       String
+  description     String       @db.Text
+  watchLink       String       @db.Text
   status          ANIME_STATUS
   studio          String
   artist          String
   episodes        Int
   episodeDuration Int
-  release         Int
+  release         DateTime
   genre           String[]
-  imageLink       String
+  imageLink       String       @db.Text
   createdAt       DateTime     @default(now())
   updatedAt       DateTime     @updatedAt
-
-  Review Review[]
+  Review          Review[]
 }
 
 model Review {
