@@ -9,10 +9,13 @@ import { addReview, getReviews } from "./functions";
 import Reviews from "./Reviews";
 import Review from "./Review";
 import SkeletonSpinner from "@/components/SkeletonSpinner";
+import useAlertModal from "@/hooks/useAlertModal";
+import { AxiosError } from "axios";
 
 const ReviewsSection = ({ animeId }: { animeId: string }) => {
     const queryClient = useQueryClient()
     const { isSignedIn } = useSession()
+    const { onOpen } = useAlertModal()
     const { toast } = useToast()
 
     const { data: reviews, isLoading } = useInfiniteQuery({
@@ -25,8 +28,12 @@ const ReviewsSection = ({ animeId }: { animeId: string }) => {
     const { mutateAsync, isPending } = useMutation({
         mutationKey: [`reviews ${animeId}`],
         mutationFn: addReview(animeId),
-        onSuccess() {
-            queryClient.invalidateQueries({ queryKey: [`reviews ${animeId}`] })
+        onError(error: AxiosError) {
+            onOpen({ title: 'Internal Server Error', description: error.message })
+        },
+        async onSuccess() {
+            await queryClient.invalidateQueries({ queryKey: [`reviews ${animeId}`] })
+            toast({ title: 'SUCCESS', description: 'Review added successfully', variant: 'success' })
         }
     })
 
@@ -35,14 +42,14 @@ const ReviewsSection = ({ animeId }: { animeId: string }) => {
         const form = e.target as HTMLFormElement;
 
         if (!isSignedIn) {
-            return toast({ title: "Unauthorized", description: "Please login to add a review.", variant: "destructive" })
+            return onOpen({ title: 'Unauthorized', description: "Please sign in to review." })
         }
 
         const formData = new FormData(form)
         const review = formData.get('review')?.toString()!
         await mutateAsync({ review })
         form.reset()
-    }, [isSignedIn, toast, mutateAsync])
+    }, [isSignedIn, mutateAsync, onOpen])
 
     return (
         <section className="my-5">
