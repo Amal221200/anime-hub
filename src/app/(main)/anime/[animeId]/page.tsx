@@ -2,10 +2,11 @@ import { Metadata } from 'next'
 import AnimeIntro from './_components/AnimeIntro'
 import { getAnime } from '@/lib/actions/anime'
 import { redirect } from 'next/navigation';
-import { lazy, Suspense } from 'react';
+import { Suspense } from 'react';
 import SkeletonSpinner from '@/components/SkeletonSpinner';
+import dynamic from 'next/dynamic';
 
-const ReviewsSection = lazy(() => import('./_components/reviews'))
+const ReviewsSection = dynamic(() => import('./_components/reviews'))
 
 export async function generateMetadata({ params: { animeId } }: { params: { animeId: string } }): Promise<Metadata> {
     const anime = await getAnime(animeId);

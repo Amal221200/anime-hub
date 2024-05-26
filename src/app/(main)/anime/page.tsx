@@ -1,7 +1,8 @@
 import SkeletonSpinner from '@/components/SkeletonSpinner'
 import { Metadata } from 'next'
-import { lazy, Suspense } from 'react'
-const AnimeSection = lazy(() => import('./_components/AnimeSection'))
+import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
+const AnimeSection = dynamic(() => import('./_components/AnimeSection'), { ssr: false })
 
 export async function generateMetadata({ searchParams: { query } }: { searchParams: { query: string } }): Promise<Metadata> {
     return {

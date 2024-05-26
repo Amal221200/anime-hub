@@ -1,10 +1,11 @@
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
 import Intro from "./_components/Intro";
 import { getAnimes } from "@/lib/actions/anime";
 import AnimeCard from "./_components/AnimeCard";
 import SkeletonSpinner from "@/components/SkeletonSpinner";
+import dynamic from "next/dynamic";
 
-const HomeAnimeSection = lazy(() => import('./_components/HomeAnimeSection'))
+const HomeAnimeSection = dynamic(() => import('./_components/HomeAnimeSection'))
 
 export default async function Home() {
   const { animes } = await getAnimes({ query: '', page: 1, totalAnimes: 12 })
@@ -13,7 +14,7 @@ export default async function Home() {
     <div className="min-h-[calc(100vh-160px)] sm:min-h-[calc(100vh-120px)]">
       <Intro />
       <Suspense fallback={<SkeletonSpinner className="h-[50vh]" />}>
-        <HomeAnimeSection className="">
+        <HomeAnimeSection>
           {
             animes?.length ? (
               animes.map(anime => (

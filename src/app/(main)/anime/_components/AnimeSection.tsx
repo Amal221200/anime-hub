@@ -3,11 +3,8 @@ import { ComponentProps, Fragment, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
 import { useIntersectionObserver } from "usehooks-ts"
-
 import useSearchQuery from "@/hooks/useSearchQuery";
-
 import { fetchAnimes } from "./functions";
-
 import AnimeCard from "../../_components/AnimeCard";
 import SectionContainer from "@/components/containers/SectionContainer"
 import SkeletonSpinner from "@/components/SkeletonSpinner";

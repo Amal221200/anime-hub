@@ -3,7 +3,6 @@ import { ArrowUpRightSquare } from "lucide-react";
 import Image from "next/image"
 import { Anime } from "@prisma/client";
 import { cn } from "@/lib/utils";
-import { forwardRef, LegacyRef } from "react";
 
 interface AnimeCardProps {
     anime: Anime, home?: boolean

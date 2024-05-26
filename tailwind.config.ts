@@ -1,3 +1,4 @@
+import tailwindAnimate from "tailwindcss-animate"
 import type { Config } from "tailwindcss"
 
 const config = {
@@ -53,6 +54,9 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      cursor: {
+        "null": "not-allowed"
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -74,7 +78,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindAnimate],
 } satisfies Config
 
 export default config

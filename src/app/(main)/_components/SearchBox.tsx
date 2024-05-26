@@ -1,5 +1,4 @@
 "use client"
-
 import useSearchQuery from "@/hooks/useSearchQuery"
 import { cn } from "@/lib/utils"
 import { Search } from "lucide-react"

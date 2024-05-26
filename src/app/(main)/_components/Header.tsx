@@ -2,11 +2,10 @@
 import { UserButton, useSession } from '@clerk/nextjs';
 import { useQueryClient, } from '@tanstack/react-query';
 import { LogIn } from 'lucide-react';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next13-progressbar';
-import React, { useEffect, useRef, ElementRef, useCallback, useState, FormEvent } from 'react'
+import React, { useEffect, useRef, ElementRef, useCallback, FormEvent } from 'react'
 import SearchBox from './SearchBox';
 
 const Header = () => {
@@ -60,6 +59,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+
       {/* Mobille Search */}
       <SearchBox handleSearch={handleSearch} mobile />
     </header>

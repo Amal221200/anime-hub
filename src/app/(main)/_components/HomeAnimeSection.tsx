@@ -8,6 +8,7 @@ import { ComponentProps } from "react"
 interface HomeAnimeSectionProps extends ComponentProps<'div'> {
 
 }
+
 const HomeAnimeSection = ({ children, className, ...props }: HomeAnimeSectionProps) => {
     return (
         <section className={cn('my-5', className)} {...props}>

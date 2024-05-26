@@ -2,7 +2,7 @@
 import SectionContainer from "@/components/containers/SectionContainer";
 import { useToast } from "@/components/ui/use-toast";
 import { useSession } from "@clerk/nextjs";
-import { FormEvent, Fragment, useCallback, useState } from "react";
+import { FormEvent, Fragment, useCallback } from "react";
 import ReviewForm from "./ReviewForm";
 import { useInfiniteQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { addReview, getReviews } from "./functions";

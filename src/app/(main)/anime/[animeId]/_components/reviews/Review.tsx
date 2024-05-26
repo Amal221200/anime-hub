@@ -2,7 +2,7 @@
 
 import UserAvatar from "@/components/UserAvatar"
 import { ReviewType } from "./functions"
-import { EllipsisVertical, Menu } from "lucide-react"
+import { EllipsisVertical } from "lucide-react"
 import { useSession } from "@clerk/nextjs";
 
 

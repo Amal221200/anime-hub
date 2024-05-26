@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import React, { ComponentProps, ReactNode } from 'react'
+import React, { ComponentProps } from 'react'
 
 const Reviews = ({ children, className, ...props }: ComponentProps<'div'>) => {
   return (

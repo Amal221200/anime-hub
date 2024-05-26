@@ -1,6 +1,6 @@
 import SectionContainer from '@/components/containers/SectionContainer'
 import { getAnime } from '@/lib/actions/anime'
-import { CirclePlay, Play } from 'lucide-react'
+import { CirclePlay } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'

@@ -5,16 +5,7 @@ import { Button } from '../ui/button'
 import { AlertDialog, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '../ui/alert-dialog'
 
 const AlertModal = () => {
-    const [mounted, setMounted] = useState(false);
     const { open, onClose, title, description } = useAlertModal()
-
-    useEffect(() => {
-        setMounted(true)
-    }, [])
-
-    if (!mounted) {
-        return null
-    }
 
     return (
         <AlertDialog open={open}>
