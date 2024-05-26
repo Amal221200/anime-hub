@@ -7,7 +7,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
             <Header />
-            <main className='mt-[150px] min-h-[calc(100vh-160px)] sm:mt-[100px]'>
+            <main className='mt-[150px] min-h-[calc(100vh-140px)] sm:mt-[100px]'>
                 {children}
                 <AlertModal />
             </main>
