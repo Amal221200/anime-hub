@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useRouter } from 'next13-progressbar';
 import React, { useEffect, useRef, ElementRef, useCallback, FormEvent } from 'react'
 import SearchBox from './SearchBox';
+import useSearchQuery from '@/hooks/useSearchQuery';
 
 const Header = () => {
   const queryClient = useQueryClient()
@@ -14,14 +15,18 @@ const Header = () => {
   const router = useRouter()
   const scrollY = useRef(0)
   const { isSignedIn } = useSession()
-
+  const { setSearchQuery } = useSearchQuery()
+  
   const handleSearch = useCallback(async (e: FormEvent) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget as HTMLFormElement)
     const search = formData.get('search')?.toString()!
+    setSearchQuery(search)
     router.push(`/anime?query=${search}`)
-    await queryClient.invalidateQueries({ queryKey: ['animes'] })
-  }, [queryClient, router])
+    setTimeout(() =>
+      queryClient.invalidateQueries({ queryKey: ['animes'] })
+    )
+  }, [queryClient, router, setSearchQuery])
 
 
 
