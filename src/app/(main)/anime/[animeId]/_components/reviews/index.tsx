@@ -1,41 +1,22 @@
 "use client"
 import SectionContainer from "@/components/containers/SectionContainer";
-import { useToast } from "@/components/ui/use-toast";
 import { useSession } from "@clerk/nextjs";
 import { FormEvent, Fragment, useCallback } from "react";
 import ReviewForm from "./ReviewForm";
-import { useInfiniteQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { addReview, getReviews } from "./functions";
 import Reviews from "./Reviews";
 import Review from "./Review";
 import SkeletonSpinner from "@/components/SkeletonSpinner";
 import useAlertModal from "@/hooks/useAlertModal";
-import { AxiosError } from "axios";
+import useFetchInfiniteReviews from "@/hooks/anime/useFetchInfiniteReviews";
+import useSubmitAnimeReview from "@/hooks/anime/useSubmitAnimeReviewForm";
 
 const ReviewsSection = ({ animeId }: { animeId: string }) => {
-    const queryClient = useQueryClient()
     const { isSignedIn } = useSession()
     const { onOpen } = useAlertModal()
-    const { toast } = useToast()
 
-    const { data: reviews, isLoading } = useInfiniteQuery({
-        queryKey: [`reviews ${animeId}`],
-        queryFn: getReviews(animeId),
-        getNextPageParam: (lastPage) => lastPage.nextPage,
-        initialPageParam: 1,
-    }, queryClient)
+    const { reviews, isLoading } = useFetchInfiniteReviews(animeId)
 
-    const { mutateAsync, isPending } = useMutation({
-        mutationKey: [`reviews ${animeId}`],
-        mutationFn: addReview(animeId),
-        onError(error: AxiosError) {
-            onOpen({ title: 'Internal Server Error', description: error.message })
-        },
-        async onSuccess() {
-            await queryClient.invalidateQueries({ queryKey: [`reviews ${animeId}`] })
-            toast({ title: 'SUCCESS', description: 'Review added successfully', variant: 'success' })
-        }
-    })
+    const { mutateAsync, isPending } = useSubmitAnimeReview(animeId)
 
     const handleSubmit = useCallback(async (e: FormEvent) => {
         e.preventDefault();
@@ -60,7 +41,7 @@ const ReviewsSection = ({ animeId }: { animeId: string }) => {
                     isLoading ? <SkeletonSpinner className="h-[15vh]" /> :
                         <Reviews className="">
                             {
-                                reviews?.pages && reviews.pages.map(reviews => (
+                                reviews?.pages?.map(reviews => (
                                     <Fragment key={crypto.randomUUID()}>
                                         {
                                             reviews.data.map(review => (

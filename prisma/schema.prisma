@@ -16,6 +16,7 @@ enum ANIME_STATUS {
 enum USER_ROLE {
   SUPER_ADMIN
   ADMIN
+  AUTHOR
   USER
 }
 

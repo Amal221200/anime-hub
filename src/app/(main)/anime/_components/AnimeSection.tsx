@@ -1,13 +1,10 @@
 "use client";
-import { ComponentProps, Fragment, useEffect } from "react";
+import { ComponentProps, Fragment } from "react";
 import { cn } from "@/lib/utils";
-import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
-import { useIntersectionObserver } from "usehooks-ts"
-import useSearchQuery from "@/hooks/useSearchQuery";
-import { fetchAnimes } from "./functions";
 import AnimeCard from "../../_components/AnimeCard";
 import SectionContainer from "@/components/containers/SectionContainer"
 import SkeletonSpinner from "@/components/SkeletonSpinner";
+import useFetchInfinitAnimes from "@/hooks/anime/useFetchInfiniteAnimes";
 
 interface AnimeSectionProps extends ComponentProps<'div'> {
     searchQuery: string;
@@ -15,22 +12,7 @@ interface AnimeSectionProps extends ComponentProps<'div'> {
 }
 
 const AnimeSection = ({ heading, className, searchQuery }: AnimeSectionProps) => {
-    const queryClient = useQueryClient()
-    const { searchQuery: currentSearchQuery } = useSearchQuery()
-    const { isIntersecting, ref } = useIntersectionObserver({ threshold: 0.5 });
-
-    const { data: animes, status, fetchNextPage, isFetchingNextPage, isLoading } = useInfiniteQuery({
-        queryKey: ['animes'],
-        queryFn: fetchAnimes(currentSearchQuery, searchQuery),
-        getNextPageParam: (lastPage) => lastPage.nextPage,
-        initialPageParam: 1,
-    }, queryClient)
-
-    useEffect(() => {
-        if (isIntersecting) {
-            fetchNextPage()
-        }
-    }, [isIntersecting, fetchNextPage])
+    const { animes, status, intersectingRef, isFetchingNextPage, isLoading } = useFetchInfinitAnimes(searchQuery)
 
     return (
         <section className={cn("my-5", className)}>
@@ -47,7 +29,7 @@ const AnimeSection = ({ heading, className, searchQuery }: AnimeSectionProps) =>
                                             animes?.pages[0].data.length ? animes?.pages?.map((animes) => (
                                                 <Fragment key={crypto.randomUUID()}>
                                                     {
-                                                        animes.data.map((anime, ind) => (
+                                                        animes.data.map((anime) => (
                                                             <AnimeCard anime={anime} key={anime.id} />
                                                         ))
                                                     }
@@ -58,7 +40,7 @@ const AnimeSection = ({ heading, className, searchQuery }: AnimeSectionProps) =>
                                     {(isFetchingNextPage || isLoading) && (
                                         <SkeletonSpinner className="h-[10vh]" />
                                     )}
-                                    <div ref={ref} className="h-5" />
+                                    <div ref={intersectingRef} className="h-5" />
                                 </>
                             )
                 }

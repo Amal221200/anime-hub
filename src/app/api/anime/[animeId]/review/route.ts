@@ -46,14 +46,22 @@ export async function POST(request: NextRequest, { params: { animeId } }: Review
 
         return NextResponse.json(newReview, { status: 201 })
     } catch (error) {
-
+        return NextResponse.json("Internal Server Error at POST REVIEW", { status: 500 })
     }
 }
 
 export async function PUT(request: NextRequest) {
-
+    try {
+        
+    } catch (error) {
+        return NextResponse.json("Internal Server Error at PUT REVIEW [reviewId]", { status: 500 })
+    }
 }
 
 export async function DELETE(request: NextRequest) {
-
+    try {
+        
+    } catch (error) {
+        return NextResponse.json("Internal Server Error at DELETE REVIEW [reviewID]", { status: 500 })
+    }
 }

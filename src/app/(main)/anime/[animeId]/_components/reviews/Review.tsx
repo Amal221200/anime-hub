@@ -1,7 +1,7 @@
 "use client";
 
 import UserAvatar from "@/components/UserAvatar"
-import { ReviewType } from "./functions"
+import { ReviewType } from "@/hooks/functions/review";
 import { EllipsisVertical } from "lucide-react"
 import { useSession } from "@clerk/nextjs";
 
