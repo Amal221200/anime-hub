@@ -9,12 +9,13 @@ import { cn } from "@/lib/utils";
 import useDeleteReview from "@/hooks/anime/useDeleteReview";
 import EditReview from "./EditReview";
 import dateFormatter from "@/utils/dateFormatter";
+import useDialogModal from "@/hooks/useDialogModal";
 
 const Review = ({ review }: { review: ReviewType }) => {
     const { session } = useSession()
     const [menuOpen, setMenuOpen] = useState(false)
     const [editMode, setEditMode] = useState(false)
-
+    const { onOpen: onDialogOpen } = useDialogModal()
     const { deleteMutation, deletePending } = useDeleteReview({ reviewId: review.id, animeId: review.animeId })
     const toggleMenuOpen = useCallback(() => {
         if (editMode) {
@@ -27,9 +28,14 @@ const Review = ({ review }: { review: ReviewType }) => {
         if (deletePending) {
             return
         }
-        await deleteMutation()
+        
+        onDialogOpen({
+            title: "Are you sure?", description: "Do you want to delete this review?", async action() {
+                await deleteMutation()
+            }
+        })
         setMenuOpen(false)
-    }, [deleteMutation, deletePending])
+    }, [deleteMutation, deletePending, onDialogOpen])
 
     const onEdit = useCallback(() => {
         setMenuOpen(false)
