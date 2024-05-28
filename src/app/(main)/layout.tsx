@@ -4,7 +4,7 @@ import Footer from './_components/Footer'
 import dynamic from 'next/dynamic'
 
 const AlertModal = dynamic(() => import('@/components/modal/AlertModal'), { ssr: false })
-const Toaster = dynamic(() => import('@/components/ui/toaster'), { ssr: false })
+const Toaster = dynamic(() => import('@/components/ui/sonner'), { ssr: false })
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -13,7 +13,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
             <main className='mt-[150px] min-h-[calc(100vh-140px)] sm:mt-[100px]'>
                 {children}
                 <Suspense>
-                    <Toaster />
+                    <Toaster richColors position='top-right' />
                     <AlertModal />
                 </Suspense>
             </main>

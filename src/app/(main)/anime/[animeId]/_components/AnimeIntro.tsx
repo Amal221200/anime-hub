@@ -1,5 +1,7 @@
 import SectionContainer from '@/components/containers/SectionContainer'
 import { getAnime } from '@/lib/actions/anime'
+import { cn } from '@/lib/utils'
+import dateFormatter from '@/utils/dateFormatter'
 import { CirclePlay } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,7 +13,7 @@ const AnimeIntro = async ({ animeId }: { animeId: string }) => {
     if (!anime) {
         redirect("/404")
     }
-    
+
     return (
         <main>
             <SectionContainer>
@@ -24,8 +26,13 @@ const AnimeIntro = async ({ animeId }: { animeId: string }) => {
                         <ul className="space-y-1 py-3 text-sm sm:space-y-2 sm:text-base">
                             <li><strong>Studio:</strong> {anime.studio}</li>
                             <li><strong>Artist:</strong> {anime.artist}</li>
-                            <li><strong>Year:</strong> {anime.release.getFullYear()} <small>{anime.status}</small></li>
-                            <li><strong>Episodes:</strong> {anime.episodes} | Duration {anime.episodeDuration} mins</li>
+                            <li>
+                                <strong>Release:</strong> {dateFormatter(anime.release)} |&nbsp;
+                                <small className={cn('font-medium', anime.status === 'COMPLETED' ? 'text-emerald-500' : 'text-orange-500')}>
+                                    {anime.status}
+                                </small>
+                            </li>
+                            <li><strong>Episodes:</strong> {anime.episodes} | <strong>Duration: </strong> {anime.episodeDuration} mins</li>
                             <li><strong>Genre:</strong> {anime.genre?.map((ele) => `${ele[0].toUpperCase()}${ele.slice(1)}`).join(", ")}</li>
                             <li className="flex items-center gap-2">
                                 <Link href={anime.watchLink} target="_blank" className="rounded-md bg-emerald-400 px-2 py-1 text-black transition-all hover:bg-emerald-500">

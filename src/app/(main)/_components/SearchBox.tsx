@@ -1,5 +1,4 @@
 "use client"
-import useSearchQuery from "@/hooks/useSearchQuery"
 import { cn } from "@/lib/utils"
 import { Search } from "lucide-react"
 import { ComponentProps, FormEvent, useCallback } from "react"
@@ -10,12 +9,6 @@ interface SearchBoxProps extends ComponentProps<'form'> {
 }
 
 const SearchBox = ({ handleSearch, className, mobile, ...props }: SearchBoxProps) => {
-    const { setSearchQuery } = useSearchQuery()
-    
-    // const handleInput = useCallback((e: FormEvent<HTMLInputElement>) => {
-    //     setSearchQuery(e.currentTarget.value)
-    // }, [setSearchQuery])
-    
     return (
         <search>
             <form onSubmit={handleSearch} {...props} className={cn("items-center overflow-hidden rounded-full bg-zinc-800", mobile ? "mx-auto mb-2 flex w-[80vw] items-center sm:hidden" : "hidden sm:flex w-[50vw]")}>

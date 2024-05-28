@@ -1,5 +1,4 @@
 'use client'
-import { useEffect, useState } from 'react'
 import useAlertModal from '@/hooks/useAlertModal'
 import { Button } from '../ui/button'
 import { AlertDialog, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '../ui/alert-dialog'

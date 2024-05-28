@@ -17,3 +17,17 @@ export function addReview(animeId: string) {
         return response.data
     }
 }
+
+export function editReview(animeId: string, reviewId: string) {
+    return async (data: { review: string }) => {
+        const response = await axios.put(`/api/anime/${animeId}/review/${reviewId}`, { review: data.review });
+        return response.data
+    }
+}
+
+export function deleteReview(animeId: string, reviewId: string) {
+    return async () => {
+        const response = await axios.delete(`/api/anime/${animeId}/review/${reviewId}`);
+        return response.data
+    }
+}

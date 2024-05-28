@@ -8,6 +8,7 @@ export default function useFetchInfiniteReviews(animeId: string) {
         queryFn: getReviews(animeId),
         getNextPageParam: (lastPage) => lastPage.nextPage,
         initialPageParam: 1,
+        refetchOnWindowFocus: false
     }, queryClient)
 
 
