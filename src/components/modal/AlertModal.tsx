@@ -9,7 +9,7 @@ const AlertModal = () => {
     return (
         <AlertDialog open={open}>
             <AlertDialogContent className='border-zinc-800 bg-[rgb(5,0,0)]'>
-                <AlertDialogHeader >
+                <AlertDialogHeader>
                     <AlertDialogTitle className='text-red-600'>{title}</AlertDialogTitle>
                     <AlertDialogDescription className='text-red-600'>
                         {description}
