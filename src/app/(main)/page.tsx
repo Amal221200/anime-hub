@@ -1,11 +1,10 @@
-import { Suspense } from "react";
 import Intro from "./_components/Intro";
 import { getAnimes } from "@/lib/actions/anime";
 import AnimeCard from "./_components/AnimeCard";
 import SkeletonSpinner from "@/components/SkeletonSpinner";
 import dynamic from "next/dynamic";
 
-const HomeAnimeSection = dynamic(() => import('./_components/HomeAnimeSection'))
+const HomeAnimeSection = dynamic(() => import('./_components/HomeAnimeSection'), { loading: () => <SkeletonSpinner className="h-[50vh]" /> })
 
 export default async function Home() {
   const { animes } = await getAnimes({ query: '', page: 1, totalAnimes: 12 })
@@ -13,7 +12,6 @@ export default async function Home() {
   return (
     <div className="min-h-[calc(100vh-160px)] sm:min-h-[calc(100vh-120px)]">
       <Intro />
-      <Suspense fallback={<SkeletonSpinner className="h-[50vh]" />}>
         <HomeAnimeSection>
           {
             animes?.length ? (
@@ -23,7 +21,6 @@ export default async function Home() {
             ) : <h1 className="text-center">{"Couldn't"} fetch anime</h1>
           }
         </HomeAnimeSection>
-      </Suspense>
     </div>
   );
 }

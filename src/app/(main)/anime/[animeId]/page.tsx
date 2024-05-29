@@ -6,7 +6,7 @@ import { Suspense } from 'react';
 import SkeletonSpinner from '@/components/SkeletonSpinner';
 import dynamic from 'next/dynamic';
 
-const ReviewsSection = dynamic(() => import('./_components/reviews'))
+const ReviewsSection = dynamic(() => import('./_components/reviews'), { loading: () => <SkeletonSpinner className='h-[50vh]' /> })
 
 export async function generateMetadata({ params: { animeId } }: { params: { animeId: string } }): Promise<Metadata> {
     const anime = await getAnime(animeId);
@@ -27,9 +27,7 @@ const AnimePage = async ({ params: { animeId } }: { params: { animeId: string } 
     return (
         <div className='min-h-screen'>
             <AnimeIntro animeId={animeId} />
-            <Suspense fallback={<SkeletonSpinner className='h-[50vh]' />}>
-                <ReviewsSection animeId={animeId} />
-            </Suspense>
+            <ReviewsSection animeId={animeId} />
         </div>
     )
 }

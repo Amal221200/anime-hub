@@ -1,7 +1,6 @@
-import { Suspense } from 'react'
+import dynamic from 'next/dynamic'
 import Header from './_components/Header'
 import Footer from './_components/Footer'
-import dynamic from 'next/dynamic'
 
 const DialogModal = dynamic(() => import("@/components/modal/DialogModal"), { ssr: false })
 const AlertModal = dynamic(() => import('@/components/modal/AlertModal'), { ssr: false })
@@ -13,11 +12,9 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
             <Header />
             <main className='mt-[150px] min-h-[calc(100vh-140px)] sm:mt-[100px]'>
                 {children}
-                <Suspense>
-                    <Toaster richColors position='top-right' />
-                    <AlertModal />
-                    <DialogModal />
-                </Suspense>
+                <Toaster richColors position='top-right' />
+                <AlertModal />
+                <DialogModal />
             </main>
             <Footer />
         </>

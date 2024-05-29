@@ -1,4 +1,5 @@
 "use client";
+import dynamic from "next/dynamic";
 import UserAvatar from "@/components/UserAvatar"
 import { ReviewType } from "@/hooks/functions/review";
 import { EllipsisVertical } from "lucide-react"
@@ -7,9 +8,11 @@ import ReviewActionMenu from "@/components/ReviewActionMenu";
 import { useCallback, useState } from "react";
 import { cn } from "@/lib/utils";
 import useDeleteReview from "@/hooks/anime/useDeleteReview";
-import EditReview from "./EditReview";
 import dateFormatter from "@/utils/dateFormatter";
 import useDialogModal from "@/hooks/useDialogModal";
+import SkeletonSpinner from "@/components/SkeletonSpinner";
+
+const EditReview = dynamic(import("./EditReview"), { loading: () => <SkeletonSpinner />, ssr: false });
 
 const Review = ({ review }: { review: ReviewType }) => {
     const { session } = useSession()
@@ -28,7 +31,7 @@ const Review = ({ review }: { review: ReviewType }) => {
         if (deletePending) {
             return
         }
-        
+
         onDialogOpen({
             title: "Are you sure?", description: "Do you want to delete this review?", async action() {
                 await deleteMutation()
