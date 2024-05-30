@@ -5,14 +5,13 @@ import AnimeCard from "../../_components/AnimeCard";
 import SectionContainer from "@/components/containers/SectionContainer"
 import SkeletonSpinner from "@/components/SkeletonSpinner";
 import useFetchInfinitAnimes from "@/hooks/anime/useFetchInfiniteAnimes";
-
 interface AnimeSectionProps extends ComponentProps<'div'> {
     searchQuery: string;
     heading?: string;
 }
 
 const AnimeSection = ({ heading, className, searchQuery }: AnimeSectionProps) => {
-    const { animes, status, intersectingRef, isFetchingNextPage, isLoading } = useFetchInfinitAnimes(searchQuery)
+    const { animes, status, intersectingRef, isFetchingNextPage, isLoading } = useFetchInfinitAnimes()
 
     return (
         <section className={cn("my-5", className)}>
@@ -20,7 +19,7 @@ const AnimeSection = ({ heading, className, searchQuery }: AnimeSectionProps) =>
                 {
                     status === 'pending' ?
                         <SkeletonSpinner className="h-[30vh]" /> : status === 'error' ?
-                            <h1>Erorr...</h1> :
+                            <h1>Error...</h1> :
                             (
                                 <>
                                     <h2 className="mb-3 text-3xl font-semibold">{heading || 'Popular Anime'}</h2>

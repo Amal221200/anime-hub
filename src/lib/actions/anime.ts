@@ -8,15 +8,15 @@ export async function getAnimes({ query, page = 1, totalAnimes = false }: { quer
             {
                 where: {
                     imageLink: { startsWith: process.env.NODE_ENV === 'development' ? "" : "" },
-                    title: { contains: query ? query : '', mode: "insensitive" }
+                    title: { contains: query === 'all' ? '' : query, mode: "insensitive" }
                 },
                 orderBy: { title: 'asc' },
                 take: isLimit || undefined,
                 skip: ((page - 1) * isLimit) || undefined
             }
-        );        
+        );
 
-        const animesLength = await db.anime.count({ where: { title: { contains: query ? query : '', mode: "insensitive" } } });
+        const animesLength = await db.anime.count({ where: { title: { contains: query === 'all' ? '' : query, mode: "insensitive" } } });
 
         const totalPages = Math.ceil(animesLength / isLimit)
 

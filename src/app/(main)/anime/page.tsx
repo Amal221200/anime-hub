@@ -1,19 +1,23 @@
 import SkeletonSpinner from '@/components/SkeletonSpinner'
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
+import { redirect } from 'next/navigation'
 
-const AnimeSection = dynamic(() => import('./_components/AnimeSection'), { ssr: false, loading: () => <SkeletonSpinner className="h-[85vh]" /> })
+const AnimeBody = dynamic(() => import('./_components/AnimeBody'), { ssr: false, loading: () => <SkeletonSpinner className="h-[85vh]" /> })
 
 export async function generateMetadata({ searchParams: { query } }: { searchParams: { query: string } }): Promise<Metadata> {
     return {
-        title: query ? `Results of ${query}` : "All Anime"
+        title: query === 'all' ? "All Anime" : `Results of ${query}`
     }
 }
 
 const AnimesPage = ({ searchParams: { query } }: { searchParams: { query: string } }) => {
+    if (!query) {
+        redirect('/anime?query=all')
+    }
+
     return (
-        <AnimeSection
-            heading={query ? `Results of ${query}` : 'All Animes'} searchQuery={query} className='min-h-[calc(100dvh-160px)]' />
+        <AnimeBody query={query} />
     )
 }
 

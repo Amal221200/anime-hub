@@ -1,4 +1,5 @@
 import SectionContainer from "@/components/containers/SectionContainer"
+import MoreButton from "@/components/MoreButton"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { CircleArrowRight } from "lucide-react"
@@ -16,11 +17,7 @@ const HomeAnimeSection = ({ children, className, ...props }: HomeAnimeSectionPro
                 <h2 className="mb-3 text-3xl font-semibold">{'Popular Anime'}</h2>
                 <div className="no-scrollbar grid grid-cols-[repeat(13,auto)] items-center gap-x-3 overflow-x-scroll">
                     {children}
-                    <Button variant="ghost" type="button" size="icon" className="rounded-full" asChild>
-                        <Link href="/anime">
-                            <CircleArrowRight />
-                        </Link>
-                    </Button>
+                    <MoreButton to="/anime" queryKey="fetch_animes" />
                 </div>
             </SectionContainer>
         </section>

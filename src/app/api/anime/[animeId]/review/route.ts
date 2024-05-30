@@ -1,4 +1,4 @@
-import { getReviews } from "@/lib/actions/review";
+import { getReviews } from "@/lib/actions/anime-review";
 import { getUser } from "@/lib/actions/user";
 import db from "@/lib/db";
 import { currentUser } from "@clerk/nextjs/server";

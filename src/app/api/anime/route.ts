@@ -5,7 +5,7 @@ export async function GET(request: NextRequest) {
     try {
         const query = request.nextUrl.searchParams.get('query')
         const page = parseInt(request.nextUrl.searchParams.get('page') || '0')
-        const { animes, totalPages } = await getAnimes({ query: query || '', page, totalAnimes: 12 })
+        const { animes, totalPages } = await getAnimes({ query: query || 'all', page, totalAnimes: 12 })
         return NextResponse.json({ animes, totalPages, page }, { status: 200 })
     } catch (error) {
         console.log("GET ANIME API");

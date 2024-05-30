@@ -10,7 +10,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
             <Header />
-            <main className='mt-[150px] min-h-[calc(100vh-140px)] sm:mt-[100px]'>
+            <main className='mt-[100px] min-h-[calc(100vh-140px)]'>
                 {children}
                 <Toaster richColors position='top-right' />
                 <AlertModal />
