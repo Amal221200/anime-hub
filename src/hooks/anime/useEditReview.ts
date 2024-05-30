@@ -9,10 +9,10 @@ export default function useEditReview(review: { animeId: string, reviewId: strin
     const { onOpen: onAlertOpen } = useAlertModal()
 
     const { mutateAsync, isPending } = useMutation({
-        mutationKey: [`edit review ${review.animeId}`],
+        mutationKey: [`edit review`, review.animeId, review.reviewId],
         mutationFn: editReview(review.animeId, review.reviewId),
         async onSuccess() {
-            await queryClient.invalidateQueries({ queryKey: [`reviews ${review.animeId}`] })
+            await queryClient.invalidateQueries({ queryKey: [`reviews`, review.animeId] })
             toast.success("REVIEW EDITED", {})
         },
         onError(error: AxiosError) {

@@ -11,7 +11,7 @@ const HomeBlogSection = dynamic(() => import('./_components/anime/HomeAnimeSecti
 
 export default async function Home() {
   const { animes } = await getAnimes({ query: '', page: 1, totalAnimes: 12 })
-  // const { blogs } = await getBlogs({ query: '', page: 1, totalBlogs: 12 })
+  const { blogs } = await getBlogs({ query: '', page: 1, totalBlogs: 12 })
 
   return (
     <div className="min-h-[calc(100vh-160px)] sm:min-h-[calc(100vh-120px)]">

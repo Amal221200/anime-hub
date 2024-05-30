@@ -9,8 +9,10 @@ import dynamic from 'next/dynamic';
 import SkeletonSpinner from '@/components/SkeletonSpinner';
 
 
-const AnimeSection = dynamic(() => import('../_components/AnimeSection'), { ssr: false, loading: () => 
-<SkeletonSpinner className="h-[85vh]" /> })
+const AnimeSection = dynamic(() => import('../_components/AnimeSection'), {
+    ssr: false, loading: () =>
+        <SkeletonSpinner className="h-[85vh]" />
+})
 
 const AnimeBody = ({ query }: { query: string }) => {
     const queryClient = useQueryClient()
@@ -21,7 +23,7 @@ const AnimeBody = ({ query }: { query: string }) => {
         setSearchQuery(query || 'all');
         router.push(`/anime?query=${query || 'all'}`)
         setTimeout(() => {
-            queryClient.invalidateQueries({ queryKey: ['fetch_animes'] })
+            queryClient.invalidateQueries({ queryKey: ['fetch_animes', { query: query || 'all' }] })
         })
     }, [router, queryClient, setSearchQuery])
 

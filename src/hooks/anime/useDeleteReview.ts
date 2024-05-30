@@ -9,10 +9,10 @@ export default function useDeleteReview(review: { animeId: string, reviewId: str
     const { onOpen: onAlertOpen } = useAlertModal()
 
     const { mutateAsync, isPending } = useMutation({
-        mutationKey: [`delete review ${review.animeId}`],
+        mutationKey: [`delete review`, review.animeId, review.reviewId],
         mutationFn: deleteReview(review.animeId, review.reviewId),
         async onSuccess() {
-            await queryClient.invalidateQueries({ queryKey: [`reviews ${review.animeId}`] })
+            await queryClient.invalidateQueries({ queryKey: [`reviews`, review.animeId] })
             toast.success("REVIEW DELETED")
         },
         onError(error: AxiosError) {

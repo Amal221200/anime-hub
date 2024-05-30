@@ -10,7 +10,7 @@ export default function useSubmitAnimeReview(animeId: string) {
     const { onOpen } = useAlertModal()
 
     const { mutateAsync, isPending } = useMutation({
-        mutationKey: [`reviews ${animeId}`],
+        mutationKey: [`reviews`, animeId],
         mutationFn: addReview(animeId),
         onError(error: AxiosError) {
             onOpen({ title: 'Internal Server Error', description: error.message })
