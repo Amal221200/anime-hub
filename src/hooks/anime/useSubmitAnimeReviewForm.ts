@@ -16,7 +16,7 @@ export default function useSubmitAnimeReview(animeId: string) {
             onOpen({ title: 'Internal Server Error', description: error.message })
         },
         async onSuccess() {
-            await queryClient.invalidateQueries({ queryKey: [`reviews ${animeId}`] })
+            await queryClient.invalidateQueries({ queryKey: [`reviews`, animeId] })
             toast.success('SUCCESS', { description: 'Review added successfully' })
         }
     })

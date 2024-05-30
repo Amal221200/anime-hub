@@ -10,9 +10,7 @@ import { cn } from "@/lib/utils";
 import useDeleteReview from "@/hooks/anime/useDeleteReview";
 import dateFormatter from "@/utils/dateFormatter";
 import useDialogModal from "@/hooks/useDialogModal";
-import SkeletonSpinner from "@/components/SkeletonSpinner";
-
-const EditReview = dynamic(import("./EditReview"), { loading: () => <SkeletonSpinner />, ssr: false });
+import EditReview from "./EditReview";
 
 const Review = ({ review }: { review: ReviewType }) => {
     const { session } = useSession()
