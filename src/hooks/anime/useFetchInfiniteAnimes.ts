@@ -3,18 +3,22 @@ import useSearchQuery from "../useSearchQuery";
 import { useIntersectionObserver } from "usehooks-ts";
 import { useEffect } from "react";
 import { fetchAnimes } from "../functions/anime";
+import { useSearchParams } from "next/navigation";
 
 
-export default function useFetchInfinitAnimes(searchQuery: string) {
+export default function useFetchInfinitAnimes() {
     const queryClient = useQueryClient()
-    const { searchQuery: currentSearchQuery } = useSearchQuery()
     const { isIntersecting, ref: intersectingRef } = useIntersectionObserver({ threshold: 0.5 });
+    const { searchQuery } = useSearchQuery()
+    const searchParams = useSearchParams()
 
-    const { data: animes, status, fetchNextPage, isFetchingNextPage, isLoading } = useInfiniteQuery({
-        queryKey: ['animes'],
-        queryFn: fetchAnimes(currentSearchQuery, searchQuery),
+    const { data: animes, status, fetchNextPage, isFetchingNextPage, isLoading, refetch } = useInfiniteQuery({
+        queryKey: ['fetch_animes'],
+        queryFn: fetchAnimes(searchQuery, searchParams.get('query') || ''),
         getNextPageParam: (lastPage) => lastPage.nextPage,
         initialPageParam: 1,
+        staleTime: 100,
+        
     }, queryClient)
 
     useEffect(() => {
@@ -28,6 +32,7 @@ export default function useFetchInfinitAnimes(searchQuery: string) {
         status,
         isFetchingNextPage,
         isLoading,
-        intersectingRef
+        intersectingRef,
+        refetch
     }
 }

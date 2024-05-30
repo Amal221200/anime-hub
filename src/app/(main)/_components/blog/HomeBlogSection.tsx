@@ -1,27 +1,24 @@
 import SectionContainer from "@/components/containers/SectionContainer"
 import MoreButton from "@/components/MoreButton"
-import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { CircleArrowRight } from "lucide-react"
-import Link from "next/link"
 import { ComponentProps } from "react"
 
-interface HomeAnimeSectionProps extends ComponentProps<'div'> {
+interface HomeBlogSectionProps extends ComponentProps<'div'> {
 
 }
 
-const HomeAnimeSection = ({ children, className, ...props }: HomeAnimeSectionProps) => {
+const HomeBlogSection = ({ children, className, ...props }: HomeBlogSectionProps) => {
     return (
         <section className={cn('my-5', className)} {...props}>
             <SectionContainer>
-                <h2 className="mb-3 text-3xl font-semibold">{'Popular Anime'}</h2>
+                <h2 className="mb-3 text-3xl font-semibold">{'Latest Blogs'}</h2>
                 <div className="no-scrollbar grid grid-cols-[repeat(13,auto)] items-center gap-x-3 overflow-x-scroll">
                     {children}
-                    <MoreButton to="/anime" queryKey="fetch_animes" />
+                    <MoreButton to="/blog" queryKey="fetch_blogs" />
                 </div>
             </SectionContainer>
         </section>
     )
 }
 
-export default HomeAnimeSection
+export default HomeBlogSection

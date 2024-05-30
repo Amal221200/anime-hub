@@ -8,7 +8,9 @@ interface SearchQueryStore {
 
 const useSearchQuery = create<SearchQueryStore>((set) => ({
     searchQuery: "",
-    setSearchQuery: (val) => set({ searchQuery: val })
+    setSearchQuery: (val) => {
+        set({ searchQuery: val })
+    }
 }))
 
 export default useSearchQuery;
