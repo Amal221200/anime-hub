@@ -1,4 +1,4 @@
-import { deleteReview, editReview } from "@/lib/actions/review";
+import { deleteReview, editReview } from "@/lib/actions/anime-review";
 import { currentUser } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 
