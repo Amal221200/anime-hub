@@ -1,4 +1,4 @@
-import { deleteReview, editReview } from "@/lib/actions/anime-review";
+import { deleteAnimeReview, editAnimeReview } from "@/lib/actions/anime-review";
 import getCurrentUser from "@/lib/actions/getCurrentUser";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -24,7 +24,7 @@ export async function PUT(request: NextRequest, { params: { reviewId } }: Review
             return NextResponse.json("Review is required", { status: 400 })
         }
 
-        const updatedReview = await editReview(reviewId, review)
+        const updatedReview = await editAnimeReview(reviewId, review)
 
         return NextResponse.json(updatedReview)
     } catch (error) {
@@ -40,7 +40,7 @@ export async function DELETE(request: NextRequest, { params: { reviewId } }: Rev
             return NextResponse.json("Unauthorized", { status: 401 })
         }
 
-        const deletedReview = await deleteReview(reviewId);
+        const deletedReview = await deleteAnimeReview(reviewId);
 
         return NextResponse.json(deletedReview)
     } catch (error) {

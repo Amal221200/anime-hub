@@ -1,4 +1,4 @@
-import { Blog, BlogReview, Review, User } from "@prisma/client";
+import { Blog, BlogReview, AnimeReview, User } from "@prisma/client";
 
 export type BlogType = Blog & {
     author: {
@@ -18,5 +18,5 @@ export type BlogWithAuthor = Blog & {
     }
 }
 
-export type AnimeReviewType = Review & { user: User };
+export type AnimeReviewType = AnimeReview & { user: User };
 export type BlogReviewType = BlogReview & { user: User };

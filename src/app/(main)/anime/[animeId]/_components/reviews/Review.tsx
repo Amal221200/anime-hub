@@ -58,7 +58,7 @@ const Review = ({ review }: { review: AnimeReviewType }) => {
                     <small className="block text-left text-xs text-muted-foreground">
                         {review.createdAt === review.updatedAt ? '(added)' : '(edited)'} {dateFormatter(new Date(review.createdAt))}
                     </small>
-                    <p className="text-sm sm:text-base">{review.content}</p>
+                    <p className="text-sm sm:text-base">{review.review}</p>
                 </div>
             </div>
 

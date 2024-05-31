@@ -1,4 +1,4 @@
-import { getReviews } from "@/lib/actions/anime-review";
+import { getAnimeReviews, addAnimeReview } from "@/lib/actions/anime-review";
 import getCurrentUser from "@/lib/actions/getCurrentUser";
 import db from "@/lib/db";
 import { NextRequest, NextResponse } from "next/server";
@@ -12,7 +12,7 @@ interface ReviewParams {
 export async function GET(request: NextRequest, { params: { animeId } }: ReviewParams) {
     try {
         const page = parseInt(request.nextUrl.searchParams.get('page') || '1')
-        const { reviews, totalPages } = await getReviews({ animeId, page, totalReviews: 10 });
+        const { reviews, totalPages } = await getAnimeReviews({ animeId, page, totalReviews: 6 });
 
         return NextResponse.json({ reviews, totalPages })
     } catch (error) {
@@ -35,7 +35,7 @@ export async function POST(request: NextRequest, { params: { animeId } }: Review
             return NextResponse.json("Invalid values", { status: 402 })
         }
 
-        const newReview = await db.review.create({ data: { content: review, userId: user.id, animeId } })
+        const newReview = await addAnimeReview(review, user.id, animeId)
 
         return NextResponse.json(newReview, { status: 201 })
     } catch (error) {

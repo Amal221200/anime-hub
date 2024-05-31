@@ -29,7 +29,7 @@ model User {
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
 
-  Review     Review[]
+  Review     AnimeReview[]
   BlogReview BlogReview[]
 }
 
@@ -46,10 +46,10 @@ model AdminUser {
 }
 
 model Anime {
-  id              String       @id @default(uuid())
+  id              String        @id @default(uuid())
   title           String
-  description     String       @db.Text
-  watchLink       String       @db.Text
+  description     String        @db.Text
+  watchLink       String        @db.Text
   status          ANIME_STATUS
   studio          String
   artist          String
@@ -57,10 +57,26 @@ model Anime {
   episodeDuration Int
   release         DateTime
   genre           String[]
-  imageLink       String       @db.Text
-  createdAt       DateTime     @default(now())
-  updatedAt       DateTime     @updatedAt
-  Review          Review[]
+  imageLink       String        @db.Text
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  Review          AnimeReview[]
+}
+
+model AnimeReview {
+  id      String @id @default(uuid())
+  review  String
+  userId  String
+  animeId String
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  anime Anime @relation(fields: [animeId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([animeId])
 }
 
 model Blog {
@@ -92,20 +108,4 @@ model BlogReview {
 
   @@index([blogId])
   @@index([userId])
-}
-
-model Review {
-  id      String @id @default(uuid())
-  content String
-  userId  String
-  animeId String
-
-  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
-  anime Anime @relation(fields: [animeId], references: [id], onDelete: Cascade)
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@index([userId])
-  @@index([animeId])
 }

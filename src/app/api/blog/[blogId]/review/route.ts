@@ -11,7 +11,7 @@ interface ReviewParams {
 export async function GET(request: NextRequest, { params: { blogId } }: ReviewParams) {
     try {
         const page = parseInt(request.nextUrl.searchParams.get('page') || '1')
-        const { blogReviews, totalPages } = await getBlogReviews({ blogId, page, totalReviews: 10 });
+        const { blogReviews, totalPages } = await getBlogReviews({ blogId, page, totalReviews: 6 });
 
         return NextResponse.json({ blogReviews, totalPages, })
     } catch (error) {
