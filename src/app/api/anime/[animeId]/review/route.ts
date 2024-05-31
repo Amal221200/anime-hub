@@ -1,7 +1,6 @@
 import { getReviews } from "@/lib/actions/anime-review";
-import { getUser } from "@/lib/actions/user";
+import getCurrentUser from "@/lib/actions/getCurrentUser";
 import db from "@/lib/db";
-import { currentUser } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 
 interface ReviewParams {
@@ -24,7 +23,7 @@ export async function GET(request: NextRequest, { params: { animeId } }: ReviewP
 
 export async function POST(request: NextRequest, { params: { animeId } }: ReviewParams) {
     try {
-        const user = await currentUser()
+        const user = await getCurrentUser()
 
         if (!user) {
             return NextResponse.json("Unauthorized", { status: 401 })
@@ -36,13 +35,7 @@ export async function POST(request: NextRequest, { params: { animeId } }: Review
             return NextResponse.json("Invalid values", { status: 402 })
         }
 
-        const userData = await getUser(user.id);
-
-        if (!userData) {
-            return NextResponse.json("User not found", { status: 404 })
-        }
-
-        const newReview = await db.review.create({ data: { content: review, userId: userData.id, animeId } })
+        const newReview = await db.review.create({ data: { content: review, userId: user.id, animeId } })
 
         return NextResponse.json(newReview, { status: 201 })
     } catch (error) {
