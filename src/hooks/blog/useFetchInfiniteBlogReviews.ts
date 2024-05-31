@@ -1,12 +1,12 @@
 import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
-import { getReviews } from "../functions/anime-review";
+import { getBlogReviews } from "../functions/blog-review";
 
-export default function useFetchInfiniteReviews(animeId: string) {
+export default function useFetchInfiniteBlogReviews(blogId: string) {
     
     const queryClient = useQueryClient()
-    const { data: reviews, isLoading, fetchNextPage, hasNextPage } = useInfiniteQuery({
-        queryKey: [`reviews`, animeId],
-        queryFn: getReviews(animeId),
+    const { data: blogReviews, isLoading, fetchNextPage, hasNextPage } = useInfiniteQuery({
+        queryKey: [`blog_reviews`, blogId],
+        queryFn: getBlogReviews(blogId),
         getNextPageParam: (lastPage) => lastPage.nextPage,
         initialPageParam: 1,
         refetchOnWindowFocus: false
@@ -14,7 +14,7 @@ export default function useFetchInfiniteReviews(animeId: string) {
 
 
     return {
-        reviews,
+        blogReviews,
         isLoading,
         fetchNextPage,
         hasNextPage

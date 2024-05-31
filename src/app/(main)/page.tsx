@@ -7,6 +7,7 @@ import Intro from "./_components/Intro";
 import BlogCard from "./_components/blog/BlogCard";
 
 const HomeAnimeSection = dynamic(() => import('./_components/anime/HomeAnimeSection'), { loading: () => <SkeletonSpinner className="h-[50vh]" /> })
+
 const HomeBlogSection = dynamic(() => import('./_components/anime/HomeAnimeSection'), { loading: () => <SkeletonSpinner className="h-[50vh]" /> })
 
 export default async function Home() {
@@ -25,7 +26,7 @@ export default async function Home() {
             ) : <h1 className="text-center">{"Couldn't"} fetch anime</h1>
           }
         </HomeAnimeSection>
-        {/* <HomeBlogSection>
+        <HomeBlogSection>
           {
             blogs?.length ? (
               blogs.map(blog => (
@@ -33,7 +34,7 @@ export default async function Home() {
               ))
             ) : <h1 className="text-center">{"Couldn't"} fetch anime</h1>
           }
-        </HomeBlogSection> */}
+        </HomeBlogSection>
     </div>
   );
 }

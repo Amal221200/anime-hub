@@ -1,22 +1,22 @@
 "use client";
 import UserAvatar from "@/components/UserAvatar"
-import { AnimeReviewType } from "@/lib/types";
+import { BlogReviewType } from "@/lib/types";
 import { EllipsisVertical } from "lucide-react"
 import { useSession } from "@clerk/nextjs";
 import ReviewActionMenu from "@/components/ReviewActionMenu";
 import { useCallback, useState } from "react";
 import { cn } from "@/lib/utils";
-import useDeleteReview from "@/hooks/anime/useDeleteReview";
 import dateFormatter from "@/utils/dateFormatter";
 import useDialogModal from "@/hooks/useDialogModal";
 import EditReview from "./EditReview";
+import useDeleteBlogReview from "@/hooks/blog/useDeleteBlogReview";
 
-const Review = ({ review }: { review: AnimeReviewType }) => {
+const Review = ({ review }: { review: BlogReviewType }) => {
     const { session } = useSession()
     const [menuOpen, setMenuOpen] = useState(false)
     const [editMode, setEditMode] = useState(false)
     const { onOpen: onDialogOpen } = useDialogModal()
-    const { deleteMutation, deletePending } = useDeleteReview({ reviewId: review.id, animeId: review.animeId })
+    const { deleteMutation, deletePending } = useDeleteBlogReview({ reviewId: review.id, blogId: review.blogId })
     const toggleMenuOpen = useCallback(() => {
         if (editMode) {
             return
@@ -58,7 +58,7 @@ const Review = ({ review }: { review: AnimeReviewType }) => {
                     <small className="block text-left text-xs text-muted-foreground">
                         {review.createdAt === review.updatedAt ? '(added)' : '(edited)'} {dateFormatter(new Date(review.createdAt))}
                     </small>
-                    <p className="text-sm sm:text-base">{review.content}</p>
+                    <p className="text-sm sm:text-base">{review.review}</p>
                 </div>
             </div>
 

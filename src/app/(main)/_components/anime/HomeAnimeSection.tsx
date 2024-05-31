@@ -14,7 +14,7 @@ const HomeAnimeSection = ({ children, className, ...props }: HomeAnimeSectionPro
                 <h2 className="mb-3 text-3xl font-semibold">{'Popular Anime'}</h2>
                 <div className="no-scrollbar grid grid-cols-[repeat(13,auto)] items-center gap-x-3 overflow-x-scroll">
                     {children}
-                    <MoreButton to="/anime" queryKey="fetch_animes" />
+                    <MoreButton to="/blog" queryKey="fetch_blogs" />
                 </div>
             </SectionContainer>
         </section>

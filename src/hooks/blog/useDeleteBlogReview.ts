@@ -1,18 +1,18 @@
 import { toast } from "sonner";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import useAlertModal from "../useAlertModal";
-import { deleteReview } from "../functions/anime-review";
 import { AxiosError } from "axios";
+import { deleteBlogReview } from "../functions/blog-review";
 
-export default function useDeleteReview(review: { animeId: string, reviewId: string }) {
+export default function useDeleteBlogReview(review: { blogId: string, reviewId: string }) {
     const queryClient = useQueryClient()
     const { onOpen: onAlertOpen } = useAlertModal()
 
     const { mutateAsync, isPending } = useMutation({
-        mutationKey: [`delete review`, review.animeId, review.reviewId],
-        mutationFn: deleteReview(review.animeId, review.reviewId),
+        mutationKey: [`delete_blog_review`, review.blogId, review.reviewId],
+        mutationFn: deleteBlogReview(review.blogId, review.reviewId),
         async onSuccess() {
-            await queryClient.invalidateQueries({ queryKey: [`reviews`, review.animeId] })
+            await queryClient.invalidateQueries({ queryKey: [`blog_reviews`, review.blogId] })
             toast.success("REVIEW DELETED")
         },
         onError(error: AxiosError) {

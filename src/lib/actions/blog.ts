@@ -30,7 +30,8 @@ export async function getBlogs({ query, page = 1, totalBlogs = false }: { query?
 
 export async function getBlog(id: string) {
     try {
-        const blog = await db.blog.findUnique({ where: { id } })
+        const blog = await db.blog.findUnique({ where: { id }, include: { author: { select: { username: true, imageUrl: true, id: true, externalUserId: true, createdAt: true, updatedAt: true } } } })
+        
         return blog
     } catch (error) {
         console.log("getBlog error");

@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query"
-import { addReview } from "../functions/review"
+import { addReview } from "../functions/anime-review"
 import useAlertModal from "../useAlertModal"
 import { toast } from "sonner"
 import { AxiosError } from "axios"

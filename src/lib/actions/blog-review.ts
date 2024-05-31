@@ -6,7 +6,7 @@ export async function getBlogReviews({ blogId, page = 1, totalReviews = false }:
     const isLimit = typeof totalReviews === 'number' ? totalReviews : 0
     try {
         const blogReviews = await db.blogReview.findMany({
-            where: { blogId },
+            where: { blogId, },
             include: { user: true },
             orderBy: { updatedAt: 'desc' },
             take: isLimit || undefined,
