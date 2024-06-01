@@ -6,7 +6,7 @@ import { useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next13-progressbar';
 import useSearchQuery from '@/hooks/useSearchQuery';
 import dynamic from 'next/dynamic';
-import SkeletonSpinner from '@/components/SkeletonSpinner';
+import SkeletonSpinner from '@/components/loading/SkeletonSpinner';
 
 
 const AnimeSection = dynamic(() => import('../_components/AnimeSection'), {

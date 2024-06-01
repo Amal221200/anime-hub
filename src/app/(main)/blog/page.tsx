@@ -1,7 +1,7 @@
 import React from 'react'
 import { redirect } from 'next/navigation'
 import dynamic from 'next/dynamic'
-import SkeletonSpinner from '@/components/SkeletonSpinner'
+import SkeletonSpinner from '@/components/loading/SkeletonSpinner'
 import { Metadata } from 'next'
 
 const BlogBody = dynamic(() => import('./_components/BlogBody'), { ssr: false, loading: () => <SkeletonSpinner className="h-[85vh]" /> })

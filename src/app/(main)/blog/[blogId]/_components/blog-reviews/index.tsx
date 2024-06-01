@@ -5,7 +5,7 @@ import { FormEvent, Fragment, useCallback } from "react";
 import ReviewForm from "./ReviewForm";
 import Reviews from "./Reviews";
 import Review from "./Review";
-import SkeletonSpinner from "@/components/SkeletonSpinner";
+import SkeletonSpinner from "@/components/loading/SkeletonSpinner";
 import useAlertModal from "@/hooks/useAlertModal";
 import useFetchInfiniteBlogReviews from "@/hooks/blog/useFetchInfiniteBlogReviews";
 import useSubmitBlogReview from "@/hooks/blog/useSubmitBlogReviewForm";

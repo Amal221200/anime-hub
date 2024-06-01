@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import BlogContent from './_components/BlogContent'
 import { redirect } from 'next/navigation';
-import SkeletonSpinner from '@/components/SkeletonSpinner';
+import SkeletonSpinner from '@/components/loading/SkeletonSpinner';
 import dynamic from 'next/dynamic';
 import { getBlog } from '@/lib/actions/blog';
 

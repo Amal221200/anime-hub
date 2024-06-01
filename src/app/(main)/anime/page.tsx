@@ -1,4 +1,4 @@
-import SkeletonSpinner from '@/components/SkeletonSpinner'
+import SkeletonSpinner from '@/components/loading/SkeletonSpinner'
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { redirect } from 'next/navigation'

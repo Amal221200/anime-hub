@@ -1,4 +1,4 @@
-import SkeletonSpinner from '@/components/SkeletonSpinner'
+import SkeletonSpinner from '@/components/loading/SkeletonSpinner'
 
 const RootLoading = () => {
     return (

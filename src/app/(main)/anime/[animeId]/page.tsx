@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import AnimeIntro from './_components/AnimeIntro'
 import { getAnime } from '@/lib/actions/anime'
 import { redirect } from 'next/navigation';
-import SkeletonSpinner from '@/components/SkeletonSpinner';
+import SkeletonSpinner from '@/components/loading/SkeletonSpinner';
 import dynamic from 'next/dynamic';
 
 const ReviewsSection = dynamic(() => import('./_components/reviews'), { loading: () => <SkeletonSpinner className='h-[50vh]' /> })

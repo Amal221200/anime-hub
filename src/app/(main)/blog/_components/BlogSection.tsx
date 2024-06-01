@@ -3,7 +3,7 @@ import { ComponentProps, Fragment } from "react";
 import { cn } from "@/lib/utils";
 import AnimeCard from "../../_components/anime/AnimeCard";
 import SectionContainer from "@/components/containers/SectionContainer"
-import SkeletonSpinner from "@/components/SkeletonSpinner";
+import SkeletonSpinner from "@/components/loading/SkeletonSpinner";
 import useFetchInfinitAnimes from "@/hooks/anime/useFetchInfiniteAnimes";
 import useFetchInfinitBlogs from "@/hooks/blog/useFetchInfiteBlogs";
 import BlogCard from "../../_components/blog/BlogCard";
