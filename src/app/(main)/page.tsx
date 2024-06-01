@@ -17,7 +17,7 @@ export default async function Home() {
   return (
     <div className="min-h-[calc(100vh-160px)] sm:min-h-[calc(100vh-120px)]">
       <Intro />
-      <HomeAnimeSection>
+      <HomeAnimeSection moreActions>
         {
           !animes ? <h1 className="text-center">{"Couldn't"} fetch anime</h1> :
             animes.length ? (
@@ -27,7 +27,7 @@ export default async function Home() {
             ) : <h1 className="text-center">No animes yet</h1>
         }
       </HomeAnimeSection>
-      <HomeBlogSection>
+      <HomeBlogSection moreActions>
         {
           !blogs ? <h1 className="text-center">{"Couldn't"} fetch blogs</h1> :
             blogs.length ? (
