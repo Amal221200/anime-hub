@@ -4,7 +4,7 @@ import db from "../db"
 export async function getBlogReviews({ blogId, page = 1, totalReviews = false }: { blogId: string, page?: number, totalReviews?: number | boolean }) {
     const isLimit = typeof totalReviews === 'number' ? totalReviews : 0
     try {
-        const blogReviews = await db.blogReview.findMany({
+        const reviews = await db.blogReview.findMany({
             where: { blogId, },
             include: { user: true },
             orderBy: { updatedAt: 'desc' },
@@ -13,8 +13,8 @@ export async function getBlogReviews({ blogId, page = 1, totalReviews = false }:
         });
 
         const reviewsLength = await db.blogReview.count({ where: { blogId } });
-        const totalPages = Math.ceil(reviewsLength / isLimit)
-        return { blogReviews, totalPages, page }
+        const totalPages = Math.ceil(reviewsLength / isLimit)        
+        return { reviews, totalPages, page }
     } catch (error) {
         console.log("GET REVIEWS ERROR");
         return { reviews: null, totalPages: 0, page: 0 }

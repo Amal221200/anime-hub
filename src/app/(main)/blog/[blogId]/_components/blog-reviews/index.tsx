@@ -1,14 +1,10 @@
 "use client"
 import SectionContainer from "@/components/containers/SectionContainer";
-import { useSession } from "@clerk/nextjs";
-import { FormEvent, Fragment, useCallback } from "react";
+import { Fragment, useCallback } from "react";
 import ReviewForm from "./ReviewForm";
 import Reviews from "./Reviews";
 import Review from "./Review";
-import SkeletonSpinner from "@/components/loading/SkeletonSpinner";
-import useAlertModal from "@/hooks/useAlertModal";
 import useFetchInfiniteBlogReviews from "@/hooks/blog/useFetchInfiniteBlogReviews";
-import useSubmitBlogReview from "@/hooks/blog/useSubmitBlogReviewForm";
 import ReviewLoader from "@/components/review/ReviewLoader";
 import ReviewsLoading from "@/components/loading/ReviewsLoading";
 
@@ -20,8 +16,7 @@ const BlogReviewsSection = ({ blogId }: { blogId: string }) => {
         await fetchNextPage()
     }, [fetchNextPage])
 
-
-
+    console.log(blogReviews);
 
     return (
         <section className="my-5">
