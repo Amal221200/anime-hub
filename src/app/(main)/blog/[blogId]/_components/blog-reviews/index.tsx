@@ -16,8 +16,6 @@ const BlogReviewsSection = ({ blogId }: { blogId: string }) => {
         await fetchNextPage()
     }, [fetchNextPage])
 
-    console.log(blogReviews);
-
     return (
         <section className="my-5">
             <SectionContainer className="space-y-3">

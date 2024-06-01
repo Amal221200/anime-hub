@@ -22,21 +22,12 @@ export async function getAnimeReviews({ animeId, page = 1, totalReviews = false 
     }
 }
 
-export async function addAnimeReviewC(review: string, userId: string, animeId: string,) {
+export async function addAnimeReview(review: string, userId: string, animeId: string,) {
     const user = await db.user.findUnique({ where: { externalUserId: userId } });
-
     if(!user){
         return 
     }
-    
     const reviews = await db.animeReview.create({ data: { review, userId: user.id, animeId } });
-
-    return reviews
-}
-
-export async function addAnimeReview(review: string, userId: string, animeId: string,) {
-    const reviews = await db.animeReview.create({ data: { review, userId, animeId } });
-
     return reviews
 }
 

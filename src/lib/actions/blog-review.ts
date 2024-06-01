@@ -21,19 +21,13 @@ export async function getBlogReviews({ blogId, page = 1, totalReviews = false }:
     }
 }
 
+
 export async function addBlogReview(blogId: string, userId: string, review: string) {
-    const reviews = await db.blogReview.create({ data: { review, userId, blogId } });
-
-    return reviews
-}
-
-export async function addBlogReviewC(blogId: string, userId: string, review: string) {
     const user = await db.user.findUnique({ where: { externalUserId: userId } })
     if (!user) {
         return
     }
     const reviews = await db.blogReview.create({ data: { review, userId: user.id, blogId } });
-
     return reviews
 }
 
