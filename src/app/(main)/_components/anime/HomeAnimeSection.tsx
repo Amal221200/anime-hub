@@ -4,17 +4,20 @@ import { cn } from "@/lib/utils"
 import { ComponentProps } from "react"
 
 interface HomeAnimeSectionProps extends ComponentProps<'div'> {
-
+    moreActions?: boolean
 }
 
-const HomeAnimeSection = ({ children, className, ...props }: HomeAnimeSectionProps) => {
+const HomeAnimeSection = ({ children, moreActions, className, ...props }: HomeAnimeSectionProps) => {
     return (
         <section className={cn('my-5', className)} {...props}>
             <SectionContainer>
                 <h2 className="mb-3 text-3xl font-semibold">{'Popular Anime'}</h2>
                 <div className="no-scrollbar grid grid-cols-[repeat(13,auto)] items-center gap-x-3 overflow-x-scroll">
                     {children}
-                    <MoreButton to="/blog" queryKey="fetch_blogs" />
+                    {
+                        moreActions &&
+                        <MoreButton to="/anime" queryKey="fetch_animes" />
+                    }
                 </div>
             </SectionContainer>
         </section>

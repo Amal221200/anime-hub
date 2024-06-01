@@ -6,9 +6,9 @@ import SkeletonSpinner from "@/components/SkeletonSpinner";
 import Intro from "./_components/Intro";
 import BlogCard from "./_components/blog/BlogCard";
 
-const HomeAnimeSection = dynamic(() => import('./_components/anime/HomeAnimeSection'), { loading: () => <SkeletonSpinner className="h-[50vh]" /> })
+const HomeAnimeSection = dynamic(() => import('./_components/anime/HomeAnimeSection'), { loading: () => <SkeletonSpinner className="h-[50vh]" />, ssr: true })
 
-const HomeBlogSection = dynamic(() => import('./_components/blog/HomeBlogSection'), { loading: () => <SkeletonSpinner className="h-[50vh]" /> })
+const HomeBlogSection = dynamic(() => import('./_components/blog/HomeBlogSection'), { loading: () => <SkeletonSpinner className="h-[50vh]" />, ssr: true })
 
 export default async function Home() {
   const { animes } = await getAnimes({ query: '', page: 1, totalAnimes: 12 })
