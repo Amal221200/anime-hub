@@ -4,10 +4,10 @@ import { cn } from '@/lib/utils'
 import React from 'react'
 import ItemLoading from './ItemLoading'
 
-const SectionLoading = () => {
+const SectionLoading = ({ className }: { className?: string }) => {
     const arr = (new Array(12)).fill(0)
     return (
-        <section>
+        <section className={cn("my-5", className)}>
             <SectionContainer>
                 <Skeleton className='mb-4 h-[30px] w-[200px] p-5' />
                 <div className="no-scrollbar grid grid-cols-[repeat(13,auto)] items-center gap-x-3 overflow-x-scroll">
