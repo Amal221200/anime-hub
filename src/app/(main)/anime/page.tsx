@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { redirect } from 'next/navigation'
 
-const AnimeBody = dynamic(() => import('./_components/AnimeBody'), { ssr: false, loading: () => <SkeletonSpinner className="h-[85vh]" /> })
+const AnimeBody = dynamic(() => import('./_components/AnimeBody'), { ssr: true, loading: () => <SkeletonSpinner className="h-[85vh]" /> })
 
 export async function generateMetadata({ searchParams: { query } }: { searchParams: { query: string } }): Promise<Metadata> {
     return {
