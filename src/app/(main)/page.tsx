@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import Intro from "./_components/Intro";
 import SectionLoading from "@/components/loading/SectionLoading";
 
-const HomeAnimeSection = dynamic(() => import('@/components/loading/SectionLoading'), { loading: () => <SectionLoading />, ssr: true })
+const HomeAnimeSection = dynamic(() => import('./_components/anime/HomeAnimeSection'), { loading: () => <SectionLoading />, ssr: true })
 
-const HomeBlogSection = dynamic(() => import('@/components/loading/SectionLoading'), { loading: () => <SectionLoading />, ssr: true })
+const HomeBlogSection = dynamic(() => import('./_components/blog/HomeBlogSection'), { loading: () => <SectionLoading />, ssr: true })
 
 export default async function Home() {
 
