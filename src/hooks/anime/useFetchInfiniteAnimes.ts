@@ -17,7 +17,6 @@ export default function useFetchInfinitAnimes() {
         queryFn: fetchAnimes(currentSearhQuery, searchParams.get('query') || ''),
         getNextPageParam: (lastPage) => lastPage.nextPage,
         initialPageParam: 1,
-        staleTime: 100,
         enabled: !!searchParams.get('query')
     }, queryClient)
 
