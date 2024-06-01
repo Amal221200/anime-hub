@@ -56,7 +56,7 @@ const Review = ({ review }: { review: BlogReviewType }) => {
                 <UserAvatar imageLink={review.user.imageUrl} username={review.user.username} />
                 <div className="w-full">
                     <small className="block text-left text-xs text-muted-foreground">
-                        {review.createdAt === review.updatedAt ? '(added)' : '(edited)'} {dateFormatter(new Date(review.createdAt))}
+                        {review.createdAt === review.updatedAt ? '(reviewed)' : '(edited)'} {dateFormatter(new Date(review.createdAt))}
                     </small>
                     <p className="text-sm sm:text-base">{review.review}</p>
                 </div>

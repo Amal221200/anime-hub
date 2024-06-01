@@ -1,7 +1,7 @@
 "use server"
 import db from "@/lib/db"
 
-export async function getAnimes({ query, page = 1, totalAnimes = false }: { query?: string, page?: number, totalAnimes?: number | boolean }) {
+export async function getAnimes({ query, page = 1, totalAnimes = false }: { query?: string, page?: number, totalAnimes?: number | boolean }) {    
     const isLimit = typeof totalAnimes === 'number' ? totalAnimes : 0
     try {
         const animes = await db.anime.findMany(

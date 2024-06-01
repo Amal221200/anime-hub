@@ -11,9 +11,9 @@ interface ReviewParams {
 export async function GET(request: NextRequest, { params: { blogId } }: ReviewParams) {
     try {
         const page = parseInt(request.nextUrl.searchParams.get('page') || '1')
-        const { blogReviews, totalPages } = await getBlogReviews({ blogId, page, totalReviews: 6 });
+        const { blogReviews, totalPages } = await getBlogReviews({ blogId, page, totalReviews: 5 });
 
-        return NextResponse.json({ blogReviews, totalPages, })
+        return NextResponse.json({ blogReviews, totalPages, page })
     } catch (error) {
         return NextResponse.json("Internal Server Error", { status: 500 })
     }

@@ -4,7 +4,7 @@ import { getBlogReviews } from "../functions/blog-review";
 export default function useFetchInfiniteBlogReviews(blogId: string) {
     
     const queryClient = useQueryClient()
-    const { data: blogReviews, isLoading, fetchNextPage, hasNextPage } = useInfiniteQuery({
+    const { data: blogReviews, isLoading, fetchNextPage, hasNextPage, isFetchingNextPage } = useInfiniteQuery({
         queryKey: [`blog_reviews`, blogId],
         queryFn: getBlogReviews(blogId),
         getNextPageParam: (lastPage) => lastPage.nextPage,
@@ -17,6 +17,7 @@ export default function useFetchInfiniteBlogReviews(blogId: string) {
         blogReviews,
         isLoading,
         fetchNextPage,
-        hasNextPage
+        hasNextPage,
+        isFetchingNextPage
     }
 }

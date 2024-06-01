@@ -1,14 +1,13 @@
 "use client"
-import useSubmitBlogReview from "@/hooks/blog/useSubmitBlogReviewForm"
+import useSubmitAnimeReview from "@/hooks/anime/useSubmitAnimeReviewForm"
 import useAlertModal from "@/hooks/useAlertModal"
 import { useSession } from "@clerk/nextjs"
 import { FormEvent, useCallback } from "react"
 
-const ReviewForm = ({ blogId }: { blogId: string }) => {
+const ReviewForm = ({ animeId }: { animeId: string }) => {
     const { isSignedIn } = useSession()
     const { onOpen } = useAlertModal()
-    
-    const { mutateAsync, isPending } = useSubmitBlogReview(blogId)
+    const { mutateAsync, isPending } = useSubmitAnimeReview(animeId)
     const handleSubmit = useCallback(async (e: FormEvent) => {
         e.preventDefault();
         const form = e.target as HTMLFormElement;

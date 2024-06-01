@@ -15,10 +15,10 @@ export async function getBlogReviews({ blogId, page = 1, totalReviews = false }:
 
         const reviewsLength = await db.blogReview.count({ where: { blogId } });
         const totalPages = Math.ceil(reviewsLength / isLimit)
-        return { blogReviews, totalPages }
+        return { blogReviews, totalPages, page }
     } catch (error) {
         console.log("GET REVIEWS ERROR");
-        return { reviews: null, totalPages: 0 }
+        return { reviews: null, totalPages: 0, page: 0 }
     }
 }
 

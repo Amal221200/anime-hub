@@ -12,9 +12,9 @@ interface ReviewParams {
 export async function GET(request: NextRequest, { params: { animeId } }: ReviewParams) {
     try {
         const page = parseInt(request.nextUrl.searchParams.get('page') || '1')
-        const { reviews, totalPages } = await getAnimeReviews({ animeId, page, totalReviews: 6 });
+        const { reviews, totalPages } = await getAnimeReviews({ animeId, page, totalReviews: 5 });
 
-        return NextResponse.json({ reviews, totalPages })
+        return NextResponse.json({ reviews, totalPages, page })
     } catch (error) {
         console.log('GET REVIEWS API ERROR');
         return NextResponse.json("Internal Server Error", { status: 500 })

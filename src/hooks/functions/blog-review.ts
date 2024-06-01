@@ -3,7 +3,7 @@ import axios from "axios"
 
 export function getBlogReviews(blogId: string) {
     return async ({ pageParam }: { pageParam: number }): Promise<{ data: BlogReviewType[], currentPage: number, nextPage: number | null }> => {
-        const response = await axios.get(`/api/blog/${blogId}/review`);
+        const response = await axios.get(`/api/blog/${blogId}/review?page=${pageParam}`);
         const { blogReviews, page, totalPages } = response.data
         return { data: blogReviews, currentPage: page, nextPage: pageParam < totalPages ? pageParam + 1 : null }
     }

@@ -1,17 +1,19 @@
 "use client"
-
 import { useCallback } from 'react'
 import SearchBox from '../../../../components/SearchBox';
 import { useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next13-progressbar';
 import useSearchQuery from '@/hooks/useSearchQuery';
 import dynamic from 'next/dynamic';
-import SkeletonSpinner from '@/components/loading/SkeletonSpinner';
+import SectionLoading from '@/components/loading/SectionLoading';
+import SectionContainer from '@/components/containers/SectionContainer';
 
 
 const AnimeSection = dynamic(() => import('../_components/AnimeSection'), {
     ssr: false, loading: () =>
-        <SkeletonSpinner className="h-[85vh]" />
+        <SectionContainer >
+            <SectionLoading />
+        </SectionContainer>
 })
 
 const AnimeBody = ({ query }: { query: string }) => {
@@ -30,7 +32,9 @@ const AnimeBody = ({ query }: { query: string }) => {
     return (
         <>
             <SearchBox handleSearch={handleSearch} placeholder="Search anime" />
-            <AnimeSection heading={query === 'all' ? 'All Animes' : `Results of ${query}`} searchQuery={query} className='min-h-[calc(100dvh-160px)' />
+            <AnimeSection
+                heading={query === 'all' ? 'All Animes' : `Results of ${query}`} searchQuery={query}
+                className='min-h-[calc(100dvh-160px)' />
         </>
     )
 }

@@ -15,10 +15,11 @@ export async function getAnimeReviews({ animeId, page = 1, totalReviews = false 
 
         const reviewsLength = await db.animeReview.count({ where: { animeId } });
         const totalPages = Math.ceil(reviewsLength / isLimit)
-        return { reviews, totalPages }
+        
+        return { reviews, totalPages, page }
     } catch (error) {
         console.log("GET REVIEWS ERROR");
-        return { reviews: null, totalPages: 0 }
+        return { reviews: null, totalPages: 0, page: 0 }
     }
 }
 

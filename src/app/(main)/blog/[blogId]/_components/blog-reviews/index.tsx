@@ -9,37 +9,28 @@ import SkeletonSpinner from "@/components/loading/SkeletonSpinner";
 import useAlertModal from "@/hooks/useAlertModal";
 import useFetchInfiniteBlogReviews from "@/hooks/blog/useFetchInfiniteBlogReviews";
 import useSubmitBlogReview from "@/hooks/blog/useSubmitBlogReviewForm";
+import ReviewLoader from "@/components/review/ReviewLoader";
+import ReviewsLoading from "@/components/loading/ReviewsLoading";
 
 const BlogReviewsSection = ({ blogId }: { blogId: string }) => {
-    const { isSignedIn } = useSession()
-    const { onOpen } = useAlertModal()
 
-    const { blogReviews, isLoading } = useFetchInfiniteBlogReviews(blogId)
+    const { blogReviews, isLoading, fetchNextPage, hasNextPage, isFetchingNextPage } = useFetchInfiniteBlogReviews(blogId)
 
-    const { mutateAsync, isPending } = useSubmitBlogReview(blogId)
+    const handleLoadMore = useCallback(async () => {
+        await fetchNextPage()
+    }, [fetchNextPage])
 
-    const handleSubmit = useCallback(async (e: FormEvent) => {
-        e.preventDefault();
-        const form = e.target as HTMLFormElement;
 
-        if (!isSignedIn) {
-            return onOpen({ title: 'Unauthorized', description: "Please sign in to review." })
-        }
 
-        const formData = new FormData(form)
-        const review = formData.get('review')?.toString()!
-        await mutateAsync({ review })
-        form.reset()
-    }, [isSignedIn, mutateAsync, onOpen])
 
     return (
         <section className="my-5">
             <SectionContainer className="space-y-3">
                 <h2 className="text-3xl font-semibold">Reviews</h2>
-                <ReviewForm handleSubmit={handleSubmit} isLoading={isPending} />
+                <ReviewForm blogId={blogId} />
                 {
-                    isLoading ? <SkeletonSpinner className="h-[15vh]" /> :
-                        <Reviews className="">
+                    isLoading ? <ReviewsLoading /> :
+                        <Reviews>
                             {
                                 blogReviews?.pages?.map(blogReviews => (
                                     <Fragment key={crypto.randomUUID()}>
@@ -51,6 +42,8 @@ const BlogReviewsSection = ({ blogId }: { blogId: string }) => {
                                     </Fragment>
                                 ))
                             }
+
+                            <ReviewLoader hasNextPage={hasNextPage} isFetchingNextPage={isFetchingNextPage} onLoadMore={handleLoadMore} />
                         </Reviews>
                 }
             </SectionContainer>

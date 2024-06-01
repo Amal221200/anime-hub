@@ -6,12 +6,15 @@ import { useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next13-progressbar';
 import useSearchQuery from '@/hooks/useSearchQuery';
 import dynamic from 'next/dynamic';
-import SkeletonSpinner from '@/components/loading/SkeletonSpinner';
+import SectionContainer from '@/components/containers/SectionContainer';
+import SectionLoading from '@/components/loading/SectionLoading';
 
 
 const BlogSection = dynamic(() => import('./BlogSection'), {
     ssr: false, loading: () =>
-        <SkeletonSpinner className="h-[85vh]" />
+        <SectionContainer >
+            <SectionLoading  />
+        </SectionContainer>
 })
 
 const BlogBody = ({ query }: { query: string }) => {

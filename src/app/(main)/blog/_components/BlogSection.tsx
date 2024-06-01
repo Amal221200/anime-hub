@@ -7,6 +7,7 @@ import SkeletonSpinner from "@/components/loading/SkeletonSpinner";
 import useFetchInfinitAnimes from "@/hooks/anime/useFetchInfiniteAnimes";
 import useFetchInfinitBlogs from "@/hooks/blog/useFetchInfiteBlogs";
 import BlogCard from "../../_components/blog/BlogCard";
+import SectionLoading from "@/components/loading/SectionLoading";
 
 interface BlogSectionProps extends ComponentProps<'div'> {
     searchQuery: string;
@@ -21,7 +22,7 @@ const BlogSection = ({ heading, className, searchQuery }: BlogSectionProps) => {
             <SectionContainer>
                 {
                     status === 'pending' ?
-                        <SkeletonSpinner className="h-[30vh]" /> : status === 'error' ?
+                        <SectionLoading /> : status === 'error' ?
                             <h1>Error...</h1> :
                             (
                                 <>
