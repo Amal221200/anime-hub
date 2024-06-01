@@ -18,7 +18,7 @@ const ReviewForm = ({ animeId }: { animeId: string }) => {
 
         const formData = new FormData(form)
         const review = formData.get('review')?.toString()!
-        await mutateAsync({ review })
+        await mutateAsync({review})
         form.reset()
     }, [isSignedIn, mutateAsync, onOpen])
     return (

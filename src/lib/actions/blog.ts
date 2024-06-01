@@ -21,17 +21,17 @@ export async function getBlogs({ query, page = 1, totalBlogs = false }: { query?
 
         const totalPages = Math.ceil(blogsLength / isLimit)
 
-        return { blogs, totalPages }
+        return { blogs, totalPages, page }
     } catch (error) {
         console.log("getBlogs error");
-        return { blogs: null, totalPages: 0 }
+        return { blogs: null, totalPages: 0, page: 0 }
     }
 }
 
 export async function getBlog(id: string) {
     try {
         const blog = await db.blog.findUnique({ where: { id }, include: { author: { select: { username: true, imageUrl: true, id: true, externalUserId: true, createdAt: true, updatedAt: true } } } })
-        
+
         return blog
     } catch (error) {
         console.log("getBlog error");

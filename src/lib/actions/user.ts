@@ -1,5 +1,4 @@
 "use server"
-
 import db from "../db"
 
 export async function getUser(userId: string) {

@@ -1,5 +1,4 @@
 "use server"
-
 import db from "../db"
 
 export async function getAnimeReviews({ animeId, page = 1, totalReviews = false }: { animeId: string, page?: number, totalReviews?: number | boolean }) {
@@ -15,12 +14,24 @@ export async function getAnimeReviews({ animeId, page = 1, totalReviews = false 
 
         const reviewsLength = await db.animeReview.count({ where: { animeId } });
         const totalPages = Math.ceil(reviewsLength / isLimit)
-        
+
         return { reviews, totalPages, page }
     } catch (error) {
         console.log("GET REVIEWS ERROR");
         return { reviews: null, totalPages: 0, page: 0 }
     }
+}
+
+export async function addAnimeReviewC(review: string, userId: string, animeId: string,) {
+    const user = await db.user.findUnique({ where: { externalUserId: userId } });
+
+    if(!user){
+        return 
+    }
+    
+    const reviews = await db.animeReview.create({ data: { review, userId: user.id, animeId } });
+
+    return reviews
 }
 
 export async function addAnimeReview(review: string, userId: string, animeId: string,) {
