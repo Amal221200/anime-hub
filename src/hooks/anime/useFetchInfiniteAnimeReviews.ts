@@ -3,7 +3,7 @@ import { ActionsContext } from "@/components/providers/ActionsProvider";
 import { ActionsProviderType, AnimeReviewType } from "@/lib/types";
 import { use, useCallback } from "react";
 
-export default function useFetchInfiniteReviews(animeId: string) {
+export default function useFetchInfiniteAnimeReviews(animeId: string) {
     const queryClient = useQueryClient()
 
     const { actions } = use(ActionsContext) as ActionsProviderType;

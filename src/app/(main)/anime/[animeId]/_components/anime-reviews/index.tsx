@@ -4,12 +4,12 @@ import { Fragment, useCallback } from "react";
 import ReviewForm from "./ReviewForm";
 import Reviews from "./Reviews";
 import Review from "./Review";
-import useFetchInfiniteReviews from "@/hooks/anime/useFetchInfiniteReviews";
+import useFetchInfiniteAnimeReviews from "@/hooks/anime/useFetchInfiniteAnimeReviews";
 import ReviewsLoading from "@/components/loading/ReviewsLoading";
 import ReviewLoader from "@/components/review/ReviewLoader";
 
 const ReviewsSection = ({ animeId }: { animeId: string }) => {
-    const { reviews, isLoading, hasNextPage, isFetchingNextPage, fetchNextPage } = useFetchInfiniteReviews(animeId)
+    const { reviews, isLoading, hasNextPage, isFetchingNextPage, fetchNextPage } = useFetchInfiniteAnimeReviews(animeId)
 
     const handleLoadMore = useCallback(async () => {
         await fetchNextPage()
