@@ -7,8 +7,8 @@ export async function getBlogs({ query, page = 1, totalBlogs = false }: { query?
         const blogs = await db.blog.findMany(
             {
                 where: {
-                    imageLink: { startsWith: process.env.NODE_ENV === 'development' ? "" : "" },
-                    title: { contains: query === 'all' ? '' : query, mode: "insensitive" }
+                    title: { contains: query === 'all' ? '' : query, mode: "insensitive" },
+                    published: true
                 },
                 orderBy: { title: 'asc' },
                 take: isLimit || undefined,
@@ -17,7 +17,12 @@ export async function getBlogs({ query, page = 1, totalBlogs = false }: { query?
             }
         );
 
-        const blogsLength = await db.anime.count({ where: { title: { contains: query === 'all' ? '' : query, mode: "insensitive" } } });
+        const blogsLength = await db.blog.count({
+            where: {
+                title: { contains: query === 'all' ? '' : query, mode: "insensitive" }, 
+                published: true,
+            }
+        });
 
         const totalPages = Math.ceil(blogsLength / isLimit)
 
