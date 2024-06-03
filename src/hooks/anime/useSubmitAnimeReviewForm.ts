@@ -3,14 +3,12 @@ import useAlertModal from "../useAlertModal"
 import { toast } from "sonner"
 import { AxiosError } from "axios"
 import { useUser } from "@clerk/nextjs"
-import { use, useCallback } from "react"
-import { ActionsContext } from "@/components/providers/ActionsProvider"
-import { ActionsProviderType } from "@/lib/types"
+import { useCallback } from "react"
+import { addAnimeReview } from "@/lib/actions/anime-review"
 
 export default function useSubmitAnimeReview(animeId: string) {
     const queryClient = useQueryClient()
     const { onOpen } = useAlertModal()
-    const { actions } = use(ActionsContext) as ActionsProviderType;
     const { user } = useUser()
 
     const handleAdd = useCallback((animeId: string) => {
@@ -18,9 +16,9 @@ export default function useSubmitAnimeReview(animeId: string) {
             if (!user) {
                 return onOpen({ title: 'Unauthorizes', description: "Please login" })
             }
-            await actions.addAnimeReview(data.review, user.id, animeId)
+            await addAnimeReview(data.review, user.id, animeId)
         }
-    }, [actions, onOpen, user])
+    }, [onOpen, user])
 
     const { mutateAsync, isPending } = useMutation({
         mutationKey: [`reviews`, animeId],

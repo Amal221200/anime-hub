@@ -2,16 +2,14 @@ import { useMutation, useQueryClient } from "@tanstack/react-query"
 import useAlertModal from "../useAlertModal"
 import { AxiosError } from "axios"
 import { toast } from "sonner"
-import { use, useCallback } from "react"
-import { ActionsContext } from "@/components/providers/ActionsProvider"
-import { ActionsProviderType } from "@/lib/types"
+import {  useCallback } from "react"
 import { useUser } from "@clerk/nextjs"
+import { addBlogReview } from "@/lib/actions/blog-review"
 
 export default function useSubmitBlogReview(blogId: string) {
     const queryClient = useQueryClient()
 
     const { onOpen } = useAlertModal()
-    const { actions } = use(ActionsContext) as ActionsProviderType;
     const { user } = useUser()
 
     const handleAdd = useCallback((blogId: string) => {
@@ -19,9 +17,9 @@ export default function useSubmitBlogReview(blogId: string) {
             if (!user) {
                 return onOpen({ title: 'Unauthorizes', description: "Please login" })
             }
-            await actions.addBlogReview(blogId, user.id, data.review)
+            await addBlogReview(blogId, user.id, data.review)
         }
-    }, [actions, onOpen, user])
+    }, [ onOpen, user])
 
     const { mutateAsync, isPending } = useMutation({
         mutationKey: [`reviews`, blogId],

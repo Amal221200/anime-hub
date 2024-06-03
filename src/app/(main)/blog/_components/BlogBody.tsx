@@ -9,7 +9,7 @@ import SectionLoading from '@/components/loading/SectionLoading';
 
 
 const BlogSection = dynamic(() => import('./BlogSection'), {
-    ssr: false, loading: () =>
+    ssr: true, loading: () =>
         <SectionContainer >
             <SectionLoading  />
         </SectionContainer>

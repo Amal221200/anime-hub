@@ -1,9 +1,9 @@
 import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
 import { useIntersectionObserver } from "usehooks-ts";
-import { use, useCallback, useEffect } from "react";
+import {  useCallback, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { ActionsContext } from "@/components/providers/ActionsProvider";
-import { ActionsProviderType, BlogType } from "@/lib/types";
+import {  BlogType } from "@/lib/types";
+import { getBlogs } from "@/lib/actions/blog";
 
 
 export default function useFetchInfinitBlogs() {
@@ -11,17 +11,16 @@ export default function useFetchInfinitBlogs() {
     const { isIntersecting, ref: intersectingRef } = useIntersectionObserver({ threshold: 0.5 });
     const searchParams = useSearchParams()
 
-    const { actions } = use(ActionsContext) as ActionsProviderType;
 
     const handleFetch = useCallback((searchQuery: string) => {
         return async ({ pageParam }: { pageParam: number }): Promise<{ data: BlogType[], currentPage: number, nextPage: number | null }> => {
-            const { blogs, page, totalPages } = await actions.getBlogs({ query: searchQuery, page: pageParam, totalBlogs: 12 })
+            const { blogs, page, totalPages } = await getBlogs({ query: searchQuery, page: pageParam, totalBlogs: 12 })
 
             return {
                 data: blogs!, currentPage: page, nextPage: pageParam < totalPages ? pageParam + 1 : null
             }
         }
-    }, [actions])
+    }, [])
     
     const { data: blogs, status, fetchNextPage, isFetchingNextPage, isLoading, refetch } = useInfiniteQuery({
         queryKey: ['fetch_blogs', { query: searchParams.get('query') || 'all' }],

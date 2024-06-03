@@ -3,20 +3,18 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import useAlertModal from "../useAlertModal";
 import { AxiosError } from "axios";
 import { use, useCallback } from "react";
-import { ActionsContext } from "@/components/providers/ActionsProvider";
-import { ActionsProviderType } from "@/lib/types";
+import { deleteBlogReview } from "@/lib/actions/blog-review";
 
 export default function useDeleteBlogReview(review: { blogId: string, reviewId: string }) {
     const queryClient = useQueryClient()
     const { onOpen: onAlertOpen } = useAlertModal()
 
-    const { actions } = use(ActionsContext) as ActionsProviderType;
 
     const handleDelete = useCallback((reviewId: string) => {
         return async () => {
-            await actions.deleteBlogReview(reviewId)
+            await deleteBlogReview(reviewId)
         }
-    }, [actions])
+    }, [])
 
     const { mutateAsync, isPending } = useMutation({
         mutationKey: [`delete_blog_review`, review.blogId, review.reviewId],

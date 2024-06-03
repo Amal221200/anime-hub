@@ -9,7 +9,7 @@ import SectionContainer from '@/components/containers/SectionContainer';
 
 
 const AnimeSection = dynamic(() => import('../_components/AnimeSection'), {
-    ssr: false, loading: () =>
+    ssr: true, loading: () =>
         <SectionContainer >
             <SectionLoading />
         </SectionContainer>

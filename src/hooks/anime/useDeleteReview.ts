@@ -2,21 +2,18 @@ import { toast } from "sonner";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import useAlertModal from "../useAlertModal";
 import { AxiosError } from "axios";
-import { use, useCallback } from "react";
-import { ActionsContext } from "@/components/providers/ActionsProvider";
-import { ActionsProviderType } from "@/lib/types";
+import {  useCallback } from "react";
+import { deleteAnimeReview } from "@/lib/actions/anime-review";
 
 export default function useDeleteReview(review: { animeId: string, reviewId: string }) {
     const queryClient = useQueryClient()
     const { onOpen: onAlertOpen } = useAlertModal()
 
-    const { actions } = use(ActionsContext) as ActionsProviderType;
-
     const handleDelete = useCallback((reviewId: string) => {
         return async () => {
-            await actions.deleteAnimeReview(reviewId)
+            await deleteAnimeReview(reviewId)
         }
-    }, [actions])
+    }, [])
 
     const { mutateAsync, isPending } = useMutation({
         mutationKey: [`delete review`, review.animeId, review.reviewId],
