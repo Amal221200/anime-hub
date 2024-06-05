@@ -23,9 +23,11 @@ export async function generateMetadata({ params: { blogId } }: { params: { blogI
 
 const BlogPage = async ({ params: { blogId } }: { params: { blogId: string } }) => {
     const blog = await getBlog(blogId);
+    
     if (!blog) {
         redirect("/404")
     }
+    
   return (
       <div className='min-h-screen'>
           <BlogContent blog={blog} />

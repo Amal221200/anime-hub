@@ -14,8 +14,8 @@ const htmlToReact = (html: string) => {
     return parse(html, {
         replace(domNode) {
             if (domNode.type === 'tag' && domNode.name === 'img') {
-                const { src, alt, ...rest } = domNode.attribs
-                return <Image width={800} height={800} src={src} alt={alt} {...rest} priority />
+                const { src, alt, class: className, ...rest } = domNode.attribs
+                return <Image width={800} height={800} className={className} src={src} alt={alt} {...rest} priority />
             }
         },
     })
