@@ -3,12 +3,14 @@ import db from "@/lib/db"
 
 export async function getAnimes({ query, page = 1, totalAnimes = false }: { query?: string, page?: number, totalAnimes?: number | boolean }) {
     const isLimit = typeof totalAnimes === 'number' ? totalAnimes : 0
+    console.log(query);
+    
     try {
         const animes = await db.anime.findMany(
             {
                 where: {
                     imageLink: { startsWith: process.env.NODE_ENV === 'development' ? "" : "" },
-                    title: { contains: query === 'all' ? '' : query, mode: "insensitive" }
+                    title: { contains: query  ? query : '', mode: "insensitive" }
                 },
                 orderBy: { title: 'asc' },
                 take: isLimit || undefined,
@@ -16,7 +18,7 @@ export async function getAnimes({ query, page = 1, totalAnimes = false }: { quer
             }
         );
 
-        const animesLength = await db.anime.count({ where: { title: { contains: query === 'all' ? '' : query, mode: "insensitive" } } });
+        const animesLength = await db.anime.count({ where: { title: { contains: !query ? '' : query, mode: "insensitive" } } });
 
         const totalPages = Math.ceil(animesLength / isLimit)
 

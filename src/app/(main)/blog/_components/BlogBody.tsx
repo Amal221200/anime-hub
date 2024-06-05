@@ -20,14 +20,14 @@ const BlogBody = ({ query }: { query: string }) => {
     const router = useRouter()
 
     const handleSearch = useCallback(async (query: string) => {
-        router.push(`/blog?query=${query || 'all'}`)
-        await queryClient.invalidateQueries({ queryKey: ['fetch_blogs', { query: query || 'all' }] })
+        router.push(`/blog?query=${query || ''}`)
+        await queryClient.invalidateQueries({ queryKey: ['fetch_blogs', { query: query || '' }] })
     }, [router, queryClient])
 
     return (
         <>
             <SearchBox handleSearch={handleSearch} placeholder="Search blog" />
-            <BlogSection heading={query === 'all' ? 'All Blogs' : `Results of ${query}`} searchQuery={query} className='min-h-[calc(100dvh-160px)' />
+            <BlogSection heading={query ? `Results of ${query}` : 'All Blogs'} searchQuery={query} className='min-h-[calc(100dvh-160px)' />
         </>
     )
 }

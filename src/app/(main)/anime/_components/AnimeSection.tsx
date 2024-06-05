@@ -12,7 +12,7 @@ interface AnimeSectionProps extends ComponentProps<'div'> {
 }
 
 const AnimeSection = ({ heading, className, searchQuery }: AnimeSectionProps) => {
-    const { animes, status, intersectingRef, isFetchingNextPage, isLoading } = useFetchInfinitAnimes()
+    const { animes, status, intersectingRef, isFetchingNextPage } = useFetchInfinitAnimes()
 
     return (
         <section className={cn("my-5", className)}>

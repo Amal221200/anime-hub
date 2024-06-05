@@ -11,8 +11,8 @@ const MoreButton = ({ to, queryKey }: { to: string, queryKey: string }) => {
     const queryClient = useQueryClient();
 
     const handleClick = useCallback(async () => {
-        router.push(`${to}?query=all`)
-        await queryClient.invalidateQueries({ queryKey: [queryKey, { query: 'all' }] })
+        router.push(to)
+        await queryClient.invalidateQueries({ queryKey: [queryKey, { query: '' }] })
     }, [ router, queryClient, to, queryKey])
 
     return (

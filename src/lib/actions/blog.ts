@@ -7,7 +7,7 @@ export async function getBlogs({ query, page = 1, totalBlogs = false }: { query?
         const blogs = await db.blog.findMany(
             {
                 where: {
-                    title: { contains: query === 'all' ? '' : query, mode: "insensitive" },
+                    title: { contains: !query  ? '' : query, mode: "insensitive" },
                     published: true
                 },
                 orderBy: { title: 'asc' },
@@ -19,7 +19,7 @@ export async function getBlogs({ query, page = 1, totalBlogs = false }: { query?
 
         const blogsLength = await db.blog.count({
             where: {
-                title: { contains: query === 'all' ? '' : query, mode: "insensitive" }, 
+                title: { contains: !query  ? '' : query, mode: "insensitive" }, 
                 published: true,
             }
         });

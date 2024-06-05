@@ -20,15 +20,15 @@ const AnimeBody = ({ query }: { query: string }) => {
     const router = useRouter()
 
     const handleSearch = useCallback(async (query: string) => {
-        router.push(`/anime?query=${query || 'all'}`)
-        await queryClient.invalidateQueries({ queryKey: ['fetch_animes', { query: query || 'all' }] })
+        router.push(`/anime?query=${query || ''}`)
+        await queryClient.invalidateQueries({ queryKey: ['fetch_animes', { query: query || '' }] })
     }, [router, queryClient])
 
     return (
         <>
             <SearchBox handleSearch={handleSearch} placeholder="Search anime" />
             <AnimeSection
-                heading={query === 'all' ? 'All Animes' : `Results of ${query}`} searchQuery={query}
+                heading={query ? `Results of ${query}` : 'All Animes'} searchQuery={query}
                 className='min-h-[calc(100dvh-160px)' />
         </>
     )
