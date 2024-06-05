@@ -1,21 +1,16 @@
 "use client"
 import SectionContainer from '@/components/containers/SectionContainer'
 import parse from "html-react-parser";
-import DOMPurify from "dompurify";
 import Image from 'next/image';
 import { BlogWithAuthor } from '@/lib/types';
 import { cn } from '@/lib/utils';
-
-const sanitizeHtml = (htmlString: string) => {
-    return DOMPurify.sanitize(htmlString);
-};
 
 const htmlToReact = (html: string) => {
     return parse(html, {
         replace(domNode) {
             if (domNode.type === 'tag' && domNode.name === 'img') {
-                const { src, alt, class: className, ...rest } = domNode.attribs
-                return <Image width={800} height={800} className={className} src={src} alt={alt} {...rest} priority />
+                const { src, alt, class: className } = domNode.attribs
+                return <Image width={800} height={800} className={className} src={src} alt={alt} priority />
             }
         },
     })
@@ -23,7 +18,7 @@ const htmlToReact = (html: string) => {
 
 const BlogContent = ({ blog }: { blog: BlogWithAuthor }) => {
 
-    const blogContent = htmlToReact(sanitizeHtml(blog.content));
+    const blogContent = htmlToReact((blog.content));
 
     return (
         <main>
