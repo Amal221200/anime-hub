@@ -31,6 +31,7 @@
     "react-dom": "^18",
     "sharp": "^0.33.4",
     "sonner": "^1.4.41",
+    "styled-components": "^6.1.11",
     "svix": "^1.24.0",
     "usehooks-ts": "^3.1.0",
     "zustand": "^4.5.2"

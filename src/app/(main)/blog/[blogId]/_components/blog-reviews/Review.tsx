@@ -51,7 +51,7 @@ const Review = ({ review }: { review: BlogReviewType }) => {
     }
 
     return (
-        <article className={cn("group flex transition-all cursor-pointer items-center justify-between rounded p-2 hover:bg-slate-900", menuOpen && "bg-slate-900")}>
+        <article className={cn("group flex transition-all cursor-pointer items-center justify-between rounded p-2 hover:bg-zinc-900/80", menuOpen && "bg-zinc-900/80")}>
             <div className="flex items-center gap-x-2 sm:gap-x-4">
                 <UserAvatar imageLink={review.user.imageUrl} username={review.user.username} />
                 <div className="w-full">

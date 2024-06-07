@@ -1,4 +1,3 @@
-"use client"
 import SectionContainer from '@/components/containers/SectionContainer'
 import parse from "html-react-parser";
 import Image from 'next/image';
@@ -8,9 +7,15 @@ import { cn } from '@/lib/utils';
 const htmlToReact = (html: string) => {
     return parse(html, {
         replace(domNode) {
-            if (domNode.type === 'tag' && domNode.name === 'img') {
-                const { src, alt, class: className } = domNode.attribs
-                return <Image width={800} height={800} className={className} src={src} alt={alt} priority />
+            if (domNode.type === 'tag') {
+                if (domNode.name === 'img') {
+
+                    const { src, alt, class: className } = domNode.attribs
+                    return <Image width={800} height={800} className={className} src={src} alt={alt} priority />
+                }
+                else if (domNode.name === 'script'){
+                    return <></>
+                }
             }
         },
     })

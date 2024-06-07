@@ -26,7 +26,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header ref={headerRef} className="header-transition fixed left-0 right-0 top-0 z-[100] bg-background/90 backdrop-blur-sm">
+    <header ref={headerRef} className="header-transition fixed left-0 right-0 top-0 z-[100] bg-background/50 backdrop-blur-sm">
       <div className="mx-auto flex max-w-[90vw] items-center justify-between px-3">
         <div className="overflow-hidden rounded-md">
           <Link href="/" className='relative block h-[100px] w-[130px] overflow-hidden rounded-md sm:w-[150px]'>

@@ -1,11 +1,12 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { dark } from "@clerk/themes";
 import { ClerkProvider } from "@clerk/nextjs"
 import ThemeProvider from "@/components/providers/ThemeProvider";
 import ProgressProvider from "@/components/providers/ProgressProvider";
 import QueryProvider from "@/components/providers/QueryProvider";
+import BackgroundStyle from "@/components/providers/BackgroundStyle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="dark">
             <ProgressProvider>
               <QueryProvider>
+                <BackgroundStyle image="" opacity={1} />
                 {children}
               </QueryProvider>
             </ProgressProvider>
