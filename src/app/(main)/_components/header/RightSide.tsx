@@ -13,8 +13,8 @@ const RightSide = () => {
                 {(isSignedIn) ? (
                     <UserButton />
                 ) :
-                    <Link href="/sign-in" className="flex gap-3">
-                        Login <LogIn />
+                    <Link href="/sign-in" className="flex items-center gap-x-1 text-sm sm:gap-x-3 sm:text-base">
+                        Login <LogIn size={18} />
                     </Link>
                 }
             </div>

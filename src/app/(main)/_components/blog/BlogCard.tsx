@@ -11,7 +11,7 @@ interface BlogCardProps {
 const BlogCard = ({ blog, home }: BlogCardProps) => {
 
     return (
-        <article className={cn("group/anime relative h-[200px] overflow-hidden rounded-md border-destructive bg-gray-300 sm:h-[250px]", home && "sm:w-[350px] w-[280px]")}>
+        <article className={cn("group/anime relative h-[200px] overflow-hidden rounded-md border-destructive sm:h-[250px]", home && "sm:w-[350px] w-[280px]")}>
             <Image src={blog.imageLink} alt={blog.title} fill className="duration-[0.5] z-0 h-full w-full transform object-cover object-top transition group-hover/anime:scale-[1.2]" />
 
             {/* Overlay Content */}
