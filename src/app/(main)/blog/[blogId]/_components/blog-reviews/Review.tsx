@@ -4,7 +4,7 @@ import { BlogReviewType } from "@/lib/types";
 import { EllipsisVertical } from "lucide-react"
 import { useSession } from "@clerk/nextjs";
 import ReviewActionMenu from "@/components/ReviewActionMenu";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
 import dateFormatter from "@/utils/dateFormatter";
 import useDialogModal from "@/hooks/useDialogModal";
@@ -45,6 +45,8 @@ const Review = ({ review }: { review: BlogReviewType }) => {
     const onCancel = useCallback(() => {
         setEditMode(false)
     }, [])
+    
+    const isSame = useMemo(()=> review.createdAt.toISOString() === review.updatedAt.toISOString(), [review])
 
     if (editMode) {
         return <EditReview review={review} onCancel={onCancel} />
@@ -56,7 +58,7 @@ const Review = ({ review }: { review: BlogReviewType }) => {
                 <UserAvatar imageLink={review.user.imageUrl} username={review.user.username} />
                 <div className="w-full">
                     <small className="block text-left text-xs text-muted-foreground">
-                        {review.createdAt === review.updatedAt ? '(reviewed)' : '(edited)'} {dateFormatter(new Date(review.createdAt))}
+                        {isSame ? '(reviewed)' : '(edited)'} {dateFormatter(review.createdAt)}
                     </small>
                     <p className="text-sm sm:text-base">{review.review}</p>
                 </div>

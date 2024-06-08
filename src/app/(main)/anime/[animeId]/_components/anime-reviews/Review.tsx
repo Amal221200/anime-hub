@@ -4,7 +4,7 @@ import { AnimeReviewType } from "@/lib/types";
 import { EllipsisVertical } from "lucide-react"
 import { useSession } from "@clerk/nextjs";
 import ReviewActionMenu from "@/components/ReviewActionMenu";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
 import useDeleteReview from "@/hooks/anime/useDeleteReview";
 import dateFormatter from "@/utils/dateFormatter";
@@ -23,6 +23,8 @@ const Review = ({ review }: { review: AnimeReviewType }) => {
         }
         setMenuOpen((current) => !current)
     }, [editMode])
+ 
+    const isSame = useMemo(()=> review.createdAt.toISOString() === review.updatedAt.toISOString(), [review])
 
     const onDelete = useCallback(async () => {
         if (deletePending) {
@@ -56,7 +58,7 @@ const Review = ({ review }: { review: AnimeReviewType }) => {
                 <UserAvatar imageLink={review.user.imageUrl} username={review.user.username} />
                 <div className="w-full">
                     <small className="block text-left text-xs text-muted-foreground">
-                        {review.createdAt === review.updatedAt ? '(reviewed)' : '(edited)'} {dateFormatter(new Date(review.createdAt))}
+                        {isSame ? '(reviewed)' : '(edited)'} {dateFormatter(review.createdAt)}
                     </small>
                     <p className="text-sm sm:text-base">{review.review}</p>
                 </div>

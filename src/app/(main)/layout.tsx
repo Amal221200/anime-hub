@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import Header from './_components/Header'
+import Header from './_components/header'
 import Footer from './_components/Footer'
 
 const DialogModal = dynamic(() => import("@/components/modal/DialogModal"), { ssr: false })

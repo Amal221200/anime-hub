@@ -1,0 +1,25 @@
+"use client"
+import { UserButton, useSession } from '@clerk/nextjs'
+import { LogIn } from 'lucide-react'
+import Link from 'next/link'
+import React from 'react'
+
+const RightSide = () => {
+    const { isSignedIn } = useSession()
+
+    return (
+        <div className="flex items-center gap-5">
+            <div className="flex">
+                {(isSignedIn) ? (
+                    <UserButton />
+                ) :
+                    <Link href="/sign-in" className="flex gap-3">
+                        Login <LogIn />
+                    </Link>
+                }
+            </div>
+        </div>
+    )
+}
+
+export default RightSide
