@@ -14,17 +14,12 @@
 }
 
 @layer base {
-
-  html,
-  body,
-  :root {
-    min-width: 100%;
-    min-height: 100%;
-  }
-
-
   .header-transition {
     transition: all .5s ease-out;
+  }
+
+  body {
+    background: rgb(0, 0, 0);
   }
 
   :root {
