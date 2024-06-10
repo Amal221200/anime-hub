@@ -1,9 +1,10 @@
 import { Metadata } from 'next'
 import BlogContent from './_components/BlogContent'
-import { redirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import SkeletonSpinner from '@/components/loading/SkeletonSpinner';
 import dynamic from 'next/dynamic';
 import { getBlog } from '@/lib/actions/blog';
+import BackgroundStyle from '@/components/providers/BackgroundStyle';
 
 const ReviewsSection = dynamic(() => import('./_components/blog-reviews'), { loading: () => <SkeletonSpinner className='h-[50vh]' /> })
 
@@ -11,7 +12,9 @@ export async function generateMetadata({ params: { blogId } }: { params: { blogI
     const blog = await getBlog(blogId);
 
     if (!blog) {
-        redirect('/404')
+        return {
+            title: 'Blog not found'
+        }
     }
 
     return {
@@ -23,17 +26,24 @@ export async function generateMetadata({ params: { blogId } }: { params: { blogI
 
 const BlogPage = async ({ params: { blogId } }: { params: { blogId: string } }) => {
     const blog = await getBlog(blogId);
-    
-    if (!blog) {
-        redirect("/404")
+
+    if (blog === undefined) {
+        return <h1>There was a problem fetching from database</h1>
     }
-    
-  return (
-      <div className='min-h-[100dvh]'>
-          <BlogContent blog={blog} />
-          <ReviewsSection blogId={blogId} />
-      </div>
-  )
+
+    if (blog === null) {
+        notFound()
+    }
+
+    return (
+        <>
+            <BackgroundStyle image={blog.imageLink} opacity={0.80} />
+            <div className='min-h-[100dvh]'>
+                <BlogContent blog={blog} />
+                <ReviewsSection blogId={blogId} />
+            </div>
+        </>
+    )
 }
 
 export default BlogPage
