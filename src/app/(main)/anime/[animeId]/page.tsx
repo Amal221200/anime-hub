@@ -24,7 +24,7 @@ export async function generateMetadata({ params: { animeId } }: { params: { anim
 const AnimePage = async ({ params: { animeId } }: { params: { animeId: string } }) => {
 
     return (
-        <div className='min-h-screen'>
+        <div className=''>
             <AnimeIntro animeId={animeId} />
             <ReviewsSection animeId={animeId} />
         </div>

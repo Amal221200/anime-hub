@@ -29,7 +29,7 @@ const BlogPage = async ({ params: { blogId } }: { params: { blogId: string } }) 
     }
     
   return (
-      <div className='min-h-screen'>
+      <div className='min-h-[100dvh]'>
           <BlogContent blog={blog} />
           <ReviewsSection blogId={blogId} />
       </div>

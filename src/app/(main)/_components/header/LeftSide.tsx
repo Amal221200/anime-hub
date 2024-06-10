@@ -25,7 +25,7 @@ const LeftSide = () => {
     return (
         <div className='flex items-center gap-x-2 sm:gap-x-10'>
             <div className="overflow-hidden rounded-md">
-                <Link href="/" className='relative block h-[50px] w-[100px] overflow-hidden rounded-md sm:h-[100px] sm:w-[150px]'>
+                <Link href="/" className='relative block h-[80px] w-[130px] overflow-hidden rounded-md sm:h-[100px] sm:w-[150px]'>
                     <Image src="/logo-header-dark.png" alt="logo" fill className="w-full object-contain" />
                 </Link>
             </div>
