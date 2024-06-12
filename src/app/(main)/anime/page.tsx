@@ -7,7 +7,7 @@ const AnimeBody = dynamic(() => import('./_components/AnimeBody'), { ssr: true, 
 
 export async function generateMetadata({ searchParams: { query } }: { searchParams: { query: string } }): Promise<Metadata> {
     return {
-        title: query ? `Results of ${query}` : "All Anime"
+        title: query ? `Search Results` : "All Animes"
     }
 }
 

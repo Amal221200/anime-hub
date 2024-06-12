@@ -33,7 +33,7 @@ const BlogBody = ({ query }: { query: string }) => {
     return (
         <>
             <BlogSearchBox handleSearch={handleSearch} placeholder="Search blog" />
-            <BlogSection heading={query ? `Results of ${query}` : 'All Blogs'} searchQuery={query} className='min-h-[calc(100dvh-160px)' />
+            <BlogSection heading={query ? `Search Results` : 'All Blogs'} searchQuery={query} className='min-h-[calc(100dvh-160px)' />
         </>
     )
 }

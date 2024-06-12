@@ -38,7 +38,7 @@ const AnimeBody = ({ query, ...props }: { query: string, artists: { artist: stri
         <>
             <AnimeSearchBox handleSearch={handleSearch} placeholder="Search anime" {...props} />
             <AnimeSection
-                heading={query ? `Results of ${query}` : 'All Animes'} searchQuery={query}
+                heading={query ? `Search Results` : 'All Animes'} searchQuery={query}
                 className='min-h-[calc(100dvh-160px)' />
         </>
     )
