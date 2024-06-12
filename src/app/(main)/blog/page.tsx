@@ -5,17 +5,17 @@ import { Metadata } from 'next'
 
 const BlogBody = dynamic(() => import('./_components/BlogBody'), { ssr: false, loading: () => <SkeletonSpinner className="h-[85vh]" /> })
 
-export async function generateMetadata({ searchParams: { query } }: { searchParams: { query: string } }): Promise<Metadata> {
-    return {
-        title: query  ? `Search Results` : "All Blogs"
-    }
+export async function generateMetadata({ searchParams: { query } }: { searchParams: { [key: string]: string } }): Promise<Metadata> {
+  return {
+    title: query ? `Search Results` : "All Blogs"
+  }
 }
 
-const BlogsPage = ({ searchParams: { query } }: { searchParams: { query: string } }) => {
+const BlogsPage = ({ searchParams: { query, fromYear, toYear } }: { searchParams: { [key: string]: string } }) => {
 
   return (
     <div>
-      <BlogBody query={query} />
+      <BlogBody showHeading={!!(query || fromYear || toYear)} />
     </div>
   )
 }

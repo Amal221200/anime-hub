@@ -19,7 +19,7 @@ const BlogCard = ({ blog, home }: BlogCardProps) => {
                 <div className="delay-[200ms] flex translate-y-[20%] transform flex-col items-center gap-2 text-center text-white opacity-0 transition-[all] duration-500 group-hover/anime:translate-y-0 group-hover/anime:opacity-100">
                     <h2 className="text-xl font-bold">{blog.title}</h2>
                     <h4 className="font-semibold">Author: {blog.author.username}</h4>
-                    <Link href={`/blog/${blog.id}`} className="flex gap-2 border border-white px-2 py-1 transition-colors hover:rounded-lg hover:bg-white hover:text-black">Read More <ArrowUpRightSquare className="border-none" /></Link>
+                    <Link href={`/blog/${blog.id}`} title={`Visit the page for ${blog.title}`} className="flex gap-2 border border-white px-2 py-1 transition-colors hover:rounded-lg hover:bg-white hover:text-black">Read More <ArrowUpRightSquare className="border-none" /></Link>
                 </div>
             </div>
         </article>

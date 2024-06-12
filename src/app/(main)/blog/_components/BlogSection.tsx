@@ -1,6 +1,6 @@
 "use client";
-import { ComponentProps, Fragment } from "react";
 import { cn } from "@/lib/utils";
+import { ComponentProps, Fragment } from "react";
 import SectionContainer from "@/components/containers/SectionContainer"
 import SkeletonSpinner from "@/components/loading/SkeletonSpinner";
 import useFetchInfinitBlogs from "@/hooks/blog/useFetchInfiteBlogs";
@@ -8,11 +8,10 @@ import BlogCard from "../../_components/blog/BlogCard";
 import SectionLoading from "@/components/loading/SectionLoading";
 
 interface BlogSectionProps extends ComponentProps<'div'> {
-    searchQuery: string;
-    heading?: string;
+    heading: string;
 }
 
-const BlogSection = ({ heading, className, searchQuery }: BlogSectionProps) => {
+const BlogSection = ({ heading, className }: BlogSectionProps) => {
     const { blogs, status, intersectingRef, isFetchingNextPage, isLoading } = useFetchInfinitBlogs()
 
     return (

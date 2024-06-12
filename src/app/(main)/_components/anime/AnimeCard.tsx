@@ -23,7 +23,7 @@ const AnimeCard = ({ anime, home }: AnimeCardProps) => {
                     <p className="text-sm font-semibold">
                         <span>{dateFormatter(anime.release)}</span> | <span className={cn('border-2 rounded p-[2px]', anime.status === 'ONGOING'?'text-orange-400 border-orange-500':'text-emerald-500 border-emerald-500')}>{anime.status}</span>
                     </p>
-                    <Link href={`/anime/${anime.id}`} className="flex gap-2 border border-white px-2 py-1 transition-colors hover:rounded-lg hover:bg-white hover:text-black">Read More <ArrowUpRightSquare className="border-none" /></Link>
+                    <Link href={`/anime/${anime.id}`} title={`Visit the page for ${anime.title}`} className="flex gap-2 border border-white px-2 py-1 transition-colors hover:rounded-lg hover:bg-white hover:text-black">Read More <ArrowUpRightSquare className="border-none" /></Link>
                 </div>
             </div>
         </article>

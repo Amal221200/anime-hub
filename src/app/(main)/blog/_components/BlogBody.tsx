@@ -15,7 +15,7 @@ const BlogSection = dynamic(() => import('./BlogSection'), {
         </SectionContainer>
 })
 
-const BlogBody = ({ query }: { query: string }) => {
+const BlogBody = ({ showHeading }: { showHeading: boolean }) => {
     const queryClient = useQueryClient()
     const router = useRouter()
 
@@ -33,7 +33,7 @@ const BlogBody = ({ query }: { query: string }) => {
     return (
         <>
             <BlogSearchBox handleSearch={handleSearch} placeholder="Search blog" />
-            <BlogSection heading={query ? `Search Results` : 'All Blogs'} searchQuery={query} className='min-h-[calc(100dvh-160px)' />
+            <BlogSection heading={showHeading ? `Search Results` : 'All Blogs'} className='min-h-[calc(100dvh-160px)' />
         </>
     )
 }

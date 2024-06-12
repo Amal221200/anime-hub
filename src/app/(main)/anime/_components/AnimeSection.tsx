@@ -7,11 +7,10 @@ import SkeletonSpinner from "@/components/loading/SkeletonSpinner";
 import useFetchInfinitAnimes from "@/hooks/anime/useFetchInfiniteAnimes";
 import SectionLoading from "@/components/loading/SectionLoading";
 interface AnimeSectionProps extends ComponentProps<'div'> {
-    searchQuery: string;
-    heading?: string;
+    heading: string;
 }
 
-const AnimeSection = ({ heading, className, searchQuery }: AnimeSectionProps) => {
+const AnimeSection = ({ heading, className }: AnimeSectionProps) => {
     const { animes, status, intersectingRef, isFetchingNextPage } = useFetchInfinitAnimes()
 
     return (
