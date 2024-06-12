@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils"
 import { Search } from "lucide-react"
 import { FormEvent, useCallback } from "react"
 import { Input } from "../ui/input"
+import { useSearchParams } from "next/navigation"
 
 interface BlogSearchBoxProps {
     handleSearch: (payload: { query: string, fromYear: number, toYear: number }) => Promise<void>,
@@ -11,6 +12,10 @@ interface BlogSearchBoxProps {
 }
 
 const BlogSearchBox = ({ handleSearch, className, placeholder }: BlogSearchBoxProps) => {
+    const searchParams = useSearchParams();
+    const defaultFromYear = searchParams.get('fromYear') ?? ''
+    const defaultToYear = searchParams.get('toYear') ?? ''
+    
     const onSearch = useCallback((e: FormEvent) => {
         e.preventDefault()
         const formData = new FormData(e.currentTarget as HTMLFormElement)
@@ -36,8 +41,8 @@ const BlogSearchBox = ({ handleSearch, className, placeholder }: BlogSearchBoxPr
                         <div>
                             <label htmlFor="">Year</label>
                             <div className="flex w-min flex-wrap justify-center gap-2 sm:w-max">
-                                <Input name="from-year" type="number" className="w-[180px] outline-none focus-visible:ring-0 focus-visible:ring-offset-0" placeholder="From" />
-                                <Input name="to-year" type="number" className="w-[180px] outline-none focus-visible:ring-0 focus-visible:ring-offset-0" placeholder="To" />
+                                <Input defaultValue={defaultFromYear} name="from-year" type="number" className="w-[180px] outline-none focus-visible:ring-0 focus-visible:ring-offset-0" placeholder="From" />
+                                <Input defaultValue={defaultToYear} name="to-year" type="number" className="w-[180px] outline-none focus-visible:ring-0 focus-visible:ring-offset-0" placeholder="To" />
                             </div>
                         </div>
                     </div>

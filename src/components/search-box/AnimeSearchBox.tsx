@@ -5,6 +5,7 @@ import { FormEvent, useCallback } from "react"
 import SelectInput from "../SelectInput"
 import { Input } from "../ui/input"
 import { ANIME_STATUS } from "@prisma/client"
+import { useSearchParams } from "next/navigation"
 
 interface AnimeSearchBoxProps {
     handleSearch: (payload: { query: string, genre: string, artist: string, status: string, studio: string, fromYear: number, toYear: number }) => Promise<void>,
@@ -14,6 +15,17 @@ interface AnimeSearchBoxProps {
 }
 
 const AnimeSearchBox = ({ handleSearch, className, placeholder, genres, artists, studios }: AnimeSearchBoxProps) => {
+    const searchParams = useSearchParams()
+
+    const defaultQuery = searchParams.get('query') ?? ''
+    const defaultGenre = searchParams.get('genre') ?? ''
+    const defaultArtist = searchParams.get('artist') ?? ''
+    const defaultStudio = searchParams.get('studio') ?? ''
+    const defaultStatusParam = searchParams.get('status') ?? ''
+    const defaultStatus = defaultStatusParam === 'ongoing' ? 'ONGOING' : defaultStatusParam === 'completed' ? 'COMPLETED' : undefined
+    const defaultFromYear = searchParams.get('fromYear') ?? ''
+    const defaultToYear = searchParams.get('toYear') ?? ''
+    
     const onSearch = useCallback((e: FormEvent) => {
         e.preventDefault()
         const formData = new FormData(e.currentTarget as HTMLFormElement)
@@ -39,7 +51,7 @@ const AnimeSearchBox = ({ handleSearch, className, placeholder, genres, artists,
         <search>
             <form onSubmit={onSearch} className={cn("mx-auto md:w-[60vw] sm:[60vw] w-[100vw] overflow-hidden space-y-3", className)}>
                 <div className={cn("flex mx-auto items-center overflow-hidden rounded-full md:w-[50vw] sm:w-[60vw] w-[80vw] bg-zinc-800")}>
-                    <input type="text" name="search" id="search" className="w-[95%] rounded-full bg-transparent px-3 py-2 outline-none" placeholder={placeholder || 'Search ...'} />
+                    <input defaultValue={defaultQuery} type="text" name="search" id="search" className="w-[95%] rounded-full bg-transparent px-3 py-2 outline-none" placeholder={placeholder || 'Search ...'} />
                     <button type="submit">
                         <Search size={20} className="mr-3" />
                     </button>
@@ -50,27 +62,27 @@ const AnimeSearchBox = ({ handleSearch, className, placeholder, genres, artists,
                     <div className="flex flex-wrap justify-center gap-2">
                         <div>
                             <label htmlFor="">Genre</label>
-                            <SelectInput name="genre" data={genres} placeholder="Genre" />
+                            <SelectInput defaultValue={defaultGenre} name="genre" data={genres} placeholder="Genre" />
                         </div>
                         <div>
                             <label htmlFor="">Artist</label>
-                            <SelectInput name="artist" data={artists.map(({ artist }) => artist)} placeholder="Artist" />
+                            <SelectInput defaultValue={defaultArtist} name="artist" data={artists.map(({ artist }) => artist)} placeholder="Artist" />
                         </div>
                         <div>
                             <label htmlFor="">Studio</label>
-                            <SelectInput name="studio" data={studios.map(({ studio }) => studio)} placeholder="Studio" />
+                            <SelectInput defaultValue={defaultStudio} name="studio" data={studios.map(({ studio }) => studio)} placeholder="Studio" />
                         </div>
                         <div>
                             <label htmlFor="">Status</label>
-                            <SelectInput name="status" data={['ongoing', 'completed']} placeholder="Status" />
+                            <SelectInput defaultValue={defaultStatus} name="status" data={['ongoing', 'completed']} placeholder="Status" />
                         </div>
                     </div>
                     <div className="flex justify-center">
                         <div>
                             <label htmlFor="">Year</label>
                             <div className="flex w-min flex-wrap justify-center gap-2 sm:w-max">
-                                <Input name="from-year" type="number" className="w-[180px] outline-none focus-visible:ring-0 focus-visible:ring-offset-0" placeholder="From" />
-                                <Input name="to-year" type="number" className="w-[180px] outline-none focus-visible:ring-0 focus-visible:ring-offset-0" placeholder="To" />
+                                <Input defaultValue={defaultFromYear} name="from-year" type="number" className="w-[180px] outline-none focus-visible:ring-0 focus-visible:ring-offset-0" placeholder="From" />
+                                <Input defaultValue={defaultToYear} name="to-year" type="number" className="w-[180px] outline-none focus-visible:ring-0 focus-visible:ring-offset-0" placeholder="To" />
                             </div>
                         </div>
                     </div>
