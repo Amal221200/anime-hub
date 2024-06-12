@@ -1,6 +1,6 @@
 "use client"
 import { useCallback } from 'react'
-import BlogSearchBox from '@/components/BlogSearchBox';
+import BlogSearchBox from '@/components/search-box/BlogSearchBox';
 import { useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next13-progressbar';
 import dynamic from 'next/dynamic';

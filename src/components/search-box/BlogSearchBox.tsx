@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils"
 import { Search } from "lucide-react"
 import { FormEvent, useCallback } from "react"
-import { Input } from "./ui/input"
+import { Input } from "../ui/input"
 
 interface BlogSearchBoxProps {
     handleSearch: (payload: { query: string, fromYear: number, toYear: number }) => Promise<void>,
@@ -35,7 +35,7 @@ const BlogSearchBox = ({ handleSearch, className, placeholder }: BlogSearchBoxPr
                     <div className="flex justify-center">
                         <div>
                             <label htmlFor="">Year</label>
-                            <div className="flex flex-wrap justify-center gap-2">
+                            <div className="flex w-min flex-wrap justify-center gap-2 sm:w-max">
                                 <Input name="from-year" type="number" className="w-[180px] outline-none focus-visible:ring-0 focus-visible:ring-offset-0" placeholder="From" />
                                 <Input name="to-year" type="number" className="w-[180px] outline-none focus-visible:ring-0 focus-visible:ring-offset-0" placeholder="To" />
                             </div>

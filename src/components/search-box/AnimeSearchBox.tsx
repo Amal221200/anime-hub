@@ -2,8 +2,8 @@
 import { cn } from "@/lib/utils"
 import { Search } from "lucide-react"
 import { FormEvent, useCallback } from "react"
-import SelectInput from "./SelectInput"
-import { Input } from "./ui/input"
+import SelectInput from "../SelectInput"
+import { Input } from "../ui/input"
 import { ANIME_STATUS } from "@prisma/client"
 
 interface AnimeSearchBoxProps {
@@ -65,7 +65,7 @@ const AnimeSearchBox = ({ handleSearch, className, placeholder, genres, artists,
                             <SelectInput name="status" data={['ongoing', 'completed']} placeholder="Status" />
                         </div>
                     </div>
-                    <div className="flex flex-wrap justify-center">
+                    <div className="flex justify-center">
                         <div>
                             <label htmlFor="">Year</label>
                             <div className="flex w-min flex-wrap justify-center gap-2 sm:w-max">

@@ -1,12 +1,11 @@
 "use client"
 import { useCallback } from 'react'
-import AnimeSearchBox from '@/components/AnimeSearchBox';
+import AnimeSearchBox from '@/components/search-box/AnimeSearchBox';
 import { useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next13-progressbar';
 import dynamic from 'next/dynamic';
 import SectionLoading from '@/components/loading/SectionLoading';
 import SectionContainer from '@/components/containers/SectionContainer';
-import { ANIME_STATUS } from '@prisma/client';
 
 
 const AnimeSection = dynamic(() => import('../_components/AnimeSection'), {
