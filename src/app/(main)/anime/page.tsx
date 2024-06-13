@@ -15,7 +15,7 @@ const AnimesPage = async ({ searchParams: { query, fromYear, toYear, status, art
     const artists = await db.anime.findMany({ select: { artist: true }, orderBy: { artist: 'asc' }, distinct: 'artist' })
     const studios = await db.anime.findMany({ select: { studio: true }, orderBy: { studio: 'asc' }, distinct: 'studio' })
     const genresData = await db.anime.findMany({ select: { genre: true }, orderBy: { genre: 'asc' }, distinct: 'genre' })
-    const genres = Array.from(new Set((genresData.map(({ genre }) => genre)).flat()))
+    const genres = Array.from(new Set((genresData.map(({ genre }) => genre)).flat())).toSorted()
 
     return (
         <AnimeBody showHeading={!!(query || fromYear || toYear || status || artist || studio || genre)} artists={artists} studios={studios} genres={genres} />
