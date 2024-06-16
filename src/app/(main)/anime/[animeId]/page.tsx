@@ -38,7 +38,7 @@ const AnimePage = async ({ params: { animeId } }: { params: { animeId: string } 
     return (
         <>
             <BackgroundStyle image={anime.imageLink} opacity={0.86} />
-            <div className=''>
+            <div>
                 <AnimeIntro anime={anime} />
                 <ReviewsSection animeId={animeId} />
             </div>

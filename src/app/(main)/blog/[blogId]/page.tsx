@@ -38,7 +38,7 @@ const BlogPage = async ({ params: { blogId } }: { params: { blogId: string } }) 
     return (
         <>
             <BackgroundStyle image={blog.imageLink} opacity={0.80} />
-            <div className='min-h-[100dvh]'>
+            <div>
                 <BlogContent blog={blog} />
                 <ReviewsSection blogId={blogId} />
             </div>
