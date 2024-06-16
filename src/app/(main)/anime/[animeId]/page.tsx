@@ -4,7 +4,7 @@ import { getAnime } from '@/lib/actions/anime'
 import { notFound } from 'next/navigation';
 import SkeletonSpinner from '@/components/loading/SkeletonSpinner';
 import dynamic from 'next/dynamic';
-import BackgroundStyle from '@/components/providers/BackgroundStyle';
+import BackgroundStyle from '@/components/styled-components/BackgroundStyle';
 
 const ReviewsSection = dynamic(() => import('./_components/anime-reviews'), { loading: () => <SkeletonSpinner className='h-[50vh]' /> })
 

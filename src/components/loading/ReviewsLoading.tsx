@@ -8,7 +8,7 @@ const ReviewsLoading = () => {
         <div className='my-5 space-y-2 sm:space-y-4'>
             {
                 arr.map((_, i) =>
-                    <article key={i} className="group rounded p-2 hover:bg-slate-900">
+                    <article key={i} className="group rounded p-2">
                         <div className="flex items-center gap-x-2 sm:gap-x-4">
                             <Skeleton className="rounded-full p-4" />
 

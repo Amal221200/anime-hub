@@ -6,7 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs"
 import ThemeProvider from "@/components/providers/ThemeProvider";
 import ProgressProvider from "@/components/providers/ProgressProvider";
 import QueryProvider from "@/components/providers/QueryProvider";
-import BackgroundStyle from "@/components/providers/BackgroundStyle";
+import BackgroundStyle from "@/components/styled-components/BackgroundStyle";
 
 const inter = Inter({ subsets: ["latin"] });
 
