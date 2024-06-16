@@ -1,8 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { AxiosError } from "axios";
 import { toast } from "sonner";
 import useAlertModal from "../useAlertModal";
-import {  useCallback } from "react";
+import { useCallback } from "react";
 import { editBlogReview } from "@/lib/actions/blog-review";
 
 export default function useEditBlogReview(review: { blogId: string, reviewId: string }) {
@@ -22,7 +21,7 @@ export default function useEditBlogReview(review: { blogId: string, reviewId: st
             await queryClient.invalidateQueries({ queryKey: [`blog_reviews`, review.blogId] })
             toast.success("REVIEW EDITED", {})
         },
-        onError(error: AxiosError) {
+        onError(error) {
             onAlertOpen({ title: 'Internal Server Error', description: error.message })
         },
     })

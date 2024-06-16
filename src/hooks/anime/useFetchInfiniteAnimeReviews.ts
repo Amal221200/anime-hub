@@ -1,6 +1,6 @@
 import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
-import {  AnimeReviewType } from "@/lib/types";
-import {  useCallback } from "react";
+import { AnimeReviewType } from "@/lib/types";
+import { useCallback } from "react";
 import { getAnimeReviews } from "@/lib/actions/anime-review";
 
 export default function useFetchInfiniteAnimeReviews(animeId: string) {

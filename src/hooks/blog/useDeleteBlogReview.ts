@@ -1,8 +1,7 @@
 import { toast } from "sonner";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import useAlertModal from "../useAlertModal";
-import { AxiosError } from "axios";
-import { use, useCallback } from "react";
+import { useCallback } from "react";
 import { deleteBlogReview } from "@/lib/actions/blog-review";
 
 export default function useDeleteBlogReview(review: { blogId: string, reviewId: string }) {
@@ -23,7 +22,7 @@ export default function useDeleteBlogReview(review: { blogId: string, reviewId: 
             await queryClient.invalidateQueries({ queryKey: [`blog_reviews`, review.blogId] })
             toast.success("REVIEW DELETED")
         },
-        onError(error: AxiosError) {
+        onError(error) {
             onAlertOpen({ title: 'Internal Server Error', description: error.message })
         },
     })

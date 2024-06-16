@@ -1,7 +1,6 @@
 import { toast } from "sonner";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import useAlertModal from "../useAlertModal";
-import { AxiosError } from "axios";
 import {  useCallback } from "react";
 import { deleteAnimeReview } from "@/lib/actions/anime-review";
 
@@ -22,7 +21,7 @@ export default function useDeleteReview(review: { animeId: string, reviewId: str
             await queryClient.invalidateQueries({ queryKey: [`reviews`, review.animeId] })
             toast.success("REVIEW DELETED")
         },
-        onError(error: AxiosError) {
+        onError(error) {
             onAlertOpen({ title: 'Internal Server Error', description: error.message })
         },
     })

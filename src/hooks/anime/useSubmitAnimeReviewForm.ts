@@ -1,7 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query"
 import useAlertModal from "../useAlertModal"
 import { toast } from "sonner"
-import { AxiosError } from "axios"
 import { useUser } from "@clerk/nextjs"
 import { useCallback } from "react"
 import { addAnimeReview } from "@/lib/actions/anime-review"
@@ -23,7 +22,7 @@ export default function useSubmitAnimeReview(animeId: string) {
     const { mutateAsync, isPending } = useMutation({
         mutationKey: [`reviews`, animeId],
         mutationFn: handleAdd(animeId),
-        onError(error: AxiosError) {
+        onError(error) {
             onOpen({ title: 'Internal Server Error', description: error.message })
         },
         async onSuccess() {

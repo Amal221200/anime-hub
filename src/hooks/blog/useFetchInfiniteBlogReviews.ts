@@ -4,9 +4,7 @@ import { BlogReviewType } from "@/lib/types";
 import { getBlogReviews } from "@/lib/actions/blog-review";
 
 export default function useFetchInfiniteBlogReviews(blogId: string) {
-
     const queryClient = useQueryClient()
-
 
     const handleFetch = useCallback((blogId: string) => {
         return async ({ pageParam }: { pageParam: number }): Promise<{ data: BlogReviewType[], currentPage: number, nextPage: number | null }> => {

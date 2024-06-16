@@ -1,8 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query"
 import useAlertModal from "../useAlertModal"
-import { AxiosError } from "axios"
 import { toast } from "sonner"
-import {  useCallback } from "react"
+import { useCallback } from "react"
 import { useUser } from "@clerk/nextjs"
 import { addBlogReview } from "@/lib/actions/blog-review"
 
@@ -19,12 +18,12 @@ export default function useSubmitBlogReview(blogId: string) {
             }
             await addBlogReview(blogId, user.id, data.review)
         }
-    }, [ onOpen, user])
+    }, [onOpen, user])
 
     const { mutateAsync, isPending } = useMutation({
         mutationKey: [`reviews`, blogId],
         mutationFn: handleAdd(blogId),
-        onError(error: AxiosError) {
+        onError(error) {
             onOpen({ title: 'Internal Server Error', description: error.message })
         },
         async onSuccess() {
