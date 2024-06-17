@@ -13,6 +13,7 @@ Stack:-
 
 Cool features:-
 * Infinite Loading
+* PWA Support
 * Sortable search results
 
 
