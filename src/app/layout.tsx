@@ -7,13 +7,9 @@ import ThemeProvider from "@/components/providers/ThemeProvider";
 import ProgressProvider from "@/components/providers/ProgressProvider";
 import QueryProvider from "@/components/providers/QueryProvider";
 import BackgroundStyle from "@/components/styled-components/BackgroundStyle";
+import { APP_DEFAULT_TITLE, APP_DESCRIPTION, APP_NAME, APP_TITLE_TEMPLATE } from "@/lib/constants";
 
 const inter = Inter({ subsets: ["latin"] });
-
-const APP_DEFAULT_TITLE = "Anime Hub"
-const APP_TITLE_TEMPLATE = "Anime Hub | %s"
-const APP_DESCRIPTION = "Everything for Anime in one place"
-const APP_NAME = "AnimeHub"
 
 export const metadata: Metadata = {
   title: {

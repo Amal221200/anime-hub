@@ -20,5 +20,6 @@
     "dir": "auto",
     "lang": "en-US",
     "name": "Anime Hub",
-    "short_name": "AnimeHub"
+    "short_name": "AnimeHub",
+    "start_url": "/"
 }
