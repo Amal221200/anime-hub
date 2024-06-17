@@ -4,6 +4,7 @@ import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 
 const AnimeBody = dynamic(() => import('./_components/AnimeBody'), { ssr: true, loading: () => <SkeletonSpinner className="h-[85vh]" /> })
+const ScrollUpButton = dynamic(() => import("@/components/ScrollUpButton"), {ssr: false});
 
 export async function generateMetadata({ searchParams: { query } }: { searchParams: { [key: string]: string } }): Promise<Metadata> {
     return {
@@ -18,7 +19,10 @@ const AnimesPage = async ({ searchParams: { query, fromYear, toYear, status, art
     const genres = Array.from(new Set((genresData.map(({ genre }) => genre)).flat())).toSorted()
 
     return (
-        <AnimeBody showHeading={!!(query || fromYear || toYear || status || artist || studio || genre)} artists={artists} studios={studios} genres={genres} />
+        <>
+            <AnimeBody showHeading={!!(query || fromYear || toYear || status || artist || studio || genre)} artists={artists} studios={studios} genres={genres} />
+            <ScrollUpButton />
+        </>
     )
 }
 

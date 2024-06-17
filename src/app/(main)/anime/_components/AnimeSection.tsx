@@ -6,6 +6,7 @@ import SectionContainer from "@/components/containers/SectionContainer"
 import SkeletonSpinner from "@/components/loading/SkeletonSpinner";
 import useFetchInfinitAnimes from "@/hooks/anime/useFetchInfiniteAnimes";
 import SectionLoading from "@/components/loading/SectionLoading";
+
 interface AnimeSectionProps extends ComponentProps<'div'> {
     heading: string;
 }
