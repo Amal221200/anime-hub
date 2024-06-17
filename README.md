@@ -1,8 +1,8 @@
 # Anime Hub
 
-![anime_hub](./Anime%20Hub.png)
+![anime_hub](./anime_hub.png)
 
-Anime Hub is the one place stop to find anything and everything related to anime, eg:- Information about anime, blogs, etc.
+Anime Hub is the one place stop to find anything and everything related to anime, eg:- Information about an anime, blogs, etc.
 
 Stack:- 
 * I have developed this application using [Next JS](https://nextjs.org) with TypeScript, powered by it's app router.
