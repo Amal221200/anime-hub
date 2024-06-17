@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     template: "Anime Hub | %s"
   },
   description: "Everything for Anime in one place",
+  manifest: '/manifest.webmanifest',
   icons: [{
     url: "/logo-dark.png",
     href: "/logo-dark.png",
