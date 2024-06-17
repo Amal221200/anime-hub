@@ -26,7 +26,7 @@ const ScrollUpButton = () => {
     })
 
     return (
-        <Button type='button' ref={ref} onClick={handleClick} size={'icon'} className='fixed bottom-5 right-5' style={{ scale: 0 }} variant={'secondary'}>
+        <Button type='button' ref={ref} onClick={handleClick} size={'icon'} className='fixed bottom-5 right-5 z-[1000]' style={{ scale: 0 }} variant={'secondary'}>
             <ArrowUp />
         </Button>
     )
