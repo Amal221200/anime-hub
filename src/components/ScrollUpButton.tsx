@@ -1,7 +1,7 @@
 "use client"
 
 import { ArrowUp } from 'lucide-react'
-import React, { useCallback, useEffect, useId, useRef } from 'react'
+import React, { useCallback, useLayoutEffect, useRef } from 'react'
 import { Button } from './ui/button'
 
 const ScrollUpButton = () => {
@@ -11,7 +11,7 @@ const ScrollUpButton = () => {
         window.scrollTo({ behavior: 'smooth', top: 0 })
     }, [])
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         window.addEventListener('scroll', () => {
             if (!ref.current) {
                 return
@@ -23,7 +23,7 @@ const ScrollUpButton = () => {
                 ref.current.setAttribute('style', `scale: ${1.20}`)
             }
         })
-    })
+    }, [])
 
     return (
         <Button type='button' ref={ref} onClick={handleClick} size={'icon'} className='fixed bottom-5 right-5 z-[1000]' style={{ scale: 0 }} variant={'secondary'}>
