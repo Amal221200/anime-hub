@@ -7,11 +7,12 @@ import ThemeProvider from "@/components/providers/ThemeProvider";
 import ProgressProvider from "@/components/providers/ProgressProvider";
 import QueryProvider from "@/components/providers/QueryProvider";
 import BackgroundStyle from "@/components/styled-components/BackgroundStyle";
-import { APP_DEFAULT_TITLE, APP_DESCRIPTION, APP_TITLE_TEMPLATE, defaultOpenGraph } from "@/lib/metadata";
+import { APP_DEFAULT_TITLE, APP_DESCRIPTION, APP_TITLE_TEMPLATE, APP_URL, defaultOpenGraph } from "@/lib/metadata";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(APP_URL),
   title: {
     default: APP_DEFAULT_TITLE,
     template: APP_TITLE_TEMPLATE
