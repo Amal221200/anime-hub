@@ -9,7 +9,7 @@ const ScrollUpButton = dynamic(() => import("@/components/ScrollUpButton"), {ssr
 
 export async function generateMetadata({ searchParams: { query } }: { searchParams: { [key: string]: string } }): Promise<Metadata> {
   return {
-    title: query ? `Search Results` : "All Blogs"
+    title: query ? `Search Results of ${query}` : "All Blogs"
   }
 }
 

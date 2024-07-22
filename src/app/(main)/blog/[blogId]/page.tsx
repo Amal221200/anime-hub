@@ -5,6 +5,7 @@ import SkeletonSpinner from '@/components/loading/SkeletonSpinner';
 import dynamic from 'next/dynamic';
 import { getBlog } from '@/lib/actions/blog';
 import BackgroundStyle from '@/components/styled-components/BackgroundStyle';
+import { APP_URL, defaultOpenGraph } from '@/lib/metadata';
 
 const ReviewsSection = dynamic(() => import('./_components/blog-reviews'), { loading: () => <SkeletonSpinner className='h-[50vh]' /> })
 
@@ -20,7 +21,15 @@ export async function generateMetadata({ params: { blogId } }: { params: { blogI
     return {
         title: `${blog.title}`,
         description: `${blog.description}`,
-        keywords: [blog.title.toLowerCase(), blog.author.username.toLowerCase()]
+        keywords: [blog.title.toLowerCase(), blog.author.username.toLowerCase()],
+        openGraph: {
+            ...defaultOpenGraph,
+            url: `${APP_URL}/blog/${blog.id}`,
+            title: `${blog.title}`,
+            description: `${blog.description}`,
+            images: [{ url: blog.imageLink }],
+            type: 'article'
+        }
     }
 }
 

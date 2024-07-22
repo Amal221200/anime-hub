@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import SkeletonSpinner from '@/components/loading/SkeletonSpinner';
 import dynamic from 'next/dynamic';
 import BackgroundStyle from '@/components/styled-components/BackgroundStyle';
+import { APP_URL, defaultOpenGraph } from '@/lib/metadata';
 
 const ReviewsSection = dynamic(() => import('./_components/anime-reviews'), { loading: () => <SkeletonSpinner className='h-[50vh]' /> })
 
@@ -20,7 +21,15 @@ export async function generateMetadata({ params: { animeId } }: { params: { anim
     return {
         title: `${anime.title}`,
         description: `${anime.description}`,
-        keywords: [anime.title.toLowerCase(), ...anime.genre, anime.studio.toLowerCase(), anime.artist.toLowerCase()]
+        keywords: [anime.title.toLowerCase(), ...anime.genre, anime.studio.toLowerCase(), anime.artist.toLowerCase()],
+        openGraph: {
+            ...defaultOpenGraph,
+            url: `${APP_URL}/anime/${anime.id}`,
+            title: `${anime.title}`,
+            description: `${anime.description}`,
+            images: [{url: anime.imageLink}],
+            type:'article'
+        }
     }
 }
 

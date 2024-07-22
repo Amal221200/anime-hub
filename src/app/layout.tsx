@@ -7,7 +7,7 @@ import ThemeProvider from "@/components/providers/ThemeProvider";
 import ProgressProvider from "@/components/providers/ProgressProvider";
 import QueryProvider from "@/components/providers/QueryProvider";
 import BackgroundStyle from "@/components/styled-components/BackgroundStyle";
-import { APP_DEFAULT_TITLE, APP_DESCRIPTION, APP_NAME, APP_TITLE_TEMPLATE } from "@/lib/constants";
+import { APP_DEFAULT_TITLE, APP_DESCRIPTION, APP_TITLE_TEMPLATE, defaultOpenGraph } from "@/lib/metadata";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,36 +18,16 @@ export const metadata: Metadata = {
   },
   description: APP_DESCRIPTION,
   manifest: '/manifest.json',
-  icons: [{
-    url: "/logo-dark.png",
-    href: "/logo-dark.png",
-    type: "image/png"
-  }],
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: APP_DEFAULT_TITLE,
-  },
   formatDetection: {
     telephone: false,
   },
   openGraph: {
-    type: "website",
-    siteName: APP_NAME,
+    ...defaultOpenGraph,
     title: {
       default: APP_DEFAULT_TITLE,
       template: APP_TITLE_TEMPLATE,
     },
-    description: APP_DESCRIPTION,
-  },
-  twitter: {
-    card: "summary",
-    title: {
-      default: APP_DEFAULT_TITLE,
-      template: APP_TITLE_TEMPLATE,
-    },
-    description: APP_DESCRIPTION,
-  },
+  }
 };
 
 export const viewport: Viewport = {
