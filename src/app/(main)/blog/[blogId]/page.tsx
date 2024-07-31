@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
-import BlogContent from './_components/BlogContent'
-import { notFound } from 'next/navigation';
-import SkeletonSpinner from '@/components/loading/SkeletonSpinner';
 import dynamic from 'next/dynamic';
+import { notFound } from 'next/navigation';
+import BlogContent from './_components/BlogContent'
+import SkeletonSpinner from '@/components/loading/SkeletonSpinner';
 import { getBlog } from '@/lib/actions/blog';
 import BackgroundStyle from '@/components/styled-components/BackgroundStyle';
 import { APP_URL, defaultOpenGraph } from '@/lib/metadata';

@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React, { useCallback } from 'react'
+import { useCallback } from 'react'
 
 const navLinks = [
     {

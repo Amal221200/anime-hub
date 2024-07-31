@@ -1,4 +1,3 @@
-import React from 'react'
 import dynamic from 'next/dynamic'
 import SkeletonSpinner from '@/components/loading/SkeletonSpinner'
 import { Metadata } from 'next'
