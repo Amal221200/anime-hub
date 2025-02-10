@@ -9,7 +9,13 @@ import { APP_URL, defaultOpenGraph } from '@/lib/metadata';
 
 const ReviewsSection = dynamic(() => import('./_components/blog-reviews'), { loading: () => <SkeletonSpinner className='h-[50vh]' /> })
 
-export async function generateMetadata({ params: { blogId } }: { params: { blogId: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ blogId: string }> }): Promise<Metadata> {
+    const params = await props.params;
+
+    const {
+        blogId
+    } = params;
+
     const blog = await getBlog(blogId);
 
     if (!blog) {
@@ -33,7 +39,13 @@ export async function generateMetadata({ params: { blogId } }: { params: { blogI
     }
 }
 
-const BlogPage = async ({ params: { blogId } }: { params: { blogId: string } }) => {
+const BlogPage = async (props: { params: Promise<{ blogId: string }> }) => {
+    const params = await props.params;
+
+    const {
+        blogId
+    } = params;
+
     const blog = await getBlog(blogId);
 
     if (blog === undefined) {

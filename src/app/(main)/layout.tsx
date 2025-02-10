@@ -2,9 +2,9 @@ import dynamic from 'next/dynamic'
 import Header from './_components/header'
 import Footer from './_components/Footer'
 
-const DialogModal = dynamic(() => import("@/components/modal/DialogModal"), { ssr: false })
-const AlertModal = dynamic(() => import('@/components/modal/AlertModal'), { ssr: false })
-const Toaster = dynamic(() => import('@/components/ui/sonner'), { ssr: false })
+const DialogModal = dynamic(() => import("@/components/modal/DialogModal"))
+const AlertModal = dynamic(() => import('@/components/modal/AlertModal'))
+const Toaster = dynamic(() => import('@/components/ui/sonner'))
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
     return (

@@ -2,17 +2,30 @@ import dynamic from 'next/dynamic'
 import SkeletonSpinner from '@/components/loading/SkeletonSpinner'
 import { Metadata } from 'next'
 
-const BlogBody = dynamic(() => import('./_components/BlogBody'), { ssr: false, loading: () => <SkeletonSpinner className="h-[85vh]" /> })
-const ScrollUpButton = dynamic(() => import("@/components/ScrollUpButton"), {ssr: false});
+const BlogBody = dynamic(() => import('./_components/BlogBody'), { loading: () => <SkeletonSpinner className="h-[85vh]" /> })
+const ScrollUpButton = dynamic(() => import("@/components/ScrollUpButton"));
 
 
-export async function generateMetadata({ searchParams: { query } }: { searchParams: { [key: string]: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { searchParams: Promise<{ [key: string]: string }> }): Promise<Metadata> {
+  const searchParams = await props.searchParams;
+
+  const {
+    query
+  } = searchParams;
+
   return {
     title: query ? `Search Results of ${query}` : "All Blogs"
   }
 }
 
-const BlogsPage = ({ searchParams: { query, fromYear, toYear } }: { searchParams: { [key: string]: string } }) => {
+const BlogsPage = async (props: { searchParams: Promise<{ [key: string]: string }> }) => {
+  const searchParams = await props.searchParams;
+
+  const {
+    query,
+    fromYear,
+    toYear
+  } = searchParams;
 
   return (
     <>
