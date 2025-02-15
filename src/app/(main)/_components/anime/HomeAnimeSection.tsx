@@ -3,6 +3,7 @@ import MoreButton from "@/components/MoreButton"
 import { getAnimes } from "@/lib/actions/anime"
 import { cn } from "@/lib/utils"
 import AnimeCard from "./AnimeCard"
+import HorizontalScrollableContainer from "@/components/HorizontalScrollableContainer"
 
 interface HomeAnimeSectionProps {
     className?: string
@@ -15,7 +16,7 @@ const HomeAnimeSection = async ({ className, }: HomeAnimeSectionProps) => {
         <section className={cn('my-5', className)}>
             <SectionContainer>
                 <h2 className="mb-3 text-3xl font-semibold">{'Popular Anime'}</h2>
-                <div className="no-scrollbar grid grid-cols-[repeat(13,auto)] items-center gap-x-3 overflow-x-scroll">
+                <HorizontalScrollableContainer elements={13}>
                     {
                         !animes ? <h1 className="text-center">{"Couldn't"} fetch anime</h1> :
                             animes.length ? (
@@ -25,7 +26,7 @@ const HomeAnimeSection = async ({ className, }: HomeAnimeSectionProps) => {
                             ) : <h1 className="text-center">No animes yet</h1>
                     }
                     <MoreButton to="/anime" queryKey="fetch_animes" />
-                </div>
+                </HorizontalScrollableContainer>
             </SectionContainer>
         </section>
     )

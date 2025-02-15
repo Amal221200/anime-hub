@@ -13,7 +13,7 @@ const AnimeCard = ({ anime, home }: AnimeCardProps) => {
 
     return (
         <article className={cn("group/anime relative h-[200px] overflow-hidden rounded-md border-destructive sm:h-[250px]", home && "sm:w-[350px] w-[280px]")}>
-            <Image src={anime.imageLink} alt={anime.title} fill className="duration-500 z-0 h-full w-full transform object-cover object-top transition group-hover/anime:scale-[1.2]" />
+            <Image src={anime.imageLink} draggable={false} alt={anime.title} fill className="duration-500 z-0 h-full w-full transform object-cover object-top transition group-hover/anime:scale-[1.2]" />
 
             {/* Overlay Content */}
             <div className="absolute inset-0 z-10 grid h-full w-full place-content-center space-y-1 bg-black/50 px-3 py-1 opacity-0 transition-all group-hover/anime:opacity-100 group-hover/anime:backdrop-blur-md">

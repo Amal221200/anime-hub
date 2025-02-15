@@ -3,6 +3,7 @@ import MoreButton from "@/components/MoreButton"
 import { getBlogs } from "@/lib/actions/blog"
 import { cn } from "@/lib/utils"
 import BlogCard from "./BlogCard"
+import HorizontalScrollableContainer from "@/components/HorizontalScrollableContainer"
 
 interface HomeBlogSectionProps {
     className?: string,
@@ -15,7 +16,7 @@ const HomeBlogSection = async ({ className }: HomeBlogSectionProps) => {
         <section className={cn('my-5', className)}>
             <SectionContainer>
                 <h2 className="mb-3 text-3xl font-semibold">{'Latest Blogs'}</h2>
-                <div className="no-scrollbar grid grid-cols-[repeat(13,auto)] items-center gap-x-3 overflow-x-scroll">
+                <HorizontalScrollableContainer elements={13}>
                     {
                         !blogs ? <h1 className="text-center">{"Couldn't"} fetch blogs</h1> :
                             blogs.length ? (
@@ -25,7 +26,7 @@ const HomeBlogSection = async ({ className }: HomeBlogSectionProps) => {
                             ) : <h1 className="text-center">No blogs yet</h1>
                     }
                     <MoreButton to="/blog" queryKey="fetch_blogs" />
-                </div>
+                </HorizontalScrollableContainer>
             </SectionContainer>
         </section>
     )
