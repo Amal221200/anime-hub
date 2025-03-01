@@ -23,7 +23,7 @@ const Header = () => {
     }, [])
 
     return (
-        <header ref={headerRef} className="header-transition fixed left-0 right-0 top-0 z-[100] bg-background/50 backdrop-blur-sm">
+        <header ref={headerRef} className="header-transition fixed left-0 right-0 top-0 z-100 bg-background/50 backdrop-blur-xs">
             <div className="mx-auto flex items-center justify-between px-2 sm:max-w-[90vw] sm:px-3">
                 <LeftSide />
                 <RightSide />

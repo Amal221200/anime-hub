@@ -13,12 +13,12 @@ const AnimeIntro =  ({ anime }: { anime: Anime }) => {
             <SectionContainer>
                 <div className="flex flex-col gap-4 md:flex-row md:items-stretch md:justify-between">
                     {/* Left Side */}
-                    <div className="relative h-[250px] flex-grow-[1] overflow-hidden rounded-md sm:h-[350px] md:h-[400px] md:w-[350px] md:flex-grow-[2] md:basis-2">
+                    <div className="relative h-[250px] flex-grow-1 overflow-hidden rounded-md sm:h-[350px] md:h-[400px] md:w-[350px] md:flex-grow-2 md:basis-2">
                         <Image src={anime.imageLink} fill alt={anime.title} className="h-full w-full object-cover object-center" />
                     </div>
 
                     {/* Right Side */}
-                    <div className="flex w-full flex-grow-[1] flex-col justify-between md:basis-2">
+                    <div className="flex w-full flex-grow-1 flex-col justify-between md:basis-2">
                         <h1 className="mb-3 text-3xl font-bold">{anime.title}</h1>
                         <ul className="space-y-1 py-3 text-sm sm:space-y-2 sm:text-base">
                             <li><strong>Studio:</strong> {anime.studio}</li>

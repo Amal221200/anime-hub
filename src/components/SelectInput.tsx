@@ -13,14 +13,14 @@ export default function SelectInput({ placeholder, name, data, defaultValue }: {
     return (
         <Select name={name} defaultValue={defaultValue} >
             <SelectTrigger className="w-[180px] capitalize">
-                <SelectValue placeholder={placeholder} className="outline-none" />
+                <SelectValue placeholder={placeholder} className="outline-hidden" />
             </SelectTrigger>
-            <SelectContent className="outline-none">
-                <SelectGroup  className="outline-none">
-                    <SelectItem value={'none'} className="capitalize opacity-80 outline-none">None</SelectItem>
+            <SelectContent className="outline-hidden">
+                <SelectGroup  className="outline-hidden">
+                    <SelectItem value={'none'} className="capitalize opacity-80 outline-hidden">None</SelectItem>
                     {
                         data.map((value) => (
-                            <SelectItem key={value} value={value} className="capitalize outline-none">{value}</SelectItem>
+                            <SelectItem key={value} value={value} className="capitalize outline-hidden">{value}</SelectItem>
                         ))
                     }
                 </SelectGroup>

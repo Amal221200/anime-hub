@@ -51,7 +51,7 @@ const AnimeSearchBox = ({ handleSearch, className, placeholder, genres, artists,
         <search>
             <form onSubmit={onSearch} className={cn("mx-auto md:w-[60vw] sm:[60vw] w-[100vw] overflow-hidden space-y-3", className)}>
                 <div className={cn("flex mx-auto items-center overflow-hidden rounded-full md:w-[50vw] sm:w-[60vw] w-[80vw] bg-zinc-800")}>
-                    <input defaultValue={defaultQuery} type="text" name="search" id="search" className="w-[95%] rounded-full bg-transparent px-3 py-2 outline-none" placeholder={placeholder || 'Search ...'} />
+                    <input defaultValue={defaultQuery} type="text" name="search" id="search" className="w-[95%] rounded-full bg-transparent px-3 py-2 outline-hidden" placeholder={placeholder || 'Search ...'} />
                     <button type="submit">
                         <Search size={20} className="mr-3" />
                     </button>
@@ -81,8 +81,8 @@ const AnimeSearchBox = ({ handleSearch, className, placeholder, genres, artists,
                         <div>
                             <label htmlFor="">Year</label>
                             <div className="flex w-min flex-wrap justify-center gap-2 sm:w-max">
-                                <Input defaultValue={defaultFromYear} name="from-year" type="number" className="w-[180px] outline-none focus-visible:ring-0 focus-visible:ring-offset-0" placeholder="From" />
-                                <Input defaultValue={defaultToYear} name="to-year" type="number" className="w-[180px] outline-none focus-visible:ring-0 focus-visible:ring-offset-0" placeholder="To" />
+                                <Input defaultValue={defaultFromYear} name="from-year" type="number" className="w-[180px] outline-hidden focus-visible:ring-0 focus-visible:ring-offset-0" placeholder="From" />
+                                <Input defaultValue={defaultToYear} name="to-year" type="number" className="w-[180px] outline-hidden focus-visible:ring-0 focus-visible:ring-offset-0" placeholder="To" />
                             </div>
                         </div>
                     </div>

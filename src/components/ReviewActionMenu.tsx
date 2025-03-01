@@ -25,11 +25,11 @@ const ReviewActionMenu = ({ children, className, onOpenChage, open, onDelete, on
                 {children}
             </PopoverTrigger>
             <PopoverContent align="end" side="top" className="flex w-max gap-2 border-zinc-700 p-2 text-sm">
-                <button type="button" onClick={()=> onEdit()} className="block rounded bg-emerald-500 p-1 text-left outline-none transition-colors hover:bg-emerald-600">
+                <button type="button" onClick={()=> onEdit()} className="block rounded bg-emerald-500 p-1 text-left outline-hidden transition-colors hover:bg-emerald-600">
                     <Pencil size={18} />
                 </button>
                 
-                <button type="button"  onClick={()=> onDelete()} className="block rounded bg-red-500 p-1 text-left outline-none transition-colors hover:bg-red-600">
+                <button type="button"  onClick={()=> onDelete()} className="block rounded bg-red-500 p-1 text-left outline-hidden transition-colors hover:bg-red-600">
                     <Trash size={18} />
                 </button>
             </PopoverContent>

@@ -19,7 +19,7 @@ const EditReview = ({ review, onCancel }: { review: AnimeReview, onCancel: () =>
 
     return (
         <form onSubmit={handleSubmit} className="space-y-2">
-            <textarea name="new-review" id="new-review" placeholder="Edit review" className="block w-full resize-none rounded-md bg-zinc-800 px-2 py-1 text-sm outline-none sm:text-base" required rows={2} defaultValue={review.review} autoFocus />
+            <textarea name="new-review" id="new-review" placeholder="Edit review" className="block w-full resize-none rounded-md bg-zinc-800 px-2 py-1 text-sm outline-hidden sm:text-base" required rows={2} defaultValue={review.review} autoFocus />
             <div className="flex justify-end gap-x-2">
                 <Button type="button" size="sm" className="text-xs sm:text-sm" variant="outline" disabled={editPending}
                     onClick={onCancel}>
