@@ -22,10 +22,10 @@ export default function DialogModal() {
                     </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
-                    <Button type="button" size="sm" disabled={disabled} className="disabled:cursor-null disabled:opacity-80" variant={"destructive"} onClick={() => onClose(true)}>
+                    <Button type="button" size="sm" disabled={disabled} className="disabled:cursor-not-allowed disabled:opacity-80" variant={"destructive"} onClick={() => onClose(true)}>
                         Continue
                     </Button>
-                    <Button type="button" size="sm" disabled={disabled} className="disabled:cursor-null disabled:opacity-80" variant={"outline-destructive"} onClick={() => onClose(false)}>
+                    <Button type="button" size="sm" disabled={disabled} className="disabled:cursor-not-allowed disabled:opacity-80" variant={"outline-destructive"} onClick={() => onClose(false)}>
                         Cancel
                     </Button>
                 </AlertDialogFooter>

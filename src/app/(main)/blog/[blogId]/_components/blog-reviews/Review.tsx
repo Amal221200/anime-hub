@@ -65,7 +65,7 @@ const Review = ({ review }: { review: BlogReviewType }) => {
             </div>
 
             {session?.user?.id === review.user.externalUserId && (
-                <ReviewActionMenu className={cn("opacity-70 hover:opacity-100", editMode && "cursor-null opacity-70")}
+                <ReviewActionMenu className={cn("opacity-70 hover:opacity-100", editMode && "cursor-not-allowed opacity-70")}
                     onOpenChage={toggleMenuOpen} open={menuOpen} onEdit={onEdit} onDelete={onDelete}>
                     <EllipsisVertical />
                 </ReviewActionMenu>
