@@ -16,7 +16,7 @@ const AnimeCard = ({ anime, home }: AnimeCardProps) => {
             <Image src={anime.imageLink} draggable={false} alt={anime.title} fill className="duration-500 z-0 h-full w-full transform object-cover object-top transition group-hover/anime:scale-[1.2]" />
 
             {/* Overlay Content */}
-            <div className="absolute inset-0 z-10 grid h-full w-full place-content-center space-y-1 bg-black/50 px-3 py-1 opacity-0 transition-all group-hover/anime:opacity-100 group-hover/anime:backdrop-blur-md">
+            <div className="absolute inset-0 pointer-events-none group-hover/anime:pointer-events-auto z-10 grid h-full w-full place-content-center space-y-1 bg-black/50 px-3 py-1 opacity-0 transition-all group-hover/anime:opacity-100 group-hover/anime:backdrop-blur-md">
                 <div className="delay-200 flex translate-y-[20%] transform flex-col items-center gap-2 text-center text-white opacity-0 transition-[all] duration-500 group-hover/anime:translate-y-0 group-hover/anime:opacity-100">
                     <h2 className="text-xl font-bold">{anime.title}</h2>
                     <h4 className="font-semibold">Artist: {anime.artist}</h4>
