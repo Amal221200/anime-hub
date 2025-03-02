@@ -1,4 +1,4 @@
-import style from "./style.module.css"
+import style from "./spinner.module.css"
 import logo from "@/assets/logo-dark.svg"
 import { cn } from "@/lib/utils"
 import Image from 'next/image'
